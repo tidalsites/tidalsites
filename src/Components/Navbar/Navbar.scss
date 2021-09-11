@@ -1,0 +1,117 @@
+@use "src/Styles/Colors.scss" as c;
+@use "src/Styles/Utilities.scss" as u;
+
+.Navbar {
+  width: 100vw;
+
+  &__nav {
+    max-width: u.$page-max-width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px;
+    height: u.$navbar-height;
+
+    &__logo {
+      padding: 10px 0;
+      img {
+        height: 35px;
+        width: 35px;
+      }
+      span {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2.15rem;
+        // margin-left: 5px;
+        // color: #555;
+      }
+    }
+
+    &__burger {
+      padding: 10px 0;
+      span {
+        font-size: 44px;
+        cursor: pointer;
+        outline: 3px solid c.$black;
+        transition: all 180ms ease-in-out;
+
+        &:hover,
+        &:focus {
+          color: c.$white;
+          background: c.$black;
+        }
+      }
+    }
+
+    &__links {
+      display: none;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: clamp(10px, 2vw, 30px);
+
+        li {
+          a {
+            color: c.$black;
+          }
+        }
+      }
+    }
+
+    &__links-mobile {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      justify-content: center;
+      background: c.$black;
+
+      &.open {
+        display: flex;
+      }
+
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+
+        li {
+          padding: clamp(5px, 5vh, 40px) 0;
+          text-align: center;
+          width: 100%;
+
+          &:hover,
+          &:focus {
+            background: c.$white;
+            // outline: 5px solid c.$black;
+            a {
+              color: c.$black;
+            }
+          }
+
+          a {
+            color: c.$white;
+            font-size: clamp(24px, 4vw, 32px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .Navbar__nav__links {
+    display: flex;
+  }
+
+  .Navbar__nav__burger {
+    display: none;
+  }
+}
