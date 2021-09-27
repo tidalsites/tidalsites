@@ -14,7 +14,6 @@ export const Home: FC = () => {
     <div
       className="Home"
       onClick={(e) => {
-        console.log(e.target.toString());
         if (
           e.target.toString() !== "mailto:tidalsites@gmail.com?subject=Inquiry"
         ) {
