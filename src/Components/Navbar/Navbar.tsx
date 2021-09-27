@@ -19,7 +19,7 @@ export const Navbar: FC = () => {
           <img src={logo} alt="Tidal Sites logo" />
           <span>TIDAL SITES</span>
         </div>
-        {/* <div className="Navbar__nav__burger">
+        <div className="Navbar__nav__burger">
           <span
             className="material-icons md-24"
             onClick={() => setDropdownActivated(!dropdownActivated)}
@@ -30,12 +30,12 @@ export const Navbar: FC = () => {
         <div className="Navbar__nav__links">
           <ul>
             <li>
-              <Link to="/">SERVICES</Link>
+              <a href="#Services">SERVICES</a>
             </li>
             <li>
-              <Link to="/">PROCESS</Link>
+              <a href="#Process">PROCESS</a>
             </li>
-            <li>
+            {/* <li>
               <Link to="/">PORTFOLIO</Link>
             </li>
             <li>
@@ -46,7 +46,7 @@ export const Navbar: FC = () => {
             </li>
             <li>
               <Link to="/">CONTACT</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div
@@ -56,7 +56,7 @@ export const Navbar: FC = () => {
             <li>
               <Link to="/">SERVICES</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/">PROCESS</Link>
             </li>
             <li>
@@ -70,9 +70,9 @@ export const Navbar: FC = () => {
             </li>
             <li>
               <Link to="/">CONTACT</Link>
-            </li>
+            </li> */}
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );
