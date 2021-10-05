@@ -22,7 +22,7 @@ export const Navbar: FC = () => {
         <div className="Navbar__nav__burger">
           <span
             className="material-icons md-24"
-            onClick={() => setDropdownActivated(!dropdownActivated)}
+            onClick={() => setDropdownActivated(true)}
           >
             menu_open
           </span>
@@ -30,47 +30,37 @@ export const Navbar: FC = () => {
         <div className="Navbar__nav__links">
           <ul>
             <li>
-              <a href="#Services">SERVICES</a>
+              <a href="#Services" onClick={() => setDropdownActivated(false)}>
+                SERVICES
+              </a>
             </li>
             <li>
-              <a href="#Process">PROCESS</a>
+              <a href="#Process" onClick={() => setDropdownActivated(false)}>
+                PROCESS
+              </a>
             </li>
-            {/* <li>
-              <Link to="/">PORTFOLIO</Link>
-            </li>
-            <li>
-              <Link to="/">TIDBITS</Link>
-            </li>
-            <li>
-              <Link to="/">ABOUT</Link>
-            </li>
-            <li>
-              <Link to="/">CONTACT</Link>
-            </li> */}
           </ul>
         </div>
         <div
           className={`Navbar__nav__links-mobile ${dropdownActivated && "open"}`}
         >
+          <span
+            onClick={() => setDropdownActivated(false)}
+            className="material-icons Navbar__nav__links-mobile__close"
+          >
+            close
+          </span>
           <ul>
             <li>
-              <Link to="/">SERVICES</Link>
-            </li>
-            {/* <li>
-              <Link to="/">PROCESS</Link>
-            </li>
-            <li>
-              <Link to="/">PORTFOLIO</Link>
+              <a onClick={() => setDropdownActivated(false)} href="#Services">
+                SERVICES
+              </a>
             </li>
             <li>
-              <Link to="/">TIDBITS</Link>
+              <a onClick={() => setDropdownActivated(false)} href="#Process">
+                PROCESS
+              </a>
             </li>
-            <li>
-              <Link to="/">ABOUT</Link>
-            </li>
-            <li>
-              <Link to="/">CONTACT</Link>
-            </li> */}
           </ul>
         </div>
       </div>

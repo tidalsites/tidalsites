@@ -50,7 +50,7 @@ export const Home: FC = () => {
                 <span className="material-icons" role="img">
                   phone
                 </span>
-                <span>(757) 550-0830</span>
+                <a href="tel:757-550-0830">(757) 550-0830</a>
               </div>
               <div className="Home__hero__left__cta__dropdown__contact">
                 <span className="material-icons" role="img">

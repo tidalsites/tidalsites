@@ -63,16 +63,31 @@
 
     &__links-mobile {
       position: absolute;
-      top: 70px;
+      // top: 70px;
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       display: none;
       justify-content: center;
       background: c.$black;
+      z-index: 5;
+      overflow: hidden;
+      height: 100vh;
 
       &.open {
         display: flex;
+        flex-direction: column;
+      }
+
+      &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      span.material-icons {
+        color: white;
       }
 
       ul {
