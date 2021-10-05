@@ -14,8 +14,11 @@ export const Home: FC = () => {
     <div
       className="Home"
       onClick={(e) => {
+        console.log(e.target.toString());
         if (
-          e.target.toString() !== "mailto:tidalsites@gmail.com?subject=Inquiry"
+          e.target.toString() !==
+            "mailto:tidalsites@gmail.com?subject=Inquiry" &&
+          e.target.toString() !== "tel:757-550-0830"
         ) {
           e.preventDefault();
           contactDropdownActive && setContactDropdownActive(false);
@@ -36,7 +39,7 @@ export const Home: FC = () => {
           </p>
           <div className="Home__hero__left__cta">
             <button
-              onClick={() => setContactDropdownActive(!contactDropdownActive)}
+              onClick={() => setContactDropdownActive(true)}
               className={contactDropdownActive ? "active" : ""}
             >
               {contactDropdownActive ? "Ask for Devin!" : "Contact Us"}
