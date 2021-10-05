@@ -11,7 +11,7 @@ export const Footer: FC = () => {
             <span className="material-icons" role="img">
               phone
             </span>
-            <span>(757) 550-0830</span>
+            <a href="tel:757-550-0830">(757) 550-0830</a>
           </div>
           <div className="Footer__contact__email">
             <span className="material-icons" role="img">
