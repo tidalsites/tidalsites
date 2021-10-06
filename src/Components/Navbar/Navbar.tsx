@@ -39,6 +39,11 @@ export const Navbar: FC = () => {
                 PROCESS
               </a>
             </li>
+            <li>
+              <a onClick={() => setDropdownActivated(false)} href="#Portfolio">
+                PORTFOLIO
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -59,6 +64,11 @@ export const Navbar: FC = () => {
             <li>
               <a onClick={() => setDropdownActivated(false)} href="#Process">
                 PROCESS
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setDropdownActivated(false)} href="#Portfolio">
+                PORTFOLIO
               </a>
             </li>
           </ul>
