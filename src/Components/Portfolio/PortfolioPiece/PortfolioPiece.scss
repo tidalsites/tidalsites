@@ -9,7 +9,7 @@ $min-width: 600px;
     "name name"
     "img img"
     "img img"
-    "type corner";
+    "type type";
   max-width: 50em;
 
   @media (min-width: $min-width) {
@@ -24,8 +24,10 @@ $min-width: 600px;
     grid-area: name;
     font-size: 1.5rem;
     padding: 0.5rem;
-    text-align: center;
     white-space: nowrap;
+    border-top: 2px solid c.$black;
+    border-left: 2px solid c.$black;
+    border-top-left-radius: 10px;
 
     @media (min-width: $min-width) {
       border-top: 2px solid c.$black;
@@ -97,14 +99,23 @@ $min-width: 600px;
     grid-area: type;
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
+    justify-content: center;
     padding: 0.25rem;
+    border: 2px solid c.$black;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    background: c.$purple;
+    color: c.$white;
 
     @media (min-width: $min-width) {
       transform: rotate(180deg);
       writing-mode: vertical-lr;
       text-orientation: mixed;
       justify-content: center;
+      font-size: 1.25rem;
+      background: c.$white;
+      color: c.$black;
+      border: 0;
     }
   }
 }

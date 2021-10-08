@@ -28,14 +28,17 @@ $min-width: 600px;
 
       &__header {
         display: flex;
-        justify-content: center;
         align-items: center;
         font-size: 2rem;
-        padding-bottom: 2rem;
-        text-decoration: underline;
-        text-decoration-color: c.$purple;
-        text-decoration-thickness: 3px;
-        text-decoration-style: wavy;
+        padding: 1rem 0;
+        background: c.$purple;
+        color: c.$white;
+        margin-left: -10px;
+        padding-left: 10px;
+        margin-bottom: 2rem;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        max-width: 300px;
 
         @media (min-width: 600px) {
           transform: rotate(180deg);
@@ -44,6 +47,10 @@ $min-width: 600px;
           justify-content: flex-end;
           text-decoration: none;
           padding-bottom: 0;
+          background: c.$white;
+          color: c.$black;
+          margin-left: 0;
+          padding-left: 0;
         }
       }
 
@@ -64,14 +71,17 @@ $min-width: 600px;
 
       &__header {
         display: flex;
-        justify-content: center;
         align-items: center;
         font-size: 2rem;
-        padding-bottom: 2rem;
-        text-decoration: underline;
-        text-decoration-color: c.$purple;
-        text-decoration-thickness: 3px;
-        text-decoration-style: wavy;
+        padding: 1rem 0;
+        background: c.$purple;
+        color: c.$white;
+        margin-left: -10px;
+        padding-left: 10px;
+        margin-bottom: 2rem;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        max-width: 300px;
 
         @media (min-width: 600px) {
           transform: rotate(180deg);
@@ -80,6 +90,10 @@ $min-width: 600px;
           justify-content: flex-end;
           text-decoration: none;
           padding-bottom: 0;
+          background: c.$white;
+          color: c.$black;
+          margin-left: 0;
+          padding-left: 0;
         }
       }
 
