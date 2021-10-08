@@ -30,12 +30,12 @@ export const Navbar: FC = () => {
         <div className="Navbar__nav__links">
           <ul>
             <li>
-              <a href="#Services" onClick={() => setDropdownActivated(false)}>
+              <a href="/#Services" onClick={() => setDropdownActivated(false)}>
                 SERVICES
               </a>
             </li>
             <li>
-              <a href="#Process" onClick={() => setDropdownActivated(false)}>
+              <a href="/#Process" onClick={() => setDropdownActivated(false)}>
                 PROCESS
               </a>
             </li>

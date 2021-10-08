@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 export const Portfolio: FC = () => {
   return (
@@ -12,15 +13,6 @@ export const Portfolio: FC = () => {
         </div>
         <div className="Home__portfolio__content__right">
           <div className="Home__portfolio__content__right__text">
-            {/* <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit
-              libero ratione cupiditate placeat tempore nam sunt in, culpa
-              impedit tenetur numquam doloribus autem reprehenderit ducimus
-              voluptate at unde! Necessitatibus voluptas vitae vel unde impedit
-              aspernatur iusto totam cupiditate sapiente! Ullam distinctio
-              molestias minima ea doloribus sequi ex, animi eaque perferendis
-              odio voluptatibus expedita suscipit laboriosam?
-            </p> */}
             <p>
               Tidal Sites believes that every website should be different. Take
               your website to the next level and showcase what makes you unique.
@@ -28,9 +20,9 @@ export const Portfolio: FC = () => {
           </div>
           <div className="Home__portfolio__content__right__img"></div>
         </div>
-        {/* <div className="Home__portfolio__content__cta">
-          <button>View Portfolio</button>
-        </div> */}
+        <div className="Home__portfolio__content__cta">
+          <Link to="/Portfolio">View Portfolio</Link>
+        </div>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { Home } from "../Home/Home";
 import { Banner } from "../Banner/Banner";
 import { Contact } from "../Contact/Contact";
+import { Portfolio } from "../Portfolio/Portfolio";
 import { Footer } from "../Footer/Footer";
 
 export const App: FC = () => {
@@ -21,6 +22,9 @@ export const App: FC = () => {
           </Route>
           <Route path="/Contact">
             <Contact />
+          </Route>
+          <Route path="/Portfolio">
+            <Portfolio />
           </Route>
         </Switch>
         <Footer />

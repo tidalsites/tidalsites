@@ -5,9 +5,8 @@ $portfolio-breakpoint: 800px;
 
 .Home {
   &__section {
-    padding: 5vw 0;
-    // max-width: u.$page-max-width;
-    max-width: 90em;
+    padding: 3vw 0;
+    max-width: u.$page-max-width;
     margin: auto;
     width: 100%;
 
@@ -437,11 +436,12 @@ $portfolio-breakpoint: 800px;
 
         &__img {
           width: 100%;
-          aspect-ratio: 1/1;
-          // background-image: url("../../Assets/different.jpg");
+          min-height: 500px;
+          // aspect-ratio: 1/1;
+          background-image: url("../../Assets/different.png");
           background-size: cover;
           background-position: right;
-          background-color: c.$black;
+          background-color: rgba(c.$black, 0.85);
           background-blend-mode: multiply;
           background-repeat: no-repeat;
           z-index: 1;
@@ -449,6 +449,8 @@ $portfolio-breakpoint: 800px;
           @media (min-width: $portfolio-breakpoint) {
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
+            aspect-ratio: 1/1;
+            max-height: 650px;
           }
         }
       }
@@ -493,7 +495,7 @@ $portfolio-breakpoint: 800px;
           width: 70%;
           height: 300px;
           margin-left: auto;
-          // background-image: url("../../Assets/different.jpg");
+          // background-image: url("../../Assets/different.png");
           background-size: cover;
           background-position: right;
           background-color: c.$black;
@@ -512,11 +514,12 @@ $portfolio-breakpoint: 800px;
 
       &__cta {
         position: absolute;
-        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 0;
+        transform: translate(-50%, -100%);
+        z-index: 3;
 
-        button {
+        a {
           background: c.$black;
           border: 0;
           box-shadow: 0;
@@ -524,6 +527,7 @@ $portfolio-breakpoint: 800px;
           padding: 0.5rem 1rem;
           border-radius: 5px;
           box-shadow: 1px 1px 5px 3px c.$white;
+          z-index: 5;
         }
       }
     }
