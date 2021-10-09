@@ -6,70 +6,87 @@ import "./Navbar.scss";
 export const Navbar: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
+  const activateDropdown = () => {
+    document.body.classList.add("no-scroll");
+    setDropdownActivated(true);
+  };
+
+  const deactivateDropdown = () => {
+    document.body.classList.remove("no-scroll");
+    setDropdownActivated(false);
+  };
+
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setDropdownActivated(false);
-    });
+    window.addEventListener("resize", deactivateDropdown);
   }, []);
 
   return (
     <div className="Navbar">
       <div className="Navbar__nav">
         <div className="Navbar__nav__logo">
-          <img src={logo} alt="Tidal Sites logo" />
-          <span>TIDAL SITES</span>
+          <Link to="/">
+            <img src={logo} alt="Tidal Sites logo" />
+            <span>TIDAL SITES</span>
+          </Link>
         </div>
         <div className="Navbar__nav__burger">
-          <span
-            className="material-icons md-24"
-            onClick={() => setDropdownActivated(true)}
-          >
+          <span className="material-icons md-24" onClick={activateDropdown}>
             menu_open
           </span>
         </div>
         <div className="Navbar__nav__links">
           <ul>
             <li>
-              <a href="/#Services" onClick={() => setDropdownActivated(false)}>
+              <Link to="/">HOME</Link>
+            </li>
+            <li>
+              <a href="/#Services" onClick={deactivateDropdown}>
                 SERVICES
               </a>
             </li>
             <li>
-              <a href="/#Process" onClick={() => setDropdownActivated(false)}>
+              <a href="/#Process" onClick={deactivateDropdown}>
                 PROCESS
               </a>
             </li>
             <li>
-              <a onClick={() => setDropdownActivated(false)} href="#Portfolio">
+              <Link to="/Portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div
-          className={`Navbar__nav__links-mobile ${dropdownActivated && "open"}`}
+          className={`Navbar__nav__links-mobile ${
+            dropdownActivated ? "open" : ""
+          }`}
         >
           <span
-            onClick={() => setDropdownActivated(false)}
+            onClick={deactivateDropdown}
             className="material-icons Navbar__nav__links-mobile__close"
           >
             close
           </span>
           <ul>
             <li>
-              <a onClick={() => setDropdownActivated(false)} href="#Services">
+              <Link to="/" onClick={deactivateDropdown}>
+                HOME
+              </Link>
+            </li>
+            <li>
+              <a onClick={deactivateDropdown} href="/#Services">
                 SERVICES
               </a>
             </li>
             <li>
-              <a onClick={() => setDropdownActivated(false)} href="#Process">
+              <a onClick={deactivateDropdown} href="/#Process">
                 PROCESS
               </a>
             </li>
             <li>
-              <a onClick={() => setDropdownActivated(false)} href="#Portfolio">
+              <Link to="/Portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
