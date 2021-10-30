@@ -4,6 +4,7 @@ import "./Home.scss";
 // Components
 import { Hero } from "./Sections/Hero";
 import { Services } from "./Sections/Services";
+import { Highlights } from "./Sections/Highlights";
 import { Process } from "./Sections/Process";
 import { Portfolio } from "./Sections/Portfolio";
 
@@ -29,6 +30,7 @@ export const Home: FC = () => {
         setContactDropdownActive={setContactDropdownActive}
       />
       <Services />
+      <Highlights />
       <Process />
       <Portfolio />
     </div>
