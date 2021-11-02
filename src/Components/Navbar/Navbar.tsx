@@ -74,7 +74,7 @@ export const Navbar: FC = () => {
               </Link>
             </li>
             <li>
-              <a onClick={deactivateDropdown} href="/#Services">
+              <a onClick={deactivateDropdown} href="/services">
                 SERVICES
               </a>
             </li>

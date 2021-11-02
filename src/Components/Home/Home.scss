@@ -181,7 +181,7 @@ $portfolio-breakpoint: 800px;
       flex-direction: column;
       width: fit-content;
 
-      button {
+      a {
         padding: clamp(10px, 1vw, 15px) 10px;
         border: none;
         box-shadow: none;
@@ -194,7 +194,6 @@ $portfolio-breakpoint: 800px;
         margin-top: -10px;
         font-size: 18px;
         justify-content: space-between;
-        display: none;
 
         .material-icons {
           font-weight: 700;

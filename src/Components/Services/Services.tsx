@@ -2,8 +2,11 @@ import { FC } from "react";
 import "./Services.scss";
 
 import brandingImg from "../../Assets/service-img-branding.png";
-import webDesignImg from "../../Assets/web-design-img.jpg";
-import webDevImg from "../../Assets/web-dev-img.jpg";
+import webDesignImg from "../../Assets/service-img-design.png";
+import webDevImg from "../../Assets/service-img-dev.png";
+import hostingImg from "../../Assets/service-img-hosting.png";
+import maintenanceImg from "../../Assets/service-img-maintenance.png";
+import consultingImg from "../../Assets/service-img-consulting.png";
 
 export const Services: FC = () => {
   return (
@@ -11,7 +14,7 @@ export const Services: FC = () => {
       <div className="Services__header">
         <div className="Services__header__group">
           <h1>Services</h1>
-          <h4>What can we do for you?</h4>
+          <span>What can we do for you?</span>
         </div>
         <p>
           We love the web and we love helping people improve their online
@@ -54,10 +57,7 @@ export const Services: FC = () => {
           <h2 className="Services__service__header">Web Design</h2>
           <div className="Services__service__content">
             <div className="Services__service__content__main">
-              <img
-                src={webDesignImg}
-                alt="Notebook with layouts drawn on it and an opened pen"
-              />
+              <img src={webDesignImg} alt="Notebook with layouts drawn on it" />
               <p>
                 Web Design is all about making your audience happy. Tidal Sites
                 designs combine functionality with a visually appealing user
@@ -91,7 +91,7 @@ export const Services: FC = () => {
           <h2 className="Services__service__header">Hosting</h2>
           <div className="Services__service__content">
             <div className="Services__service__content__main">
-              <img src={brandingImg} alt="Man holding vague business card" />
+              <img src={hostingImg} alt="Server rack" />
               <p>
                 Web Hosting from Tidal Sites is secure, reliable, and
                 affordable. We do not lock ourselves into a single hosting
@@ -105,7 +105,10 @@ export const Services: FC = () => {
           <h2 className="Services__service__header">Maintenance</h2>
           <div className="Services__service__content">
             <div className="Services__service__content__main">
-              <img src={brandingImg} alt="Man holding vague business card" />
+              <img
+                src={maintenanceImg}
+                alt="Hand plugging in computer component"
+              />
               <p>
                 Maintaining a website shouldn't be your burden to bear. Let
                 Tidal Sites provide website maintenance so that you can focus on
@@ -113,13 +116,22 @@ export const Services: FC = () => {
                 website is secure and always online.
               </p>
             </div>
+            <div className="Services__service__content__list">
+              <span>Maintenance items include:</span>
+              <ul>
+                <li>Security Updates</li>
+                <li>Content Updates</li>
+                <li>Color Modifications</li>
+                <li>Font Modifications</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="Services__service">
           <h2 className="Services__service__header">Consulting</h2>
           <div className="Services__service__content">
             <div className="Services__service__content__main">
-              <img src={brandingImg} alt="Man holding vague business card" />
+              <img src={consultingImg} alt="Hands pointing at data on graph" />
               <p>
                 Sometimes, you just need some advice. If your question is
                 technical, it is likely that Tidal Sites can help. Web advice is
