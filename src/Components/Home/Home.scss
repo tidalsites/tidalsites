@@ -281,11 +281,7 @@ $portfolio-breakpoint: 800px;
     align-items: center;
     margin: 3rem 0;
     padding: 10px;
-    background: c.$black;
-    color: c.$white;
-    border-top: 5px solid black;
-    border-bottom: 5px solid black;
-    box-shadow: 0 2px 4px 4px c.$darkgray;
+    background: c.$lightpurple;
 
     > span {
       font-size: 1.75rem;

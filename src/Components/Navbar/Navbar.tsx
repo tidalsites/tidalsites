@@ -40,7 +40,7 @@ export const Navbar: FC = () => {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="/#Services" onClick={deactivateDropdown}>
+              <a href="/services" onClick={deactivateDropdown}>
                 SERVICES
               </a>
             </li>
@@ -50,7 +50,7 @@ export const Navbar: FC = () => {
               </a>
             </li>
             <li>
-              <Link to="/Portfolio" onClick={deactivateDropdown}>
+              <Link to="/portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
               </Link>
             </li>
@@ -84,7 +84,7 @@ export const Navbar: FC = () => {
               </a>
             </li>
             <li>
-              <Link to="/Portfolio" onClick={deactivateDropdown}>
+              <Link to="/portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
               </Link>
             </li>
