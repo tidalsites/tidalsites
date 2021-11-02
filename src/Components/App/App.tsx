@@ -8,6 +8,7 @@ import { Home } from "../Home/Home";
 // import { Banner } from "../Banner/Banner";
 import { Contact } from "../Contact/Contact";
 import { Portfolio } from "../Portfolio/Portfolio";
+import { Services } from "../Services/Services";
 import { Footer } from "../Footer/Footer";
 
 export const App: FC = () => {
@@ -20,11 +21,14 @@ export const App: FC = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/Contact">
+          <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/Portfolio">
+          <Route exact path="/portfolio">
             <Portfolio />
+          </Route>
+          <Route exact path="/services">
+            <Services />
           </Route>
         </Switch>
         <Footer />
