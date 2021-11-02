@@ -1,16 +1,17 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 export const Services: FC = () => {
   return (
     <section className="Home__services Home__section" id="Services">
       <div className="Home__services__header Home__section__header">
         <span>SERVICES</span>
-        <button>
+        <Link to="/services">
           View all services
           <span className="material-icons" role="img">
             east
           </span>
-        </button>
+        </Link>
       </div>
       <div className="Home__services__list">
         <ul>
