@@ -113,7 +113,11 @@ export const Services: FC = () => {
                 Maintaining a website shouldn't be your burden to bear. Let
                 Tidal Sites provide website maintenance so that you can focus on
                 your business. We provide constant updates to make sure your
-                website is secure and always online.
+                website is secure and always online. <br />
+                <br />
+                We implement a PRO-active approach to website maintenance and
+                always try to mitigate issues before they arise. Rest assured
+                that your website will be highly available.
               </p>
             </div>
             <div className="Services__service__content__list">
@@ -136,6 +140,9 @@ export const Services: FC = () => {
                 Sometimes, you just need some advice. If your question is
                 technical, it is likely that Tidal Sites can help. Web advice is
                 our specialty, but we have experience in a number of fields.
+                Check the list below. If you are unsure about a technical issue
+                you are having, just give us a call. We will let you know if we
+                are able to help.
               </p>
             </div>
             <div className="Services__service__content__list">
