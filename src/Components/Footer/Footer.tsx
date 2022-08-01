@@ -23,7 +23,7 @@ export const Footer: FC = () => {
           </div>
         </div>
       </div>
-      <div className="Footer__copyright">&copy; Tidal Sites, LLC 2021</div>
+      <div className="Footer__copyright">&copy; Tidal Sites, LLC 2022</div>
     </div>
   );
 };

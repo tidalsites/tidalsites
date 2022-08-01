@@ -7,6 +7,7 @@ import GladiatorLogo from "../../Assets/gladiator-logo.png";
 import DictumSquareLogo from "../../Assets/dictum-square-logo.png";
 import AtoBLogo from "../../Assets/atob-logo.png";
 import TidalSitesLogo from "../../Assets/tidalsites-logo.png";
+import XPRTHomeLogo from "../../Assets/xprt-logo.png";
 
 export const Portfolio: FC = () => {
   return (
@@ -18,6 +19,12 @@ export const Portfolio: FC = () => {
         <div className="Portfolio__content__websites">
           <span className="Portfolio__content__websites__header">WEBSITES</span>
           <div className="Portfolio__content__websites__sites">
+            <PortfolioPiece
+              project_name="XPRT Home"
+              project_img="xprt-web"
+              project_img_alt="XPRT Home Website"
+              project_type="Website Creation"
+            />
             <PortfolioPiece
               project_name="AtoB Towing"
               project_img="atob-web"
@@ -51,6 +58,7 @@ export const Portfolio: FC = () => {
             <img src={DictumSquareLogo} alt="Dictum Labs Logo" />
             <img src={AtoBLogo} alt="AtoB Towing Logo" />
             <img src={TidalSitesLogo} alt="Tidal Sites Logo" />
+            <img src={XPRTHomeLogo} alt="XPRT Home Logo" />
           </div>
         </div>
       </div>

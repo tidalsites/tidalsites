@@ -9,6 +9,8 @@ import HHGWeb from "../../../Assets/hartshollergraphics-web.png";
 import HHGMobile from "../../../Assets/hartshollergraphics-mobile.png";
 import DWBWeb from "../../../Assets/dwbuilders-web.png";
 import DWBMobile from "../../../Assets/dwbuilders-mobile.png";
+import XPRTHomeWeb from "../../../Assets/xprt-web.png";
+import XPRTHomeMobile from "../../../Assets/xprt-mobile.png";
 
 interface IPortfolioPieceProps {
   project_name: string;
@@ -37,6 +39,10 @@ export const PortfolioPiece: FC<IPortfolioPieceProps> = ({
     case "dwbuilders-web":
       web_image = DWBWeb;
       mobile_image = DWBMobile;
+      break;
+    case "xprt-web":
+      web_image = XPRTHomeWeb;
+      mobile_image = XPRTHomeMobile;
       break;
     default:
       break;
