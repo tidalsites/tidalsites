@@ -8,21 +8,14 @@ export const Portfolio: FC = () => {
         <span>DARE TO BE DIFFERENT</span>
       </div>
       <div className="Home__portfolio__content">
-        <div className="Home__portfolio__content__left">
-          <div className="Home__portfolio__content__left__img"></div>
-        </div>
-        <div className="Home__portfolio__content__right">
-          <div className="Home__portfolio__content__right__text">
-            <p>
-              Tidal Sites believes that every website should be different. Take
-              your website to the next level and showcase what makes you unique.
-            </p>
-          </div>
-          <div className="Home__portfolio__content__right__img"></div>
-        </div>
-        <div className="Home__portfolio__content__cta">
-          <Link to="/Portfolio">View Portfolio</Link>
-        </div>
+        <p>
+          Tidal Sites believes that every website should be different. We make
+          every effort to showcase what makes you unique! Take a look at some of
+          our latest work.
+        </p>
+        <Link className="Home__portfolio__content__cta" to="/Portfolio">
+          View Portfolio
+        </Link>
       </div>
     </section>
   );

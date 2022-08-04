@@ -91,6 +91,7 @@ $min-width: 600px;
     img:nth-child(2) {
       aspect-ratio: 320/568;
       max-width: calc(100vw - 6px - 20px);
+      max-width: 325px;
 
       @media (min-width: $min-width) {
         position: absolute;

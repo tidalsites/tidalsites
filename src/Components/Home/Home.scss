@@ -65,6 +65,9 @@ $portfolio-breakpoint: 800px;
         flex-direction: column;
         z-index: 2;
         position: relative;
+        animation: fadeIn 1.25s forwards;
+        animation-delay: 450ms;
+        opacity: 0;
 
         button {
           border: 0;
@@ -245,9 +248,12 @@ $portfolio-breakpoint: 800px;
             "description description";
           padding: clamp(10px, 5vw, 2rem);
           border-radius: 10px;
-          box-shadow: 2px 2px 5px #666;
           background: white;
           isolation: isolate;
+
+          @media (min-width: 30em) {
+            box-shadow: 0px 0px 3px 1px #666;
+          }
 
           span.service-name {
             font-size: clamp(1.5rem, 10vw, 2.2rem);
@@ -450,123 +456,44 @@ $portfolio-breakpoint: 800px;
 
   // Portfolio
   &__portfolio {
-    position: relative;
     width: 100%;
     max-width: unset;
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
 
     &__content {
-      position: relative;
-      min-height: 600px;
       display: flex;
-      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      background: c.$black;
+      color: c.$white;
+      outline: 2px solid c.$white;
+      outline-offset: -8px;
 
-      &__left {
-        display: flex;
-        align-items: center;
-        margin: auto 0;
-        width: 100%;
-        position: absolute;
-        inset: 0;
-        width: 100vw;
-        z-index: 1;
-        margin-bottom: 10vw;
-
-        @media (min-width: $portfolio-breakpoint) {
-          position: relative;
-          width: 50%;
-        }
-
-        &__img {
-          width: 100%;
-          min-height: 500px;
-          background-image: url("../../Assets/different.png");
-          background-size: cover;
-          background-position: right;
-          background-color: rgba(c.$black, 0.75);
-          background-blend-mode: multiply;
-          background-repeat: no-repeat;
-          z-index: 1;
-
-          @media (min-width: $portfolio-breakpoint) {
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            aspect-ratio: 1/1;
-            max-height: 650px;
-          }
-        }
-      }
-
-      &__right {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-
-        @media (min-width: $portfolio-breakpoint) {
-          width: 50%;
-        }
-
-        &__text {
-          display: grid;
-          place-content: center;
-          flex-grow: 1;
-          margin: 0 auto;
-          z-index: 2;
-          position: absolute;
-          inset: 0;
-          width: 100vw;
-          color: c.$white;
-          font-size: 1.5rem;
-          line-height: 1.5;
-          padding: 1rem;
-          font-family: "Architects Daughter", cursive;
-          // text-align: center;
-
-          @media (min-width: $portfolio-breakpoint) {
-            position: relative;
-            color: c.$black;
-            width: auto;
-          }
-
-          p {
-            max-width: 40ch;
-          }
-        }
-
-        &__img {
-          width: 70%;
-          height: 300px;
-          margin-left: auto;
-          background-image: url("../../Assets/different-right.jpg");
-          background-size: cover;
-          background-position: right;
-          background-repeat: no-repeat;
-          border-top-right-radius: 100px;
-          border-bottom-right-radius: 10px;
-          transform: scaleX(-1);
-          display: none;
-
-          @media (min-width: $portfolio-breakpoint) {
-            display: block;
-          }
-        }
+      > p {
+        max-width: 50ch;
+        text-align: center;
+        padding: 2rem 0;
       }
 
       &__cta {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translate(-50%, -100%);
-        z-index: 3;
+        padding: 0.5rem 1rem;
+        box-shadow: none;
+        background: c.$white;
+        color: c.$black;
+        border-radius: 5px;
+        width: max-content;
 
-        a {
-          background: c.$black;
-          border: 0;
-          box-shadow: 0;
-          color: c.$white;
-          padding: 0.5rem 1rem;
-          border-radius: 5px;
-          box-shadow: 1px 1px 5px 3px c.$white;
-          z-index: 5;
+        .material-icons {
+          font-weight: 700;
+          font-size: 30px;
         }
       }
     }
@@ -579,9 +506,6 @@ $portfolio-breakpoint: 800px;
   }
   75% {
     transform: translateY(-10%);
-  }
-  85% {
-    transform: translateY(2%);
   }
   100% {
     transform: translateY(0);
