@@ -63,6 +63,29 @@
         li {
           a {
             color: c.$black;
+            position: relative;
+            padding-block: 0.25rem;
+            transition: color 250ms linear;
+
+            &:hover {
+              color: c.$purple;
+
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 0;
+              height: 2px;
+              background-color: c.$purple;
+              transition: all 250ms linear;
+            }
           }
         }
       }
@@ -90,8 +113,12 @@
 
       &__close {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 1rem;
+        right: 1rem;
+
+        > span {
+          font-size: 1.75rem;
+        }
       }
 
       span.material-icons {

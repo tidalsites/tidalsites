@@ -30,9 +30,9 @@ export const Home: FC = () => {
         setContactDropdownActive={setContactDropdownActive}
       />
       <Services />
-      <Highlights />
-      <Process />
       <Portfolio />
+      <Process />
+      <Highlights />
     </div>
   );
 };

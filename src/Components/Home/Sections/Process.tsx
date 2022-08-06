@@ -28,9 +28,10 @@ export const Process: FC = () => {
         <div className="Home__process__content__col">
           <span>Develop</span>
           <p>
-            After a website is designed, it is time to build it. Tidal Sites not
-            only custom designs every website, but every one is also built by
-            hand. Again, no templates!
+            After a website is designed, it is time to build it. Once a base
+            portion of the site is ready, we put it on a temporary hosting
+            platform and send you a link. This allows you to have a keep
+            up-to-date with all the progress we are making.
           </p>
           <img
             src={WebDevImg}
@@ -40,10 +41,11 @@ export const Process: FC = () => {
         <div className="Home__process__content__col">
           <span>Deploy</span>
           <p>
-            The site is designed. The site is built. Now it is time to deploy.
-            This is when your website goes public. Whether you choose your own
-            hosting platform or choose to leverage Tidal Sites, we ensure a
-            smooth process in making your website go live!
+            The site is designed. The site is built and looks just the way you
+            want it. Now it is time to deploy. This is when your website goes
+            public. Whether you choose your own hosting platform or choose to
+            leverage Tidal Sites, we ensure a smooth process in making your
+            website go live!
           </p>
           <img src={WebDeployImg} alt="Server rack" />
         </div>
