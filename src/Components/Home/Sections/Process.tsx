@@ -33,10 +33,7 @@ export const Process: FC = () => {
             platform and send you a link. This allows you to have a keep
             up-to-date with all the progress we are making.
           </p>
-          <img
-            src={WebDevImg}
-            alt="Black and white photo of laptop with notebook and pen on desk"
-          />
+          <img src={WebDevImg} alt="Laptop with notebook and pen on desk" />
         </div>
         <div className="Home__process__content__col">
           <span>Deploy</span>

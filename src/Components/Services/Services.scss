@@ -39,13 +39,17 @@
       font-weight: 600;
       border-radius: 10px;
       position: relative;
+      animation: fadeIn 750ms forwards;
+      opacity: 0;
 
       &::before,
       &::after {
         content: "";
         position: absolute;
-        height: 50%;
+        height: 0;
         aspect-ratio: 1;
+        animation: growBorder 750ms forwards;
+        animation-delay: 250ms;
       }
 
       &::before {
@@ -67,11 +71,15 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
   }
 
   &__service {
     width: 100%;
+
+    &:nth-child(odd) {
+      background-color: rgba(c.$lightpurple, 0.5);
+      box-shadow: 0 0 2px 1px c.$purple;
+    }
 
     &__header {
       font-size: 1.75rem;
@@ -92,7 +100,6 @@
       margin: 1rem auto;
       display: flex;
       flex-direction: column;
-      border-bottom: 2px solid c.$purple;
 
       &__main {
         p {
@@ -115,37 +122,56 @@
       }
 
       &__list {
-        padding: 10px clamp(10px, 5vw, 50px);
+        padding-inline: 10px;
         margin: 0 auto;
-        border: 2px solid c.$purple;
-        border-bottom: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: fit-content;
-        // background: c.$lightpurple;
+        align-items: center;
+        width: 100%;
 
         > span {
           text-align: center;
           font-weight: 500;
           font-size: 1.125rem;
           padding: 1rem 0;
+
+          &:nth-child(1) {
+            background-color: c.$white;
+            color: c.$purple;
+            border: 2px solid c.$purple;
+            width: 100%;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          width: fit-content;
+          margin-inline: auto;
+          margin-top: 2rem;
         }
 
         ul li {
           display: flex;
           align-items: center;
-        }
-
-        ul li::before {
-          content: "\2022";
-          color: c.$purple;
-          font-weight: bold;
-          width: 1em;
-          //   margin-left: -2em;
-          font-size: 1.25rem;
+          background-color: c.$purple;
+          color: c.$white;
+          padding: 0.5rem 1rem;
+          border-radius: 200em;
+          flex-grow: 1;
         }
       }
     }
+  }
+}
+
+@keyframes growBorder {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 50%;
   }
 }

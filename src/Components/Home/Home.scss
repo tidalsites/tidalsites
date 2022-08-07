@@ -13,6 +13,7 @@ $portfolio-breakpoint: 800px;
     &__header {
       font-size: 50px;
       padding: 0 10px;
+      line-height: 1.2;
     }
   }
 
@@ -435,7 +436,7 @@ $portfolio-breakpoint: 800px;
         img {
           width: 100%;
           aspect-ratio: 1.5/1;
-          background: c.$black;
+          background-color: c.$black;
           margin-bottom: 3rem;
           outline: 3px solid #c5ba1c;
           outline-offset: -10px;
