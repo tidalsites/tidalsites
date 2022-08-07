@@ -18,8 +18,9 @@ body {
   font-family: "Rubik", "Fira Sans", "Ubuntu", "Roboto", sans-serif;
   color: c.$black;
 
-  .no-scroll {
+  &.no-scroll {
     overflow: hidden;
+    height: 100vh;
   }
 }
 
@@ -39,4 +40,9 @@ ul {
 
 button {
   cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: "Rubik", sans-serif;
 }
