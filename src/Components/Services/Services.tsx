@@ -24,8 +24,8 @@ export const Services: FC = () => {
       </div>
       <div className="Services__wrapper">
         <div className="Services__service">
-          <h2 className="Services__service__header">Branding</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Branding</h2>
             <div className="Services__service__content__main">
               <img src={brandingImg} alt="Man holding vague business card" />
               <p>
@@ -54,8 +54,8 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="Services__service">
-          <h2 className="Services__service__header">Web Design</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Web Design</h2>
             <div className="Services__service__content__main">
               <img src={webDesignImg} alt="Notebook with layouts drawn on it" />
               <p>
@@ -71,8 +71,8 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="Services__service">
-          <h2 className="Services__service__header">Web Development</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Web Development</h2>
             <div className="Services__service__content__main">
               <img src={webDevImg} alt="Man holding vague business card" />
               <p>
@@ -88,8 +88,8 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="Services__service">
-          <h2 className="Services__service__header">Hosting</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Hosting</h2>
             <div className="Services__service__content__main">
               <img src={hostingImg} alt="Server rack" />
               <p>
@@ -102,8 +102,8 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="Services__service">
-          <h2 className="Services__service__header">Maintenance</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Maintenance</h2>
             <div className="Services__service__content__main">
               <img
                 src={maintenanceImg}
@@ -132,8 +132,8 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="Services__service">
-          <h2 className="Services__service__header">Consulting</h2>
           <div className="Services__service__content">
+            <h2 className="Services__service__header">Consulting</h2>
             <div className="Services__service__content__main">
               <img src={consultingImg} alt="Hands pointing at data on graph" />
               <p>
