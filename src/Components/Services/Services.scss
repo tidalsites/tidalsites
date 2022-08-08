@@ -79,9 +79,8 @@
     width: 100%;
     padding-block: 2rem;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: rgba(c.$lightpurple, 0.5);
-      box-shadow: 0 0 2px 1px c.$purple;
 
       .Services__service__content__main {
         flex-direction: row-reverse;
@@ -122,7 +121,6 @@
         outline: 2px solid c.$white;
         outline-offset: -4px;
         border: 2px solid c.$purple;
-        // border-top: none;
 
         p {
           padding: 1rem;
@@ -171,7 +169,6 @@
           gap: 1rem;
           width: fit-content;
           margin-inline: auto;
-          // margin-top: 2rem;
         }
 
         ul li {
