@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction, useEffect } from "react";
 import "./ContactModal.scss";
 
 interface IContactModalProps {
@@ -10,11 +10,12 @@ export const ContactModal: FC<IContactModalProps> = ({
 }) => {
   return (
     <div className="ContactModal">
-      <div className="ContactModal__close">
-        <button onClick={() => setShowContactModal(false)}>
-          <span className="material-icons">close</span>
-        </button>
-      </div>
+      <button
+        className="ContactModal__close"
+        onClick={() => setShowContactModal(false)}
+      >
+        <span className="material-icons">close</span>
+      </button>
       <div className="ContactModal__wrapper">
         <div className="ContactModal__heading">
           <span>How can we assist you?</span>

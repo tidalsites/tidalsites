@@ -63,67 +63,39 @@ $portfolio-breakpoint: 800px;
 
       &__cta {
         display: flex;
-        flex-direction: column;
-        z-index: 2;
-        position: relative;
+        gap: 0.5rem;
         animation: fadeIn 1.25s forwards;
         animation-delay: 450ms;
         opacity: 0;
 
-        button {
-          border: 0;
-          box-shadow: 0;
-          background: c.$purple;
+        button,
+        a {
           border: 2px solid c.$purple;
-          color: c.$white;
-          padding: 1rem 2rem;
+          background: c.$white;
+          box-shadow: 0;
+          padding: 0.5rem 1rem;
           border-radius: u.$border-radius-subtle;
           font-size: 1.1rem;
           cursor: pointer;
-          font-weight: 700;
           margin-top: 1rem;
-          transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+          transition: color 0.25s ease-in-out, background 0.25s ease-in-out,
+            outline-offset 0.25s linear;
           width: max-content;
           position: relative;
+          outline: 2px solid c.$purple;
+          outline-offset: -2px;
+          display: flex;
+          gap: 0.25rem;
+          align-items: center;
 
-          &::before {
-            content: "";
-            position: absolute;
-            top: -1px;
-            bottom: 0;
-            left: 0;
-            right: 0;
+          &.btn-primary {
             background: c.$purple;
-            z-index: -1;
-            transform: scale(0, 1);
-            transform-origin: top left;
-            transition: transform 0.25s ease-in;
-          }
-
-          &.active {
-            width: 100%;
-            background: c.$white;
-            color: c.$black;
-            border-radius: 0;
             border: 2px solid c.$purple;
-
-            &:hover {
-              outline: none;
-              color: c.$black;
-            }
-          }
-
-          &.btn-secondary {
-            background: c.$lightpurple;
-            color: c.$black;
-          }
-
-          &:hover {
             color: c.$white;
+          }
 
-            &::before {
-              transform: scale(1, 1);
-            }
+          &:is(:hover, :focus) {
+            outline-offset: 2px;
           }
         }
 

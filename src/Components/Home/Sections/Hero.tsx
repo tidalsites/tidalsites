@@ -3,14 +3,10 @@ import characters from "../../../Assets/characters.png";
 import background from "../../../Assets/Background.png";
 
 interface IHeroProps {
-  contactDropdownActive: boolean;
-  setContactDropdownActive: Dispatch<SetStateAction<boolean>>;
+  setShowContactModal: Dispatch<SetStateAction<boolean>>;
 }
 
-export const Hero: FC<IHeroProps> = ({
-  contactDropdownActive,
-  setContactDropdownActive,
-}) => {
+export const Hero: FC<IHeroProps> = ({ setShowContactModal }) => {
   return (
     <section className="Home__hero Home__section">
       <div className="Home__hero__left">
@@ -25,13 +21,20 @@ export const Hero: FC<IHeroProps> = ({
           is both functional and beautiful.
         </p>
         <div className="Home__hero__left__cta cta">
-          <button
-            onClick={() => setContactDropdownActive(true)}
-            className={contactDropdownActive ? "active" : ""}
-          >
-            {contactDropdownActive ? "Ask for Devin!" : "Contact Us"}
+          <button onClick={() => setShowContactModal(true)}>
+            <span className="material-icons" role="img">
+              email
+            </span>
+            Get Quote
           </button>
-          <div
+          <a href="tel:757-550-0830" className="btn-primary">
+            <span className="material-icons" role="img">
+              phone
+            </span>
+            Call now
+          </a>
+
+          {/* <div
             className={`Home__hero__left__cta__dropdown ${
               contactDropdownActive ? "active" : ""
             }`}
@@ -50,7 +53,7 @@ export const Hero: FC<IHeroProps> = ({
                 tidalsites@gmail.com
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="Home__hero__right">

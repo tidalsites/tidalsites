@@ -12,7 +12,7 @@ import { Services } from "../Services/Services";
 import { Footer } from "../Footer/Footer";
 
 export const App: FC = () => {
-  const [showContactModal, setShowContactModal] = useState<boolean>(true);
+  const [showContactModal, setShowContactModal] = useState<boolean>(false);
 
   useEffect(() => {
     showContactModal
@@ -23,10 +23,10 @@ export const App: FC = () => {
     <div className="App">
       <Router>
         {/* <Banner text="This site is still under construction. Please be patient as we build out our own experience" /> */}
-        <Navbar setShowContactModal={setShowContactModal} />
+        <Navbar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home setShowContactModal={setShowContactModal} />
           </Route>
           <Route exact path="/portfolio">
             <Portfolio />

@@ -30,15 +30,13 @@
         text-transform: uppercase;
         font-weight: 700;
         font-size: 2.15rem;
-        // margin-left: 5px;
-        // color: #555;
       }
     }
 
     &__burger {
       padding: 10px 0;
       span {
-        font-size: 44px;
+        font-size: 32px;
         cursor: pointer;
         outline: 3px solid c.$black;
         transition: all 180ms ease-in-out;

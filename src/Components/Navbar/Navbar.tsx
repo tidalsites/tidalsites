@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Assets/logo.svg";
 import "./Navbar.scss";
 
-interface INavbarProps {
-  setShowContactModal: Dispatch<SetStateAction<boolean>>;
-}
-
-export const Navbar: FC<INavbarProps> = ({ setShowContactModal }) => {
+export const Navbar: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
   const activateDropdown = () => {
@@ -57,9 +53,6 @@ export const Navbar: FC<INavbarProps> = ({ setShowContactModal }) => {
               <Link to="/portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
               </Link>
-            </li>
-            <li>
-              <button onClick={() => setShowContactModal(true)}>CONTACT</button>
             </li>
           </ul>
         </div>
