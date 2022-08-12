@@ -17,8 +17,8 @@ export const Footer: FC = () => {
             <span className="material-icons" role="img">
               email
             </span>
-            <a href="mailto:tidalsites@gmail.com?subject=Inquiry">
-              tidalsites@gmail.com
+            <a href="mailto:devin@tidalsites.com?subject=Inquiry">
+              devin@tidalsites.com
             </a>
           </div>
         </div>
