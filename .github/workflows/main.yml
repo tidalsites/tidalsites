@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         #Setup AWS
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -37,7 +37,7 @@ jobs:
       - run: CI= npm run build
       - name: Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.8.x
+          npm install -g @lhci/cli@0.9.x
           lhci autorun
       - run: npm run s3-cleanup
       - run: npm run deploy
