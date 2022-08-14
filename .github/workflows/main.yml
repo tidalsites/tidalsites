@@ -35,9 +35,9 @@ jobs:
           node-version: "18"
       - run: npm ci
       - run: CI= npm run build
-      - name: Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.9.x
-          lhci autorun
+      # - name: Lighthouse CI
+      #   run: |
+      #     npm install -g @lhci/cli@0.9.x
+      #     lhci autorun
       - run: npm run s3-cleanup
       - run: npm run deploy
