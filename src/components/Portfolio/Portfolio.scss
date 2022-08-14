@@ -1,0 +1,116 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+$min-width: 600px;
+
+.Portfolio {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  max-width: u.$page-max-width;
+  margin: 0 auto;
+
+  &__header {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    gap: 3rem;
+
+    &__websites {
+      @media (min-width: $min-width) {
+        display: flex;
+      }
+
+      &__header {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        padding: 1rem 0;
+        background: c.$black;
+        color: c.$white;
+        margin-left: -10px;
+        padding-left: 10px;
+        margin-bottom: 2rem;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        max-width: 300px;
+
+        @media (min-width: 600px) {
+          transform: rotate(180deg);
+          writing-mode: vertical-lr;
+          text-orientation: mixed;
+          justify-content: flex-end;
+          text-decoration: none;
+          padding-bottom: 0;
+          background: c.$white;
+          color: c.$black;
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+
+      &__sites {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    &__logos {
+      @media (min-width: $min-width) {
+        display: flex;
+      }
+
+      &__header {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        padding: 1rem 0;
+        background: c.$black;
+        color: c.$white;
+        margin-left: -10px;
+        padding-left: 10px;
+        margin-bottom: 2rem;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        max-width: 300px;
+
+        @media (min-width: 600px) {
+          transform: rotate(180deg);
+          writing-mode: vertical-lr;
+          text-orientation: mixed;
+          justify-content: flex-end;
+          text-decoration: none;
+          padding-bottom: 0;
+          background: c.$white;
+          color: c.$black;
+          margin-left: 0;
+          padding-left: 0;
+        }
+      }
+
+      &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-grow: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        img {
+          height: 75px;
+        }
+      }
+    }
+  }
+}
