@@ -56,6 +56,9 @@ export const Navbar: FC = () => {
             </li>
           </ul>
         </div>
+        <Link className="Navbar__cta" to="/invoice">
+          Pay Invoice
+        </Link>
         <div
           className={`Navbar__nav__links-mobile ${
             dropdownActivated ? "open" : ""

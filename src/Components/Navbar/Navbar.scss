@@ -51,6 +51,7 @@
 
     &__links {
       display: none;
+      flex-grow: 1;
 
       ul {
         display: flex;
@@ -152,11 +153,24 @@
       }
     }
   }
+
+  &__cta {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .Navbar__nav__links {
     display: flex;
+    justify-content: flex-end;
+  }
+
+  .Navbar__cta {
+    display: flex;
+    margin-inline: 1rem;
+    background-color: c.$purple;
+    color: c.$white;
+    padding: 0.25rem 0.75rem;
   }
 
   .Navbar__nav__burger {

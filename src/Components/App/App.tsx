@@ -11,6 +11,7 @@ import { Portfolio } from "../Portfolio/Portfolio";
 import { Services } from "../Services/Services";
 import { Footer } from "../Footer/Footer";
 import { NotFound } from "../NotFound/NotFound";
+import { Invoice } from "../Invoice/Invoice";
 
 export const App: FC = () => {
   const [showContactModal, setShowContactModal] = useState<boolean>(false);
@@ -34,6 +35,9 @@ export const App: FC = () => {
           </Route>
           <Route exact path="/services">
             <Services />
+          </Route>
+          <Route exact path="/invoice">
+            <Invoice />
           </Route>
           <Route path="*">
             <NotFound />
