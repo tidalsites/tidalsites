@@ -1,10 +1,27 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 export const Footer: FC = () => {
   return (
     <div className="Footer">
       <div className="Footer__wrapper">
+        <nav aria-label="Footer Navigation" className="Footer__nav">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <a href="/services">Services</a>
+            </li>
+            <li>
+              <a href="/#Process">Process</a>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+          </ul>
+        </nav>
         <div className="Footer__contact">
           <span className="Footer__contact__header">Contact Us Today</span>
           <div className="Footer__contact__phone">

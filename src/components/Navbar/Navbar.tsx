@@ -34,7 +34,7 @@ export const Navbar: FC = () => {
             menu_open
           </span>
         </div>
-        <div className="Navbar__nav__links">
+        <nav aria-label="Primary Navigation" className="Navbar__nav__links">
           <ul>
             <li>
               <Link to="/">HOME</Link>
@@ -55,7 +55,7 @@ export const Navbar: FC = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
         <div
           className={`Navbar__nav__links-mobile ${
             dropdownActivated ? "open" : ""

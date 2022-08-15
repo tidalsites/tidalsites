@@ -437,9 +437,6 @@ $portfolio-breakpoint: 800px;
 
   // Portfolio
   &__portfolio {
-    width: 100%;
-    max-width: unset;
-    font-size: 1.2rem;
     line-height: 1.7;
 
     &__header {
@@ -457,6 +454,31 @@ $portfolio-breakpoint: 800px;
       color: c.$white;
       outline: 2px solid c.$white;
       outline-offset: -8px;
+      font-size: 1.2rem;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background-color: rgba(c.$white, 0.4);
+        top: -150px;
+        left: -150px;
+        border-radius: 50%;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        background-color: rgba(c.$white, 0.6);
+        bottom: -150px;
+        right: -150px;
+        border-radius: 50%;
+      }
 
       > p {
         max-width: 50ch;
@@ -471,10 +493,13 @@ $portfolio-breakpoint: 800px;
         color: c.$black;
         border-radius: 5px;
         width: max-content;
+        transition: outline-offset 250ms ease-in-out;
+        outline: 2px solid c.$white;
+        outline-offset: -2px;
 
-        .material-icons {
-          font-weight: 700;
-          font-size: 30px;
+        &:hover,
+        &:focus-within {
+          outline-offset: 2px;
         }
       }
     }
