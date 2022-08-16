@@ -3,6 +3,10 @@
 
 .Navbar {
   width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: white;
 
   &__nav {
     max-width: u.$page-max-width;
@@ -92,20 +96,17 @@
     &__links-mobile {
       position: fixed;
       inset: 0;
-      transform: translateY(-100%);
-      display: none;
+      transform: translateY(-100vh);
       justify-content: center;
       background: c.$black;
       overflow: hidden;
-      transition: transform 0.5s ease-in-out, opacity 0.75s ease-in;
-      opacity: 0;
+      transition: transform 450ms linear;
       z-index: 5;
 
       &.open {
         display: flex;
         flex-direction: column;
         opacity: 1;
-
         transform: translateY(0);
       }
 
@@ -138,7 +139,6 @@
           &:hover,
           &:focus {
             background: c.$white;
-            // outline: 5px solid c.$black;
             a {
               color: c.$black;
             }

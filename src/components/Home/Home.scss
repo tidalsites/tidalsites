@@ -1,5 +1,6 @@
 @use "src/styles/Utilities.scss" as u;
 @use "src/styles/Colors.scss" as c;
+@use "src/styles/Animations.scss";
 
 $portfolio-breakpoint: 800px;
 
@@ -21,7 +22,7 @@ $portfolio-breakpoint: 800px;
   &__hero {
     display: flex;
     flex-wrap: wrap;
-    min-height: calc(100vh - 70px);
+    height: 100vh;
     position: relative;
     padding: 0 10px;
     width: 100%;
@@ -503,26 +504,5 @@ $portfolio-breakpoint: 800px;
         }
       }
     }
-  }
-}
-
-@keyframes shiftUp {
-  0% {
-    transform: translateY(100%);
-  }
-  75% {
-    transform: translateY(-10%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
