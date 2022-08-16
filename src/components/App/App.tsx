@@ -11,6 +11,7 @@ import { Portfolio } from "../Portfolio/Portfolio";
 import { Services } from "../Services/Services";
 import { Footer } from "../Footer/Footer";
 import { NotFound } from "../NotFound/NotFound";
+import { Process } from "../Process/Process";
 
 export const App: FC = () => {
   const [showContactModal, setShowContactModal] = useState<boolean>(false);
@@ -31,9 +32,8 @@ export const App: FC = () => {
             element={<Home setShowContactModal={setShowContactModal} />}
           />
           <Route path="/portfolio" element={<Portfolio />} />
-
           <Route path="/services" element={<Services />} />
-
+          <Route path="/process" element={<Process />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

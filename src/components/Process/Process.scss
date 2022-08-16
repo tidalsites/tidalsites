@@ -1,0 +1,75 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+.Process {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: u.$navbar-height;
+  max-width: 90em;
+
+  p {
+    max-width: 70ch;
+  }
+
+  &__header {
+    width: fit-content;
+    padding: 10px;
+
+    h1 {
+      background-color: c.$black;
+      color: c.$white;
+      outline: 2px solid c.$white;
+      outline-offset: -4px;
+      padding: 1rem 2rem 1rem 1rem;
+      border-radius: 0 1rem 1rem 0;
+      width: fit-content;
+    }
+
+    span {
+      padding-block: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__stage {
+    h2 {
+      position: relative;
+      background-color: c.$black;
+      color: white;
+      isolation: isolate;
+      width: fit-content;
+      margin-block: 2rem;
+      padding-left: calc(50px + 1rem);
+      padding-right: 1rem;
+      border-top: 2px solid c.$black;
+      border-bottom: 2px solid c.$black;
+      border-radius: 100px 1rem 1rem 0;
+      height: 54px;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        content: "1";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        place-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid c.$black;
+        background-color: white;
+        color: c.$black;
+      }
+    }
+  }
+}
