@@ -9,6 +9,10 @@ import AtoBLogo from "../../assets/atob-logo.png";
 import TidalSitesLogo from "../../assets/tidalsites-logo.png";
 import XPRTHomeLogo from "../../assets/xprt-logo.png";
 
+// Digital Marketing Images
+import brochure from "../../assets/brochure.svg";
+import lockBrochure from "../../assets/lock-brochure.svg";
+
 export const Portfolio: FC = () => {
   return (
     <div className="Portfolio">
@@ -59,6 +63,15 @@ export const Portfolio: FC = () => {
             <img src={AtoBLogo} alt="AtoB Towing Logo" />
             <img src={TidalSitesLogo} alt="Tidal Sites Logo" />
             <img src={XPRTHomeLogo} alt="XPRT Home Logo" />
+          </div>
+        </div>
+        <div className="Portfolio__content__design">
+          <span className="Portfolio__content__design__header">
+            Graphic Design
+          </span>
+          <div className="Portfolio__content__design__items">
+            <img src={brochure} alt="Experto Home Lock Brochure" />
+            <img src={lockBrochure} alt="Experto Home Services Brochure" />
           </div>
         </div>
       </div>
