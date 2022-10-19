@@ -1,0 +1,52 @@
+:root {
+  --black: #111;
+  --white: white;
+  --gold: #c5bd15ff;
+  --blue: #224583;
+  --max-width: 60em;
+  --navbar-height: 120px;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: Rubik, Fira Sans, Ubuntu, Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */

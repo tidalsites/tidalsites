@@ -4,26 +4,23 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "deploy": "aws s3 sync dist/ s3://tidalsites.com",
     "s3-cleanup": "aws s3 rm s3://tidalsites.com/static --recursive"
   },
   "dependencies": {
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.0.1",
     "sass": "^1.54.4",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.7",
-    "vite-plugin-pwa": "^0.12.3"
+    "typescript": "^4.6.4"
   }
 }

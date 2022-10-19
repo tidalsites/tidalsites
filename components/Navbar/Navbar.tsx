@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import logo from "../../assets/logo.svg";
 import "./Navbar.scss";
 
@@ -24,9 +24,9 @@ export const Navbar: FC = () => {
     <div className="Navbar">
       <div className="Navbar__nav">
         <div className="Navbar__nav__logo">
-          <Link to="/">
+          <Link href="/">
             <img src={logo} alt="Tidal Sites logo" />
-            <span>TIDAL SITES</span>
+            {/* <span>TIDAL SITES</span> */}
           </Link>
         </div>
         <div className="Navbar__nav__burger">
@@ -37,7 +37,7 @@ export const Navbar: FC = () => {
         <nav aria-label="Primary Navigation" className="Navbar__nav__links">
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link href="/home">HOME</Link>
             </li>
             <li>
               <a href="/services" onClick={deactivateDropdown}>
@@ -50,7 +50,7 @@ export const Navbar: FC = () => {
               </a>
             </li>
             <li>
-              <Link to="/portfolio" onClick={deactivateDropdown}>
+              <Link href="/portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
               </Link>
             </li>
@@ -69,7 +69,7 @@ export const Navbar: FC = () => {
           </span>
           <ul>
             <li>
-              <Link to="/" onClick={deactivateDropdown}>
+              <Link href="/home" onClick={deactivateDropdown}>
                 HOME
               </Link>
             </li>
@@ -84,7 +84,7 @@ export const Navbar: FC = () => {
               </a>
             </li>
             <li>
-              <Link to="/portfolio" onClick={deactivateDropdown}>
+              <Link href="/portfolio" onClick={deactivateDropdown}>
                 PORTFOLIO
               </Link>
             </li>

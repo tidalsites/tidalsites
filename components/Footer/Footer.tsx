@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import "./Footer.scss";
 
 export const Footer: FC = () => {
@@ -9,16 +9,16 @@ export const Footer: FC = () => {
         <nav aria-label="Footer Navigation" className="Footer__nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/services">Services</a>
+              <Link href="/services">Services</Link>
             </li>
             <li>
               <a href="/#Process">Process</a>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link href="/portfolio">Portfolio</Link>
             </li>
           </ul>
         </nav>

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import checkbox from "../../../assets/checkbox.svg";
+import checkbox from "../../../public/checkbox.svg";
 
 export const Highlights: FC = () => {
   return (

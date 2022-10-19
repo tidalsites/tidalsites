@@ -1,9 +1,10 @@
-import { FC } from "react";
-import webDesignImg from "../../../assets/web-design-img.jpg";
-import WebDevImg from "../../../assets/web-dev-img.jpg";
-import WebDeployImg from "../../../assets/web-deploy-img.jpg";
+import Image from "next/image";
 
-export const Process: FC = () => {
+import webDesignImg from "../../../public/web-design-img.jpg";
+import WebDevImg from "../../../public/web-dev-img.jpg";
+import WebDeployImg from "../../../public/web-deploy-img.jpg";
+
+export const Process = () => {
   return (
     <section className="Home__process Home__section" id="Process">
       <div className="Home__process__header Home__section__header">
@@ -20,7 +21,7 @@ export const Process: FC = () => {
             design process ensures that you are happy with the look and feel of
             your website before we even start to build anything.
           </p>
-          <img
+          <Image
             src={webDesignImg}
             alt="Notebook with layouts drawn on it and an opened pen"
           />
@@ -33,7 +34,7 @@ export const Process: FC = () => {
             platform and send you a link. This allows you to have a keep
             up-to-date with all the progress we are making.
           </p>
-          <img src={WebDevImg} alt="Laptop with notebook and pen on desk" />
+          <Image src={WebDevImg} alt="Laptop with notebook and pen on desk" />
         </div>
         <div className="Home__process__content__col">
           <span>Deploy</span>
@@ -44,7 +45,7 @@ export const Process: FC = () => {
             leverage Tidal Sites, we ensure a smooth process in making your
             website go live!
           </p>
-          <img src={WebDeployImg} alt="Server rack" />
+          <Image src={WebDeployImg} alt="Server rack" />
         </div>
       </div>
     </section>

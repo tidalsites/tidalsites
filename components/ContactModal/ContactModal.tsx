@@ -5,7 +5,7 @@ import {
   SetStateAction,
   useState,
 } from "react";
-import "./ContactModal.scss";
+// import "./ContactModal.scss";
 
 interface ValidationErrors {
   firstname: string;

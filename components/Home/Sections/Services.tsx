@@ -1,19 +1,23 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import styles from "../../../styles/ServiceSection.module.scss";
 
 export const Services: FC = () => {
+  const { services__header, services__list } = styles;
   return (
     <section className="Home__services Home__section" id="Services">
-      <div className="Home__services__header Home__section__header">
+      <div className={services__header}>
         <span>SERVICES</span>
-        <Link to="/services">
-          View all services
-          <span className="material-icons" role="img">
-            east
-          </span>
+        <Link href="/services">
+          <>
+            View all services
+            <span className="material-icons" role="img">
+              east
+            </span>
+          </>
         </Link>
       </div>
-      <div className="Home__services__list">
+      <div className={services__list}>
         <ul>
           <li>
             <span className="material-icons" role="img">
