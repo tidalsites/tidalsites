@@ -1,16 +1,18 @@
 import { FC } from "react";
-import "./PortfolioPiece.scss";
+// import "./PortfolioPiece.scss";
+import styles from "../../../styles/PortfolioPiece.module.scss";
+import Image from "next/image";
 
-import ProsoftWeb from "../../../assets/prosoft-web.png";
-import ProsoftMobile from "../../../assets/prosoft-mobile.png";
-import AtoBWeb from "../../../assets/atob-web.png";
-import AtoBMobile from "../../../assets/atob-mobile.png";
-import HHGWeb from "../../../assets/hartshollergraphics-web.png";
-import HHGMobile from "../../../assets/hartshollergraphics-mobile.png";
-import DWBWeb from "../../../assets/dwbuilders-web.png";
-import DWBMobile from "../../../assets/dwbuilders-mobile.png";
-import XPRTHomeWeb from "../../../assets/xprt-web.png";
-import XPRTHomeMobile from "../../../assets/xprt-mobile.png";
+import ProsoftWeb from "../../../public/prosoft-web.png";
+import ProsoftMobile from "../../../public/prosoft-mobile.png";
+import AtoBWeb from "../../../public/atob-web.png";
+import AtoBMobile from "../../../public/atob-mobile.png";
+import HHGWeb from "../../../public/hartshollergraphics-web.png";
+import HHGMobile from "../../../public/hartshollergraphics-mobile.png";
+import DWBWeb from "../../../public/dwbuilders-web.png";
+import DWBMobile from "../../../public/dwbuilders-mobile.png";
+import XPRTHomeWeb from "../../../public/xprt-web.png";
+import XPRTHomeMobile from "../../../public/xprt-mobile.png";
 
 interface IPortfolioPieceProps {
   project_name: string;
@@ -25,6 +27,7 @@ export const PortfolioPiece: FC<IPortfolioPieceProps> = ({
   project_img_alt,
   project_type,
 }) => {
+  const { portfolioPiece, name, corner, img, type } = styles;
   let web_image = ProsoftWeb;
   let mobile_image = ProsoftMobile;
   switch (project_img) {
@@ -48,14 +51,14 @@ export const PortfolioPiece: FC<IPortfolioPieceProps> = ({
       break;
   }
   return (
-    <div className="PortfolioPiece">
-      <div className="PortfolioPiece__name">{project_name}</div>
-      <div className="PortfolioPiece__corner"></div>
-      <div className="PortfolioPiece__img">
-        <img src={web_image} alt={project_img_alt} />
-        <img src={mobile_image} alt="AtoB Towing Mobile Website view" />
+    <div className={portfolioPiece}>
+      <div className={name}>{project_name}</div>
+      <div className={corner}></div>
+      <div className={img}>
+        <Image src={web_image} alt={project_img_alt} />
+        <Image src={mobile_image} alt="AtoB Towing Mobile Website view" />
       </div>
-      <div className="PortfolioPiece__type">{project_type}</div>
+      <div className={type}>{project_type}</div>
     </div>
   );
 };

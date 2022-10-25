@@ -21,6 +21,7 @@ $purple: #8a3fa2;
     margin-top: -10px;
     font-size: 18px;
     justify-content: space-between;
+    margin-left: 10px;
 
     .material-icons {
       font-weight: 700;
@@ -60,35 +61,35 @@ $purple: #8a3fa2;
         box-shadow: 0px 0px 3px 1px $darkgray;
       }
 
-      span.service-name {
-        font-size: clamp(1.5rem, 10vw, 2.2rem);
-        padding: 1rem 0;
-        display: flex;
-        grid-area: name;
-        align-items: flex-end;
-        border-bottom: 3px solid $black;
-      }
+      // span.service-name {
+      //   font-size: clamp(1.5rem, 10vw, 2.2rem);
+      //   padding: 1rem 0;
+      //   display: flex;
+      //   grid-area: name;
+      //   align-items: flex-end;
+      //   border-bottom: 3px solid $black;
+      // }
 
-      span.material-icons {
-        grid-area: icon;
-        border-radius: 50%;
-        display: grid;
-        place-content: center;
-        border: 3px solid $black;
-        position: relative;
-        font-size: 36px;
-        color: $purple;
+      // span.material-icons {
+      //   grid-area: icon;
+      //   border-radius: 50%;
+      //   display: grid;
+      //   place-content: center;
+      //   border: 3px solid $black;
+      //   position: relative;
+      //   font-size: 36px;
+      //   color: $purple;
 
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: -3px;
-          left: -3px;
-          width: 50%;
-          height: 2.5px;
-          background-color: $black;
-        }
-      }
+      //   &::after {
+      //     content: "";
+      //     position: absolute;
+      //     bottom: -3px;
+      //     left: -3px;
+      //     width: 50%;
+      //     height: 2.5px;
+      //     background-color: $black;
+      //   }
+      // }
 
       p {
         background: $purple;
@@ -99,5 +100,35 @@ $purple: #8a3fa2;
         z-index: 2;
       }
     }
+  }
+}
+
+.service__name {
+  font-size: clamp(1.5rem, 10vw, 2.2rem);
+  padding: 1rem 0;
+  display: flex;
+  grid-area: name;
+  align-items: flex-end;
+  border-bottom: 3px solid $black;
+}
+
+.service__icon {
+  grid-area: icon;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 3px solid $black;
+  position: relative;
+  font-size: 36px;
+  color: $purple;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    width: 50%;
+    height: 2.5px;
+    background-color: $black;
   }
 }

@@ -1,25 +1,28 @@
 import { FC } from "react";
 import checkbox from "../../../public/checkbox.svg";
+import Image from "next/image";
+import styles from "../../../styles/HighlightsSection.module.scss";
 
 export const Highlights: FC = () => {
+  const { highlights, wrapper, highlight } = styles;
   return (
-    <div className="Home__Highlights">
+    <div className={highlights}>
       <span>Tidal Sites builds professional websites that always include:</span>
-      <div className="Home__Highlights__wrapper">
-        <div className="Home__Highlights__Highlight">
-          <img src={checkbox} alt="Checkbox" />
+      <div className={wrapper}>
+        <div className={highlight}>
+          <Image src={checkbox} width="25" height="25" alt="Checkbox" />
           <span>SEO</span>
         </div>
-        <div className="Home__Highlights__Highlight">
-          <img src={checkbox} alt="Checkbox" />
+        <div className={highlight}>
+          <Image src={checkbox} width="25" height="25" alt="Checkbox" />
           <span>Mobile Responsiveness</span>
         </div>
-        <div className="Home__Highlights__Highlight">
-          <img src={checkbox} alt="Checkbox" />
+        <div className={highlight}>
+          <Image src={checkbox} width="25" height="25" alt="Checkbox" />
           <span>508 (Accessibility)</span>
         </div>
-        <div className="Home__Highlights__Highlight">
-          <img src={checkbox} alt="Checkbox" />
+        <div className={highlight}>
+          <Image src={checkbox} width="25" height="25" alt="Checkbox" />
           <span>Performance Optimizations</span>
         </div>
       </div>

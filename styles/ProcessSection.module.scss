@@ -1,0 +1,144 @@
+$black: #333;
+$white: #fefefe;
+$darkgray: #666;
+$lightpurple: #edf;
+$purple: #8a3fa2;
+$gold: #d1c300;
+$error: #dd3232;
+$success: #32dd32;
+
+$page-max-width: 90em;
+$border-radius-subtle: 5px;
+$border-radius-rounded: 500px;
+$navbar-height: 70px;
+
+.process {
+  padding-inline: 1rem;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  button {
+    background: $black;
+    color: white;
+    border: none;
+    box-shadow: none;
+    padding: 10px 30px;
+    border-radius: $border-radius-subtle;
+    cursor: pointer;
+    height: fit-content;
+    display: none;
+
+    &:hover {
+      border: 1px solid $black;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vw 0;
+  gap: 3rem;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.col {
+  width: 100%;
+  max-width: 500px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 4px 2px #dedede;
+  border-radius: $border-radius-subtle;
+  isolation: isolate;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    width: 40%;
+    background-color: $purple;
+    border-right: 8px double $white;
+    border-left: 8px double $white;
+    height: 100%;
+    z-index: -1;
+  }
+
+  span {
+    font-size: 2.75rem;
+    background-color: $white;
+    margin-top: 1rem;
+    position: relative;
+    border-top: 2px solid $purple;
+    padding: 1rem;
+
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   content: "";
+    //   display: grid;
+    //   place-content: center;
+    //   font-size: clamp(5rem, 10vw, 7rem);
+    //   border-radius: 50%;
+    //   width: 50%;
+    //   max-width: 180px;
+    //   aspect-ratio: 1/1;
+    //   z-index: -1;
+    //   background: rgba($purple, 0.1);
+    //   color: white;
+    // }
+  }
+
+  // &:nth-child(1) > span::before {
+  //   content: "1";
+  // }
+
+  // &:nth-child(2) > span::before {
+  //   content: "2";
+  // }
+
+  // &:nth-child(3) > span::before {
+  //   content: "3";
+  // }
+
+  p {
+    padding: 1.5rem 1rem;
+    max-width: 60ch;
+    font-size: clamp(12px, 5vw, 16px);
+    background-color: $white;
+    margin-bottom: 1rem;
+  }
+
+  span > span > img {
+    width: 100%;
+    background-color: $black;
+    margin-bottom: 3rem;
+  }
+
+  // @media screen and (min-width: 1200px) {
+  //   width: calc(33% - 30px);
+
+  //   &:nth-child(2) {
+  //     span {
+  //       order: 2;
+  //     }
+
+  //     p {
+  //       order: 3;
+  //     }
+
+  //     img {
+  //       order: 1;
+  //     }
+  //   }
+  // }
+}
