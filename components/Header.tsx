@@ -58,11 +58,11 @@ export const Header: FC = () => {
                 {/* </span> */}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a href="/#Process" onClick={deactivateDropdown}>
                 PROCESS
               </a>
-            </li>
+            </li> */}
             <li>
               <Link href="/portfolio">
                 {/* <span onClick={deactivateDropdown}> */}

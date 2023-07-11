@@ -104,6 +104,13 @@ $min-width: 600px;
   }
 }
 
+.logo__items__img {
+  height: 75px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+}
+
 .design {
   @media (min-width: $min-width) {
     display: flex;
@@ -179,6 +186,9 @@ $min-width: 600px;
     background: $white;
     color: $black;
     margin-left: 0;
+    margin-bottom: 0;
     padding-left: 0;
+    border-radius: 0;
+    padding-inline: 1rem;
   }
 }

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 // import "./Portfolio.scss";
 import styles from "../styles/Portfolio.module.scss";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import DictumSquareLogo from "../public/dictum-square-logo.png";
 import AtoBLogo from "../public/atob-logo.png";
 import TidalSitesLogo from "../public/tidalsites-logo.png";
 import XPRTHomeLogo from "../public/xprt-logo.png";
+import placeholder from "../public/placeholder-img.png";
 
 // Digital Marketing Images
 import brochure from "../public/brochure.svg";
@@ -24,10 +25,15 @@ const Portfolio: FC = () => {
     sites,
     logos,
     logo__items,
+    logo__items__img,
     design,
     design__items,
     section__header,
   } = styles;
+
+  const [firstGraphicLoaded, setFirstGraphicLoaded] = useState<boolean>(false);
+  const [secondGraphicLoaded, setSecondGraphicLoaded] =
+    useState<boolean>(false);
   return (
     <div className={portfolio}>
       <div className={header}>
@@ -72,18 +78,69 @@ const Portfolio: FC = () => {
         <div className={logos}>
           <span className={section__header}>LOGOS</span>
           <div className={logo__items}>
-            <Image src={GladiatorLogo} alt="Gladiator Home Services Logo" />
-            <Image src={DictumSquareLogo} alt="Dictum Labs Logo" />
-            <Image src={AtoBLogo} alt="AtoB Towing Logo" />
-            <Image src={TidalSitesLogo} alt="Tidal Sites Logo" />
-            <Image src={XPRTHomeLogo} alt="XPRT Home Logo" />
+            <div className={logo__items__img}>
+              <Image src={GladiatorLogo} alt="Gladiator Home Services Logo" />
+            </div>
+            <div className={logo__items__img}>
+              <Image src={DictumSquareLogo} alt="Dictum Labs Logo" />
+            </div>
+            <div className={logo__items__img}>
+              <Image src={AtoBLogo} alt="AtoB Towing Logo" />
+            </div>
+
+            <div className={logo__items__img}>
+              <Image src={TidalSitesLogo} alt="Tidal Sites Logo" />
+            </div>
+
+            <div className={logo__items__img}>
+              <Image src={XPRTHomeLogo} alt="XPRT Home Logo" />
+            </div>
           </div>
         </div>
         <div className={design}>
           <span className={section__header}>Graphic Design</span>
           <div className={design__items}>
-            <Image src={brochure} alt="Experto Home Lock Brochure" />
-            <Image src={lockBrochure} alt="Experto Home Services Brochure" />
+            <Image
+              onLoad={() => setFirstGraphicLoaded(true)}
+              src={brochure}
+              alt="Experto Home Lock Brochure"
+              style={{
+                visibility: `${firstGraphicLoaded ? "visible" : "hidden"}`,
+              }}
+              width="200"
+              height="282"
+            />
+            {!firstGraphicLoaded && (
+              <Image
+                style={{
+                  display: `${!firstGraphicLoaded ? "block" : "none"}`,
+                }}
+                src={placeholder}
+                width="200"
+                height="282"
+              />
+            )}
+
+            <Image
+              onLoad={() => setSecondGraphicLoaded(true)}
+              src={lockBrochure}
+              alt="Experto Home Services Brochure"
+              style={{
+                visibility: `${secondGraphicLoaded ? "visible" : "hidden"}`,
+              }}
+              width="200"
+              height="282"
+            />
+            {!secondGraphicLoaded && (
+              <Image
+                style={{
+                  display: `${!secondGraphicLoaded ? "block" : "none"}`,
+                }}
+                src={placeholder}
+                width="200"
+                height="282"
+              />
+            )}
           </div>
         </div>
       </div>

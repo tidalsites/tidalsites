@@ -53,12 +53,12 @@ export const PortfolioPiece: FC<IPortfolioPieceProps> = ({
   return (
     <div className={portfolioPiece}>
       <div className={name}>{project_name}</div>
-      <div className={corner}></div>
+      {/* <div className={corner}></div> */}
       <div className={img}>
         <Image src={web_image} alt={project_img_alt} />
-        <Image src={mobile_image} alt="AtoB Towing Mobile Website view" />
+        {/* <Image src={mobile_image} alt="AtoB Towing Mobile Website view" /> */}
       </div>
-      <div className={type}>{project_type}</div>
+      {/* <div className={type}>{project_type}</div> */}
     </div>
   );
 };

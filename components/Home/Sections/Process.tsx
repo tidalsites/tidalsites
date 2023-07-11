@@ -4,7 +4,7 @@ import home_styles from "../../../styles/Home.module.scss";
 
 // Images
 import webDesignImg from "../../../public/web-design-img.jpg";
-import webDesignIllustration from "../../../public/web-design-illustration.svg";
+// import webDesignIllustration from "../../../public/web-design-illustration.svg";
 import WebDevImg from "../../../public/web-dev-img.jpg";
 import WebDeployImg from "../../../public/web-deploy-img.jpg";
 
@@ -21,7 +21,7 @@ export const Process = () => {
         <div className={col}>
           <span>Design</span>
           <Image
-            src={webDesignIllustration}
+            src={webDesignImg}
             alt="Notebook with layouts drawn on it and an opened pen"
           />
           <p>
