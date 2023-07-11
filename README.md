@@ -19,7 +19,7 @@ This project is the official website for Tidal Sites, LLC.
 - **CSS:** Sass with BEM
 - **Build Tool:** Vite
 - **CI/CD Pipeline:** Github actions
-- **Deployment Environment:** AWS S3 Bucket
+- **Deployment Environment:** AWS Amplify
 
 ## Color Palette
 
