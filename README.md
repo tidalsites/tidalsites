@@ -18,7 +18,7 @@ This project is the official website for Tidal Sites, LLC.
 - **FrontEnd Framework:** React w/ Typescript
 - **CSS:** Sass with BEM
 - **Build Tool:** Vite
-- **CI/CD Pipeline:** Github actions
+- **CI/CD Pipeline:** AWS Amplify
 - **Deployment Environment:** AWS Amplify
 
 ## Color Palette
