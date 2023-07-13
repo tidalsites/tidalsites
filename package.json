@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "deploy": "aws s3 sync dist/ s3://tidalsites.com",
-    "s3-cleanup": "aws s3 rm s3://tidalsites.com/static --recursive"
+    "start": "next start"
   },
   "dependencies": {
     "next": "^12.3.1",
