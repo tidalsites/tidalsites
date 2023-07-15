@@ -9,13 +9,13 @@
   background-color: white;
 
   &__nav {
-    max-width: u.$page-max-width;
+    max-width: u.var(--page-max-width);
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: auto;
     padding: 0 10px;
-    height: u.$navbar-height;
+    height: u.var(--navbar-height);
 
     &__logo {
       padding: 10px 0;
@@ -42,13 +42,13 @@
       span {
         font-size: 32px;
         cursor: pointer;
-        outline: 3px solid c.$black;
+        outline: 3px solid c.var(--black);
         transition: all 180ms ease-in-out;
 
         &:hover,
         &:focus {
-          color: c.$white;
-          background: c.$black;
+          color: c.var(--white);
+          background: c.var(--black);
         }
       }
     }
@@ -64,13 +64,13 @@
 
         li {
           a {
-            color: c.$black;
+            color: c.var(--black);
             position: relative;
             padding-block: 0.25rem;
             transition: color 250ms linear;
 
             &:hover {
-              color: c.$purple;
+              color: c.var(--purple);
 
               &::after {
                 width: 100%;
@@ -85,7 +85,7 @@
               left: 50%;
               width: 0;
               height: 2px;
-              background-color: c.$purple;
+              background-color: c.var(--purple);
               transition: all 250ms linear;
             }
           }
@@ -98,7 +98,7 @@
       inset: 0;
       transform: translateY(-100vh);
       justify-content: center;
-      background: c.$black;
+      background: c.var(--black);
       overflow: hidden;
       transition: transform 450ms linear;
       z-index: 5;
@@ -138,14 +138,14 @@
 
           &:hover,
           &:focus {
-            background: c.$white;
+            background: c.var(--white);
             a {
-              color: c.$black;
+              color: c.var(--black);
             }
           }
 
           a {
-            color: c.$white;
+            color: c.var(--white);
             font-size: clamp(24px, 4vw, 32px);
           }
         }

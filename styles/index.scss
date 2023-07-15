@@ -16,12 +16,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: "Rubik", "Fira Sans", "Ubuntu", "Roboto", sans-serif;
-  color: c.$black;
-
-  &.no-scroll {
-    overflow: hidden;
-    height: 100vh;
-  }
+  color: c.var(--black);
 }
 
 code {
@@ -31,7 +26,7 @@ code {
 
 a {
   text-decoration: none;
-  color: c.$black;
+  color: c.var(--black);
 }
 
 ul {

@@ -1,30 +1,12 @@
-$black: #333;
-$white: #fefefe;
-$darkgray: #666;
-$lightpurple: #edf;
-$purple: #8a3fa2;
-$gold: #d1c300;
-$error: #dd3232;
-$success: #32dd32;
-
-$page-max-width: 90em;
-$border-radius-subtle: 5px;
-$border-radius-rounded: 500px;
-$navbar-height: 70px;
-
 $min-width: 600px;
 
 .portfolio {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
-  max-width: $page-max-width;
+  max-width: var(--page-max-width);
   margin: 0 auto;
-}
-
-.header {
-  font-size: 2.5rem;
-  margin-top: 2rem;
+  margin-top: var(--navbar-height);
 }
 
 .content {
@@ -34,12 +16,6 @@ $min-width: 600px;
   gap: 3rem;
 }
 
-.websites {
-  @media (min-width: $min-width) {
-    display: flex;
-  }
-}
-
 .sites {
   display: flex;
   flex-direction: column;
@@ -47,68 +23,22 @@ $min-width: 600px;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .logos {
   padding-block: 2rem;
-  position: relative;
-  border-top: 1rem double $white;
-  border-bottom: 1rem double $white;
-
-  @media (min-width: $min-width) {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba($black, 0.15);
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    padding: 1rem 0;
-    background: $black;
-    color: $white;
-    margin-left: -10px;
-    padding-left: 10px;
-    margin-bottom: 2rem;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
-    max-width: 300px;
-
-    @media (min-width: 600px) {
-      transform: rotate(180deg);
-      writing-mode: vertical-lr;
-      text-orientation: mixed;
-      justify-content: flex-end;
-      text-decoration: none;
-      background-color: unset;
-      color: $black;
-      margin-left: 0;
-      margin-inline: auto;
-    }
-  }
 }
 
 .logo__items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-grow: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-
-  img {
-    height: 75px;
-  }
-}
-
-.logo__items__img {
-  height: 75px;
-  aspect-ratio: 1;
   display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
   place-content: center;
+  width: 100%;
+  max-width: 80em;
+  gap: 2rem;
+  margin-inline: auto;
+  margin-top: 2rem;
 }
 
 .design {
@@ -121,8 +51,8 @@ $min-width: 600px;
     align-items: center;
     font-size: 2rem;
     padding: 1rem 0;
-    background: $black;
-    color: $white;
+    background: var(--black);
+    color: var(--white);
     margin-left: -10px;
     padding-left: 10px;
     margin-bottom: 2rem;
@@ -138,8 +68,8 @@ $min-width: 600px;
       justify-content: flex-end;
       text-decoration: none;
       padding-bottom: 0;
-      background: $white;
-      color: $black;
+      background: var(--white);
+      color: var(--black);
       margin-left: 0;
       padding-left: 0;
     }
@@ -158,37 +88,33 @@ $min-width: 600px;
 
   img {
     height: min(100vw, 500px);
-    border: 2px solid $black;
+    border: 2px solid var(--black);
   }
 }
 
 .section__header {
-  display: flex;
-  align-items: center;
   font-size: 2rem;
-  padding: 1rem 0;
-  background: $black;
-  color: $white;
-  margin-left: -10px;
-  padding-left: 10px;
-  margin-bottom: 2rem;
-  border-top-right-radius: 200px;
-  border-bottom-right-radius: 200px;
-  max-width: 300px;
+  margin-block: 2rem;
+  background-color: var(--black);
+  color: var(--white);
+  width: fit-content;
+  border-radius: var(--border-radius-subtle);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--white);
+  position: relative;
+  isolation: isolate;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 
-  @media (min-width: 600px) {
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    justify-content: flex-end;
-    text-decoration: none;
-    padding-bottom: 0;
-    background: $white;
-    color: $black;
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    border-radius: 0;
-    padding-inline: 1rem;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    width: 110vw;
+    height: 75%;
+    background-color: var(--black);
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   }
 }

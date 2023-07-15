@@ -1,10 +1,16 @@
 :root {
-  --black: #111;
-  --white: white;
-  --gold: #c5bd15ff;
-  --blue: #224583;
-  --max-width: 60em;
-  --navbar-height: 120px;
+  --black: #333;
+  --white: #fefefe;
+  --darkgray: #666;
+  --lightpurple: #edf;
+  --purple: #8a3fa2;
+  --gold: #d1c300;
+  --error: #dd3232;
+  --success: #32dd32;
+  --page-max-width: 90em;
+  --border-radius-subtle: 5px;
+  --border-radius-rounded: 500px;
+  --navbar-height: 70px;
 }
 
 html,
@@ -14,6 +20,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
   font-family: Rubik, Fira Sans, Ubuntu, Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -41,6 +48,10 @@ ul {
   list-style-type: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

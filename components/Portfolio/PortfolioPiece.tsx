@@ -1,18 +1,18 @@
 import { FC } from "react";
-// import "./PortfolioPiece.scss";
-import styles from "../../../styles/PortfolioPiece.module.scss";
+import styles from "../../styles/PortfolioPiece.module.scss";
 import Image from "next/image";
 
-import ProsoftWeb from "../../../public/prosoft-web.png";
-import ProsoftMobile from "../../../public/prosoft-mobile.png";
-import AtoBWeb from "../../../public/atob-web.png";
-import AtoBMobile from "../../../public/atob-mobile.png";
-import HHGWeb from "../../../public/hartshollergraphics-web.png";
-import HHGMobile from "../../../public/hartshollergraphics-mobile.png";
-import DWBWeb from "../../../public/dwbuilders-web.png";
-import DWBMobile from "../../../public/dwbuilders-mobile.png";
-import XPRTHomeWeb from "../../../public/xprt-web.png";
-import XPRTHomeMobile from "../../../public/xprt-mobile.png";
+import ProsoftWeb from "../../public/prosoft-web.png";
+import ProsoftMobile from "../../public/prosoft-mobile.png";
+import AtoBWeb from "../../public/atob-web.png";
+import AtoBMobile from "../../public/atob-mobile.png";
+import HHGWeb from "../../public/hartshollergraphics-web.png";
+import HHGMobile from "../../public/hartshollergraphics-mobile.png";
+import DWBWeb from "../../public/dwbuilders-web.png";
+import DWBMobile from "../../public/dwbuilders-mobile.png";
+import XPRTHomeWeb from "../../public/xprt-web.png";
+import XPRTHomeMobile from "../../public/xprt-mobile.png";
+import ConcrecalWeb from "../../public/concrecal-web.png";
 
 interface IPortfolioPieceProps {
   project_name: string;
@@ -47,6 +47,8 @@ export const PortfolioPiece: FC<IPortfolioPieceProps> = ({
       web_image = XPRTHomeWeb;
       mobile_image = XPRTHomeMobile;
       break;
+    case "concrecal-web":
+      web_image = ConcrecalWeb;
     default:
       break;
   }

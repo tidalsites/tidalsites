@@ -1,54 +1,29 @@
-$black: #333;
-$white: #fefefe;
-$darkgray: #666;
-$lightpurple: #edf;
-$purple: #8a3fa2;
-$gold: #d1c300;
-$error: #dd3232;
-$success: #32dd32;
-
-// Variables
-$page-max-width: 90em;
-$border-radius-subtle: 5px;
-$border-radius-rounded: 500px;
-$navbar-height: 70px;
-
 .navbar {
   width: 100vw;
   position: fixed;
   top: 0;
   z-index: 2;
-  background-color: white;
-  // border-bottom: 2px solid $purple;
+  background-color: var(--white);
 }
 
 .navbar__nav {
-  max-width: $page-max-width;
+  max-width: var(--page-max-width);
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
   padding: 0 10px;
-  height: $navbar-height;
+  height: var(--navbar-height);
 }
 
 .navbar__nav__logo {
   padding: 10px 0;
 
-  a {
-    display: flex;
-    gap: 0.25rem;
-  }
-
-  img {
-    height: 35px;
-    width: 35px;
-  }
-
   span {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2.15rem;
+    color: var(--black);
   }
 }
 
@@ -57,13 +32,13 @@ $navbar-height: 70px;
   span {
     font-size: 32px;
     cursor: pointer;
-    outline: 3px solid $black;
+    outline: 3px solid var(--black);
     transition: all 180ms ease-in-out;
 
     &:hover,
     &:focus {
-      color: $white;
-      background: $black;
+      color: var(--white);
+      background: var(--black);
     }
   }
 }
@@ -79,13 +54,13 @@ $navbar-height: 70px;
 
     li {
       a {
-        color: $black;
+        color: var(--black);
         position: relative;
         padding-block: 0.25rem;
         transition: color 250ms linear;
 
         &:hover {
-          color: $purple;
+          color: var(--purple);
 
           &::after {
             width: 100%;
@@ -100,7 +75,7 @@ $navbar-height: 70px;
           left: 50%;
           width: 0;
           height: 2px;
-          background-color: $purple;
+          background-color: var(--purple);
           transition: all 250ms linear;
         }
       }
@@ -113,7 +88,7 @@ $navbar-height: 70px;
   inset: 0;
   transform: translateY(-100vh);
   justify-content: center;
-  background: $black;
+  background: var(--black);
   overflow: hidden;
   transition: transform 450ms linear;
   z-index: 5;
@@ -132,8 +107,8 @@ $navbar-height: 70px;
     width: 100%;
     background-color: white;
     min-height: 80vh;
-    border-top: 8px double $purple;
-    border-bottom: 8px double $purple;
+    border-top: 8px double var(--purple);
+    border-bottom: 8px double var(--purple);
 
     li {
       padding: clamp(5px, 5vh, 40px) 0;
@@ -142,9 +117,9 @@ $navbar-height: 70px;
 
       &:hover,
       &:focus {
-        background: $white;
+        background: var(--white);
         a {
-          color: $black;
+          color: var(--black);
         }
       }
 
@@ -166,11 +141,11 @@ $navbar-height: 70px;
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: $purple;
+  background-color: var(--purple);
   border-radius: 50%;
   padding: 0.5rem;
-  color: $white;
-  border: 2px solid $white;
+  color: var(--white);
+  border: 2px solid var(--white);
 
   > span {
     font-size: 1.75rem;

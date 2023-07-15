@@ -1,18 +1,3 @@
-$black: #333;
-$white: #fefefe;
-$darkgray: #666;
-$lightpurple: #edf;
-$purple: #8a3fa2;
-$gold: #d1c300;
-$error: #dd3232;
-$success: #32dd32;
-
-// Variables
-$page-max-width: 90em;
-$border-radius-subtle: 5px;
-$border-radius-rounded: 500px;
-$navbar-height: 70px;
-
 // Classes
 .hidden {
   display: none;
@@ -73,7 +58,7 @@ $portfolio-breakpoint: 800px;
 .Home {
   &__section {
     padding: 3vw 0;
-    max-width: $page-max-width;
+    max-width: var(--page-max-width);
     margin: auto;
     width: 100%;
 
@@ -95,7 +80,7 @@ $portfolio-breakpoint: 800px;
         padding: clamp(10px, 1vw, 15px) 10px;
         border: none;
         box-shadow: none;
-        background: $black;
+        background: var(--black);
         color: white;
         display: flex;
         justify-content: center;
@@ -149,7 +134,7 @@ $portfolio-breakpoint: 800px;
             display: flex;
             grid-area: name;
             align-items: flex-end;
-            border-bottom: 3px solid $black;
+            border-bottom: 3px solid var(--black);
           }
 
           span.material-icons {
@@ -157,10 +142,10 @@ $portfolio-breakpoint: 800px;
             border-radius: 50%;
             display: grid;
             place-content: center;
-            border: 3px solid $black;
+            border: 3px solid var(--black);
             position: relative;
             font-size: 36px;
-            color: $purple;
+            color: var(--purple);
 
             &::after {
               content: "";
@@ -169,12 +154,12 @@ $portfolio-breakpoint: 800px;
               left: -3px;
               width: 50%;
               height: 2.5px;
-              background-color: $black;
+              background-color: var(--black);
             }
           }
 
           p {
-            background: $purple;
+            background: var(--purple);
             color: white;
             padding: 1rem clamp(10px, 3vw, 20px);
             border-radius: 5px;
@@ -191,8 +176,8 @@ $portfolio-breakpoint: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $lightpurple;
-    box-shadow: 0 0 2px 1px $purple;
+    background-color: var(--lightpurple);
+    box-shadow: 0 0 2px 1px var(--purple);
     padding-inline: 1rem;
 
     > span {
@@ -221,15 +206,15 @@ $portfolio-breakpoint: 800px;
       align-items: center;
       gap: 1rem;
       padding: 1rem;
-      background: $white;
-      color: $black;
+      background: var(--white);
+      color: var(--black);
       border-radius: 100vw;
-      box-shadow: 0 0 1px 1px $purple;
+      box-shadow: 0 0 1px 1px var(--purple);
 
       img {
         width: 25px;
         aspect-ratio: 1;
-        background: $white;
+        background: var(--white);
         border-radius: 50%;
       }
 
@@ -247,18 +232,18 @@ $portfolio-breakpoint: 800px;
       justify-content: space-between;
 
       button {
-        background: $black;
+        background: var(--black);
         color: white;
         border: none;
         box-shadow: none;
         padding: 10px 30px;
-        border-radius: $border-radius-subtle;
+        border-radius: var(--border-radius-subtle);
         cursor: pointer;
         height: fit-content;
         display: none;
 
         &:hover {
-          border: 1px solid $black;
+          border: 1px solid var(--black);
         }
       }
     }
@@ -281,7 +266,7 @@ $portfolio-breakpoint: 800px;
 
         span {
           font-size: 2.75rem;
-          border-bottom: 3px solid $black;
+          border-bottom: 3px solid var(--black);
           position: relative;
 
           &::before {
@@ -297,7 +282,7 @@ $portfolio-breakpoint: 800px;
             max-width: 180px;
             aspect-ratio: 1/1;
             z-index: -1;
-            background: rgba($purple, 0.1);
+            background: rgba(var(--purple), 0.1);
             color: white;
           }
         }
@@ -323,7 +308,7 @@ $portfolio-breakpoint: 800px;
         img {
           width: 100%;
           aspect-ratio: 1.5/1;
-          background-color: $black;
+          background-color: var(--black);
           margin-bottom: 3rem;
           outline: 3px solid #c5ba1c;
           outline-offset: -10px;
@@ -365,9 +350,9 @@ $portfolio-breakpoint: 800px;
       flex-direction: column;
       align-items: center;
       padding: 2rem 1rem;
-      background: $black;
-      color: $white;
-      outline: 2px solid $white;
+      background: var(--black);
+      color: var(--white);
+      outline: 2px solid var(--white);
       outline-offset: -8px;
       font-size: 1.2rem;
       position: relative;
@@ -378,7 +363,7 @@ $portfolio-breakpoint: 800px;
         position: absolute;
         height: 300px;
         width: 300px;
-        background-color: rgba($white, 0.4);
+        background-color: rgba(var(--white), 0.4);
         top: -150px;
         left: -150px;
         border-radius: 50%;
@@ -389,7 +374,7 @@ $portfolio-breakpoint: 800px;
         position: absolute;
         height: 300px;
         width: 300px;
-        background-color: rgba($white, 0.6);
+        background-color: rgba(var(--white), 0.6);
         bottom: -150px;
         right: -150px;
         border-radius: 50%;
@@ -404,12 +389,12 @@ $portfolio-breakpoint: 800px;
       &__cta {
         padding: 0.5rem 1rem;
         box-shadow: none;
-        background: $white;
-        color: $black;
+        background: var(--white);
+        color: var(--black);
         border-radius: 5px;
         width: max-content;
         transition: outline-offset 250ms ease-in-out;
-        outline: 2px solid $white;
+        outline: 2px solid var(--white);
         outline-offset: -2px;
 
         &:hover,

@@ -53,23 +53,10 @@ export const Header: FC = () => {
               <Link href="/">HOME</Link>
             </li>
             <li>
-              <Link href="/services">
-                {/* <span onClick={deactivateDropdown}> */}
-                SERVICES
-                {/* </span> */}
-              </Link>
+              <Link href="/services">SERVICES</Link>
             </li>
-            {/* <li>
-              <a href="/#Process" onClick={deactivateDropdown}>
-                PROCESS
-              </a>
-            </li> */}
             <li>
-              <Link href="/portfolio">
-                {/* <span onClick={deactivateDropdown}> */}
-                PORTFOLIO
-                {/* </span> */}
-              </Link>
+              <Link href="/portfolio">PORTFOLIO</Link>
             </li>
           </ul>
         </nav>
@@ -95,11 +82,6 @@ export const Header: FC = () => {
                 <span onClick={deactivateDropdown}>SERVICES</span>
               </Link>
             </li>
-            {/* <li>
-              <a onClick={deactivateDropdown} href="/#Process">
-                PROCESS
-              </a>
-            </li> */}
             <li>
               <Link href="/portfolio">
                 <span onClick={deactivateDropdown}>PORTFOLIO</span>

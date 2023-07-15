@@ -3,3 +3,7 @@
 - [] Containerize
 - [] Convert SCSS variables into custom properties and centralize
 - [x] Fix styling issue with services images
+- [] Update tagline
+- [] Add about page
+- [] Update portfolio page
+- [] Fix no-scroll

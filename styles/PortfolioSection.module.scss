@@ -1,12 +1,3 @@
-$black: #333;
-$white: #fefefe;
-$darkgray: #666;
-$lightpurple: #edf;
-$purple: #8a3fa2;
-$gold: #d1c300;
-$error: #dd3232;
-$success: #32dd32;
-
 .section {
   line-height: 1.7;
 }
@@ -22,9 +13,9 @@ $success: #32dd32;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  background: $black;
-  color: $white;
-  outline: 2px solid $white;
+  background: var(--black);
+  color: var(--white);
+  outline: 2px solid var(--white);
   outline-offset: -8px;
   font-size: 1.2rem;
   position: relative;
@@ -35,7 +26,7 @@ $success: #32dd32;
     position: absolute;
     height: 300px;
     width: 300px;
-    background-color: rgba($white, 0.4);
+    background-color: rgba(var(--white), 0.4);
     top: -150px;
     left: -150px;
     border-radius: 50%;
@@ -46,7 +37,7 @@ $success: #32dd32;
     position: absolute;
     height: 300px;
     width: 300px;
-    background-color: rgba($white, 0.6);
+    background-color: rgba(var(--white), 0.6);
     bottom: -150px;
     right: -150px;
     border-radius: 50%;
@@ -62,12 +53,12 @@ $success: #32dd32;
 .cta {
   padding: 0.5rem 1rem;
   box-shadow: none;
-  background: $white;
-  color: $black;
+  background: var(--white);
+  color: var(--black);
   border-radius: 5px;
   width: max-content;
   transition: outline-offset 250ms ease-in-out;
-  outline: 2px solid $white;
+  outline: 2px solid var(--white);
   outline-offset: -2px;
 
   &:hover,

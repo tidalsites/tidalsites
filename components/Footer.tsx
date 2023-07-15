@@ -49,7 +49,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={footer__copyright}>&copy; Tidal Sites, LLC 2022</div>
+      <div className={footer__copyright}>&copy; Tidal Sites, LLC 2023</div>
     </div>
   );
 };
