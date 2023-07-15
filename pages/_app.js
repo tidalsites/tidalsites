@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.ico?" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -20,7 +20,11 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap"
           rel="stylesheet"
@@ -29,7 +33,11 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
           rel="stylesheet"
         />
-        <title>Tidal Sites</title>
+        <title>
+          {process.env.NODE_ENV === "development"
+            ? "Tidal Sites - Dev"
+            : "Tidal Sites"}
+        </title>
       </Head>
       <Layout>
         <Component {...pageProps} />

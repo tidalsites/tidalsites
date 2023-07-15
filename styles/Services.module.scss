@@ -207,6 +207,16 @@ $navbar-height: 70px;
   }
 }
 
+.service__img {
+  max-width: 100%;
+  min-width: 200px;
+  display: none;
+
+  @media (min-width: 50em) {
+    display: block;
+  }
+}
+
 @keyframes growBorder {
   0% {
     height: 0%;

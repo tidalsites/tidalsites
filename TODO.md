@@ -1,0 +1,5 @@
+- [x] Mobile nav menu working
+- [] Install fonts locally
+- [] Containerize
+- [] Convert SCSS variables into custom properties and centralize
+- [x] Fix styling issue with services images

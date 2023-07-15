@@ -118,6 +118,7 @@ const Portfolio: FC = () => {
                 src={placeholder}
                 width="200"
                 height="282"
+                alt="Loading"
               />
             )}
 
@@ -139,6 +140,7 @@ const Portfolio: FC = () => {
                 src={placeholder}
                 width="200"
                 height="282"
+                alt="Loading"
               />
             )}
           </div>

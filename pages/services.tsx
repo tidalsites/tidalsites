@@ -21,6 +21,7 @@ const Services: FC = () => {
     service__content,
     service__content__main,
     service__content__list,
+    service__img,
   } = styles;
   return (
     <>
@@ -48,10 +49,12 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Branding</h2>
               <div className={service__content__main}>
-                <Image
-                  src={brandingImg}
-                  alt="Man holding vague business card"
-                />
+                <div className={service__img}>
+                  <Image
+                    src={brandingImg}
+                    alt="Man holding vague business card"
+                  />
+                </div>
                 <p>
                   Building a brand can be challenging to new businesses. There
                   is a lot to think about. Let Tidal Sites guide you through the
@@ -81,10 +84,12 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Web Design</h2>
               <div className={service__content__main}>
-                <Image
-                  src={webDesignImg}
-                  alt="Notebook with layouts drawn on it"
-                />
+                <div className={service__img}>
+                  <Image
+                    src={webDesignImg}
+                    alt="Notebook with layouts drawn on it"
+                  />
+                </div>
                 <p>
                   Web Design is all about making your audience happy. Tidal
                   Sites designs combine functionality with a visually appealing
@@ -101,7 +106,9 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Web Development</h2>
               <div className={service__content__main}>
-                <Image src={webDevImg} alt="Man holding vague business card" />
+                <div className={service__img}>
+                  <Image src={webDevImg} alt="Computer with code" />
+                </div>
                 <p>
                   Tidal Sites offers secure and reliable web development. We
                   always use the latest web technologies to stay ahead of the
@@ -118,7 +125,9 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Hosting</h2>
               <div className={service__content__main}>
-                <Image src={hostingImg} alt="Server rack" />
+                <div className={service__img}>
+                  <Image src={hostingImg} alt="Server rack" />
+                </div>
                 <p>
                   Web Hosting from Tidal Sites is secure, reliable, and
                   affordable. We do not lock ourselves into a single hosting
@@ -133,10 +142,12 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Maintenance</h2>
               <div className={service__content__main}>
-                <Image
-                  src={maintenanceImg}
-                  alt="Hand plugging in computer component"
-                />
+                <div className={service__img}>
+                  <Image
+                    src={maintenanceImg}
+                    alt="Hand plugging in computer component"
+                  />
+                </div>
                 <p>
                   Maintaining a website shouldn't be your burden to bear. Let
                   Tidal Sites provide website maintenance so that you can focus
@@ -163,10 +174,12 @@ const Services: FC = () => {
             <div className={service__content}>
               <h2 className={service__header}>Consulting</h2>
               <div className={service__content__main}>
-                <Image
-                  src={consultingImg}
-                  alt="Hands pointing at data on graph"
-                />
+                <div className={service__img}>
+                  <Image
+                    src={consultingImg}
+                    alt="Hands pointing at data on graph"
+                  />
+                </div>
                 <p>
                   Sometimes, you just need some advice. If your question is
                   technical, it is likely that Tidal Sites can help. Web advice

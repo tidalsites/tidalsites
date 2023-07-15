@@ -13,6 +13,7 @@ export const Header: FC = () => {
     navbar__nav__links_mobile,
     navbar__nav__links_mobile__close,
     navbar__nav__logo,
+    open,
   } = styles;
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
@@ -36,8 +37,8 @@ export const Header: FC = () => {
         <div className={navbar__nav__logo}>
           <Link href="/">
             <>
-              <Image src={logo} alt="Tidal Sites logo" width="35" height="35" />
-              <span>TIDAL SITES</span>
+              <Image src={logo} alt="Tidal Sites" width="35" height="35" />
+              <span aria-hidden>TIDAL SITES</span>
             </>
           </Link>
         </div>
@@ -74,7 +75,7 @@ export const Header: FC = () => {
         </nav>
         <div
           className={`${navbar__nav__links_mobile} ${
-            dropdownActivated ? "open" : ""
+            dropdownActivated ? open : ""
           }`}
         >
           <span
@@ -94,11 +95,11 @@ export const Header: FC = () => {
                 <span onClick={deactivateDropdown}>SERVICES</span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <a onClick={deactivateDropdown} href="/#Process">
                 PROCESS
               </a>
-            </li>
+            </li> */}
             <li>
               <Link href="/portfolio">
                 <span onClick={deactivateDropdown}>PORTFOLIO</span>
