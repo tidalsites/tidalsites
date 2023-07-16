@@ -14,6 +14,7 @@ export const Header: FC = () => {
     navbar__nav__links_mobile__close,
     navbar__nav__logo,
     open,
+    link,
   } = styles;
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
@@ -36,10 +37,10 @@ export const Header: FC = () => {
       <div className={navbar__nav}>
         <div className={navbar__nav__logo}>
           <Link href="/">
-            <>
+            <div className={link}>
               <Image src={logo} alt="Tidal Sites" width="35" height="35" />
               <span aria-hidden>TIDAL SITES</span>
-            </>
+            </div>
           </Link>
         </div>
         <div className={navbar__nav__burger}>

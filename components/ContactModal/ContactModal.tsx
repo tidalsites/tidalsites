@@ -17,12 +17,10 @@ interface ValidationErrors {
 }
 
 interface IContactModalProps {
-  showContactModal: boolean;
   setShowContactModal: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ContactModal: FC<IContactModalProps> = ({
-  showContactModal,
   setShowContactModal,
 }) => {
   const {

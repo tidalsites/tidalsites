@@ -12,6 +12,7 @@ import XPRTHomeLogo from "../public/xprt-logo.png";
 import FourSquareCalcLogo from "../public/foursquare.svg";
 import SunriseLogo from "../public/sunrise.svg";
 import PlanetLogo from "../public/planet.svg";
+import ConcrecalLogo from "../public/concrecal-logo.svg";
 
 import placeholder from "../public/placeholder-img.png";
 
@@ -19,8 +20,6 @@ import placeholder from "../public/placeholder-img.png";
 import brochure from "../public/brochure.svg";
 import lockBrochure from "../public/lock-brochure.svg";
 import { LogoCard } from "../components/Logo/LogoCard";
-
-const logoSize = "150";
 
 const Portfolio: FC = () => {
   const {
@@ -30,9 +29,6 @@ const Portfolio: FC = () => {
     sites,
     logos,
     logo__items,
-    logo__items__img,
-    logo__card,
-    logo__title,
     design,
     design__items,
     section__header,
@@ -88,16 +84,12 @@ const Portfolio: FC = () => {
         <div className={logos}>
           <span className={section__header}>LOGOS</span>
           <div className={logo__items}>
-            {/* <div className={logo__card}>
-              <p className={logo__title}>Sunrise Kitchen & Bath</p>
-              <div className={logo__items__img}>
-                <Image
-                  height={logoSize}
-                  width={logoSize}
-                  src={SunriseLogo}
-                  alt="Sunrise Kitchen & Bath"
-                />
-              </div> */}
+            <LogoCard
+              title="Concrecal Proyectos"
+              alt="Concrecal Proyectos"
+              src={ConcrecalLogo}
+              color="rgb(255, 102, 0)"
+            />
             <LogoCard
               title="Sunrise Kitchen & Bath"
               alt="Sunrise Kitchen & Bath"
@@ -117,8 +109,8 @@ const Portfolio: FC = () => {
               color="rgb(51, 204, 56)"
             />
             <LogoCard
-              title="Gladiator Home Repair"
-              alt="Gladiator Home Repair"
+              title="Gladiator Home Services"
+              alt="Gladiator Home Services"
               src={GladiatorLogo}
               color="rgb(188, 125, 71)"
             />

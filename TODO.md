@@ -7,4 +7,5 @@
 - [] Add about page
 - [x] Update portfolio page
 - [x] Fix no-scroll
-- [] Update guarantee banner
+- [x] Update guarantee banner
+- [] Fix contact form
