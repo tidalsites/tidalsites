@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
-          href="https://fonts.gstatic.com"
+          href="https://fonts.gstaticom"
           crossOrigin="true"
         />
         <link

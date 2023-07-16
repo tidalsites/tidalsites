@@ -53,22 +53,7 @@
   }
 }
 
-$portfolio-breakpoint: 800px;
-
 .Home {
-  &__section {
-    padding: 3vw 0;
-    max-width: var(--page-max-width);
-    margin: auto;
-    width: 100%;
-
-    &__header {
-      font-size: 50px;
-      padding: 0 10px;
-      line-height: 1.2;
-    }
-  }
-
   // Services
   &__services {
     &__header {
@@ -404,6 +389,10 @@ $portfolio-breakpoint: 800px;
       }
     }
   }
+}
+
+.section {
+  margin-top: 2rem;
 }
 
 .home__section__header {

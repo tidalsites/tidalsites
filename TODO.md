@@ -1,9 +1,10 @@
 - [x] Mobile nav menu working
 - [] Install fonts locally
 - [] Containerize
-- [] Convert SCSS variables into custom properties and centralize
+- [x] Convert SCSS variables into custom properties and centralize
 - [x] Fix styling issue with services images
-- [] Update tagline
+- [x] Update tagline
 - [] Add about page
-- [] Update portfolio page
-- [] Fix no-scroll
+- [x] Update portfolio page
+- [x] Fix no-scroll
+- [] Update guarantee banner

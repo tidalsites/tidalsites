@@ -6,6 +6,7 @@ import {
   useState,
 } from "react";
 // import "./ContactModal.scss";
+import styles from "../../styles/ContactModal.module.scss";
 
 interface ValidationErrors {
   firstname: string;
@@ -16,12 +17,25 @@ interface ValidationErrors {
 }
 
 interface IContactModalProps {
+  showContactModal: boolean;
   setShowContactModal: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ContactModal: FC<IContactModalProps> = ({
+  showContactModal,
   setShowContactModal,
 }) => {
+  const {
+    contact,
+    wrapper,
+    heading,
+    MessageSending,
+    close,
+    status,
+    form_group,
+    btn_group,
+  } = styles;
+
   const [firstname, setFirstname] = useState<string>("");
   const [lastname, setLastname] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
@@ -116,17 +130,19 @@ export const ContactModal: FC<IContactModalProps> = ({
     });
   };
 
+  function handleCloseModal() {
+    document.body.classList.remove("no-scroll");
+    setShowContactModal(false);
+  }
+
   return (
-    <div className="ContactModal">
-      <button
-        className="ContactModal__close"
-        onClick={() => setShowContactModal(false)}
-      >
+    <div className={contact}>
+      <button className={close} onClick={handleCloseModal}>
         <span className="material-icons">close</span>
       </button>
-      <div className="ContactModal__wrapper">
+      <div className={wrapper}>
         {messageSending ? (
-          <div className="MessageSending">
+          <div className={MessageSending}>
             <div className="MessageSending__wrapper">
               <span>Sending Request Now!</span>
               <div className="MessageSending__icons">
@@ -138,7 +154,7 @@ export const ContactModal: FC<IContactModalProps> = ({
           ""
         )}
         <div
-          className="ContactModal__status"
+          className={status}
           data-success={successMessage ? true : false}
           data-failure={failureMessage ? true : false}
         >
@@ -158,11 +174,11 @@ export const ContactModal: FC<IContactModalProps> = ({
             <span className="material-icons">close</span>
           </button>
         </div>
-        <div className="ContactModal__heading">
+        <div className={heading}>
           <span>How can we assist you?</span>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="ContactModal__form-group">
+          <div className={form_group}>
             <label>
               <span>First Name</span>
               <input
@@ -179,7 +195,7 @@ export const ContactModal: FC<IContactModalProps> = ({
             </label>
             <span className="error">{formErrors.firstname}</span>
           </div>
-          <div className="ContactModal__form-group">
+          <div className={form_group}>
             <label>
               <span>Last Name</span>
               <input
@@ -196,7 +212,7 @@ export const ContactModal: FC<IContactModalProps> = ({
             </label>
             <span className="error">{formErrors.lastname}</span>
           </div>
-          <div className="ContactModal__form-group">
+          <div className={form_group}>
             <label>
               <span>Email</span>
               <input
@@ -213,7 +229,7 @@ export const ContactModal: FC<IContactModalProps> = ({
             </label>
             <span className="error">{formErrors.email}</span>
           </div>
-          <div className="ContactModal__form-group">
+          <div className={form_group}>
             <label>
               <span>Phone Number</span>
               <input
@@ -230,7 +246,7 @@ export const ContactModal: FC<IContactModalProps> = ({
             </label>
             <span className="error">{formErrors.phone}</span>
           </div>
-          <div className="ContactModal__form-group">
+          <div className={form_group}>
             <label>
               <span>Message</span>
               <textarea
@@ -252,7 +268,7 @@ export const ContactModal: FC<IContactModalProps> = ({
             </label>
             <span className="error">{formErrors.message}</span>
           </div>
-          <div className="ContactModal__btn-group">
+          <div className={btn_group}>
             <button type="submit">Submit</button>
           </div>
         </form>

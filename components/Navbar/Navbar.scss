@@ -42,13 +42,13 @@
       span {
         font-size: 32px;
         cursor: pointer;
-        outline: 3px solid c.var(--black);
+        outline: 3px solid var(--black);
         transition: all 180ms ease-in-out;
 
         &:hover,
         &:focus {
-          color: c.var(--white);
-          background: c.var(--black);
+          color: var(--white);
+          background: var(--black);
         }
       }
     }
@@ -64,13 +64,13 @@
 
         li {
           a {
-            color: c.var(--black);
+            color: var(--black);
             position: relative;
             padding-block: 0.25rem;
             transition: color 250ms linear;
 
             &:hover {
-              color: c.var(--purple);
+              color: var(--purple);
 
               &::after {
                 width: 100%;
@@ -85,7 +85,7 @@
               left: 50%;
               width: 0;
               height: 2px;
-              background-color: c.var(--purple);
+              background-color: var(--purple);
               transition: all 250ms linear;
             }
           }
@@ -98,7 +98,7 @@
       inset: 0;
       transform: translateY(-100vh);
       justify-content: center;
-      background: c.var(--black);
+      background: var(--black);
       overflow: hidden;
       transition: transform 450ms linear;
       z-index: 5;
@@ -138,14 +138,14 @@
 
           &:hover,
           &:focus {
-            background: c.var(--white);
+            background: var(--white);
             a {
-              color: c.var(--black);
+              color: var(--black);
             }
           }
 
           a {
-            color: c.var(--white);
+            color: var(--white);
             font-size: clamp(24px, 4vw, 32px);
           }
         }

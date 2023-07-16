@@ -48,7 +48,7 @@ export const Process = () => {
           <p>
             The site is designed. The site is built and looks just the way you
             want it. Now it is time to deploy. This is when your website goes
-            public. Whether you choose your own hosting platform or choose to
+            publi Whether you choose your own hosting platform or choose to
             leverage Tidal Sites, we ensure a smooth process in making your
             website go live!
           </p>
