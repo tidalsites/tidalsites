@@ -3,10 +3,10 @@ import styles from "../../../styles/ProcessSection.module.scss";
 import home_styles from "../../../styles/Home.module.scss";
 
 // Images
-import webDesignImg from "../../../public/web-design-img.jpg";
-// import webDesignIllustration from "../../../public/web-design-illustration.svg";
-import WebDevImg from "../../../public/web-dev-img.jpg";
-import WebDeployImg from "../../../public/web-deploy-img.jpg";
+import webDesignIllustration from "../../../public/web-design-illustration.svg";
+import webDesignIllustrationAlt from "../../../public/web-design-illustration-alt.svg";
+import webDesignIllustrationNew from "../../../public/web-design-illustration-new.svg";
+import deployIllustration from "../../../public/deploy-illustration.svg";
 
 export const Process = () => {
   const { process, header, content, col } = styles;
@@ -21,7 +21,7 @@ export const Process = () => {
         <div className={col}>
           <span>Design</span>
           <Image
-            src={webDesignImg}
+            src={webDesignIllustrationNew}
             alt="Notebook with layouts drawn on it and an opened pen"
           />
           <p>
@@ -34,7 +34,10 @@ export const Process = () => {
         </div>
         <div className={col}>
           <span>Develop</span>
-          <Image src={WebDevImg} alt="Laptop with notebook and pen on desk" />
+          <Image
+            src={webDesignIllustrationAlt}
+            alt="Laptop with notebook and pen on desk"
+          />
           <p>
             After a website is designed, it is time to build it. Once a base
             portion of the site is ready, we put it on a temporary hosting
@@ -44,7 +47,7 @@ export const Process = () => {
         </div>
         <div className={col}>
           <span>Deploy</span>
-          <Image src={WebDeployImg} alt="Server rack" />
+          <Image src={deployIllustration} alt="Server rack" />
           <p>
             The site is designed. The site is built and looks just the way you
             want it. Now it is time to deploy. This is when your website goes
