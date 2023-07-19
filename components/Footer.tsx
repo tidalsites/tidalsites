@@ -12,6 +12,9 @@ export const Footer = () => {
     footer__contact__email,
     footer__copyright,
   } = styles;
+
+  const emailBody =
+    "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
   return (
     <div className={footer}>
       <div className={footer__wrapper}>
@@ -43,7 +46,10 @@ export const Footer = () => {
             <span className="material-icons" role="img">
               email
             </span>
-            <a href="mailto:devin@tidalsites.com?subject=Inquiry">
+            <a
+              href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
+              target="_blank"
+            >
               devin@tidalsites.com
             </a>
           </div>
