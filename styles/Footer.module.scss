@@ -49,6 +49,17 @@
   }
 }
 
+.review {
+  max-width: 60em;
+  margin-inline: auto;
+  padding-block: 0.5rem;
+
+  a {
+    color: var(--link-light);
+    text-decoration: underline;
+  }
+}
+
 .footer__copyright {
   display: flex;
   justify-content: center;

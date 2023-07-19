@@ -10,6 +10,7 @@ export const Footer = () => {
     footer__contact__header,
     footer__contact__phone,
     footer__contact__email,
+    review,
     footer__copyright,
   } = styles;
 
@@ -54,6 +55,12 @@ export const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className={review}>
+        Already a customer?{" "}
+        <a href="https://g.page/r/CRXKrwtrLyweEBM/review" target="_blank">
+          Leave a review
+        </a>
       </div>
       <div className={footer__copyright}>&copy; Tidal Sites, LLC 2023</div>
     </div>
