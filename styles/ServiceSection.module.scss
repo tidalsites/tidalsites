@@ -78,12 +78,16 @@
 }
 
 .service__icon {
+  // ** !important is necessary for the display and font-size properties
+  // ** due to nextjs reconfiguring style imports in document head
+
+  // TODO - Resolve style priorities instead of using !important
   grid-area: icon;
   border-radius: 50%;
-  display: grid;
+  display: grid !important;
   place-content: center;
   border: 3px solid var(--black);
   position: relative;
-  font-size: 36px;
+  font-size: 36px !important;
   color: var(--purple);
 }

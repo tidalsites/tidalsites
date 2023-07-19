@@ -25,11 +25,8 @@ export const Footer = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <a href="/services">Services</a>
+              <Link href="/services">Services</Link>
             </li>
-            {/* <li>
-              <a href="/#Process">Process</a>
-            </li> */}
             <li>
               <Link href="/portfolio">Portfolio</Link>
             </li>
