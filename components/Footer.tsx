@@ -30,6 +30,9 @@ export const Footer = () => {
             <li>
               <Link href="/portfolio">Portfolio</Link>
             </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
           </ul>
         </nav>
         <div className={footer__contact}>
