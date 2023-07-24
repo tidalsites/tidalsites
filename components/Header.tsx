@@ -54,13 +54,13 @@ export const Header: FC = () => {
               <Link href="/">HOME</Link>
             </li>
             <li>
+              <Link href="/about">ABOUT</Link>
+            </li>
+            <li>
               <Link href="/services">SERVICES</Link>
             </li>
             <li>
               <Link href="/portfolio">PORTFOLIO</Link>
-            </li>
-            <li>
-              <Link href="/about">ABOUT</Link>
             </li>
           </ul>
         </nav>
@@ -82,6 +82,11 @@ export const Header: FC = () => {
               </Link>
             </li>
             <li>
+              <Link href="/about">
+                <span onClick={deactivateDropdown}>ABOUT</span>
+              </Link>
+            </li>
+            <li>
               <Link href="/services">
                 <span onClick={deactivateDropdown}>SERVICES</span>
               </Link>
@@ -89,11 +94,6 @@ export const Header: FC = () => {
             <li>
               <Link href="/portfolio">
                 <span onClick={deactivateDropdown}>PORTFOLIO</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <span onClick={deactivateDropdown}>ABOUT</span>
               </Link>
             </li>
           </ul>

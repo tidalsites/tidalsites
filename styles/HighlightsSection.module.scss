@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--lightpurple);
-  box-shadow: 0 0 2px 1px var(--purple);
+  background: url(../public/decorative-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-inline: 1rem;
 
   > span {
