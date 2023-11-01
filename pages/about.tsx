@@ -1,10 +1,9 @@
 import { FC } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/About.module.scss";
-import decoration from "../public/decoration.svg";
 
 const About: FC = () => {
-  const { about, img, intro, cta } = styles;
+  const { about, intro, cta, link } = styles;
 
   const emailBody =
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
@@ -36,6 +35,11 @@ const About: FC = () => {
             deliver high-quality designs that showcase your brand in the best
             light.
           </p>
+          <div className={link}>
+            <Link href={{ pathname: "/tidbits", query: { title: "qa" } }}>
+              Learn about our Quality Assurance
+            </Link>
+          </div>
         </div>
       </section>
       <section>
@@ -67,6 +71,11 @@ const About: FC = () => {
           engine optimized, helping you climb the ranks and reach a wider
           audience.
         </p>
+        <div className={link}>
+          <Link href={{ pathname: "/tidbits", query: { title: "seo" } }}>
+            Learn more about SEO
+          </Link>
+        </div>
       </section>
       <section>
         <h2>Responsive and User-Centric Designs</h2>

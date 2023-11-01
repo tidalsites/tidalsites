@@ -105,6 +105,15 @@
   }
 }
 
+.link {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 0.5rem 0.75rem;
+  width: fit-content;
+  border-radius: var(--border-radius-subtle);
+  margin-top: 1rem;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
