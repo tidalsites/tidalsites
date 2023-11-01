@@ -32,6 +32,7 @@ const Portfolio: FC = () => {
     design,
     design__items,
     section__header,
+    section__header__bg,
   } = styles;
 
   const [firstGraphicLoaded, setFirstGraphicLoaded] = useState<boolean>(false);
@@ -41,7 +42,10 @@ const Portfolio: FC = () => {
     <div className={portfolio}>
       <div className={content}>
         <div className={websites}>
-          <span className={section__header}>WEBSITES</span>
+          <div className={section__header}>
+            <span>WEBSITES</span>
+            <div className={section__header__bg}></div>
+          </div>
           <div className={sites}>
             <PortfolioPiece
               project_name="Concrecal"
@@ -82,7 +86,10 @@ const Portfolio: FC = () => {
           </div>
         </div>
         <div className={logos}>
-          <span className={section__header}>LOGOS</span>
+          <div className={section__header}>
+            <span>LOGOS</span>
+            <div className={section__header__bg}></div>
+          </div>
           <div className={logo__items}>
             <LogoCard
               title="Concrecal Proyectos"

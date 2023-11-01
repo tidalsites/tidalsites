@@ -99,26 +99,40 @@ $min-width: 600px;
 .section__header {
   font-size: 2rem;
   margin-block: 2rem;
-  background-color: var(--black);
-  color: var(--white);
-  width: fit-content;
-  border-radius: var(--border-radius-subtle);
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--white);
   position: relative;
   isolation: isolate;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: -1rem;
-    width: 110vw;
-    height: 75%;
+  > span {
     background-color: var(--black);
-    z-index: -1;
-    top: 50%;
-    transform: translateY(-50%);
+    color: var(--white);
+    width: fit-content;
+    border-radius: var(--border-radius-subtle);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--white);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-left: 1rem;
   }
+
+  &__bg {
+    width: 100%;
+    background-color: var(--black);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    border-radius: var(--border-radius-subtle);
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: -1rem;
+  //   width: 110vw;
+  //   height: 75%;
+  //   background-color: var(--black);
+  //   z-index: -1;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  // }
 }

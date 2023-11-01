@@ -7,10 +7,12 @@ import { Portfolio } from "../components/Home/Sections/Portfolio";
 import { ContactModal } from "../components/ContactModal/ContactModal";
 import { useState } from "react";
 
+import styles from "../styles/Home.module.scss";
+
 export default function Home() {
   const [showContactModal, setShowContactModal] = useState(false);
   return (
-    <div className="Home">
+    <div className={styles.Home}>
       <Hero setShowContactModal={setShowContactModal} />
       <Services />
       <Portfolio />

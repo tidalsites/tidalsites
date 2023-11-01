@@ -54,6 +54,9 @@
 }
 
 .Home {
+  max-width: var(--page-max-width);
+  margin-inline: auto;
+
   // Services
   &__services {
     &__header {
