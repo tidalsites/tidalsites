@@ -1,33 +1,37 @@
-# TIDALSITES
+# Tidal Sites
 
-This project is the official website for Tidal Sites, LLC.
+Welcome to Tidal Sites - Your Premier Web Services Partner!
 
-## Development Guide
+## About
 
-1. **Clone Repo** `git clone git@github.com:tidalsites/tidalsites.git`
-2. **Install Packages** `npm i`
-3. **Start app** `npm run dev`
+Tidal Sites is a leading web services company based in the Hampton Roads area of Virginia. We specialize in crafting exceptional online experiences, offering a range of services that include website design, development, hosting, branding, maintenance, and expert consultation.
 
-## Deploy
+## Features
 
-1. Merge or commit changes to main
-2. Push changes to Github <-- This will automatically deploy to AWS via Github Actions
+- **Website Services**: Explore our cutting-edge web design, development, and hosting solutions tailored to your business needs.
+- **Branding Expertise**: Elevate your brand with our specialized services in creating memorable online identities.
+- **Maintenance and Consultation**: Our ongoing support and expert guidance ensure your online success.
+- **Quality Guarantee**: We are committed to delivering high-quality solutions for our clients, ensuring their satisfaction.
 
-## Tech stack
+## Portfolio
 
-- **FrontEnd Framework:** NextJS w/ Typescript
-- **CSS:** Sass with BEM
-- **Build Tool:** Vite
-- **CI/CD Pipeline:** AWS Amplify
-- **Deployment Environment:** AWS Amplify
+Browse our Portfolio to witness our success stories, showcasing our accomplished projects and how we've helped businesses achieve their online goals.
 
-## Color Palette
+## How to Get Started
 
-- **Primary:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #8a3fa2"></span><span>#8a3fa2</span></div>
-- **Secondary:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #edf"></span><span>#edf</span></div>
-- **Accent:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #d1c300"></span><span>#d1c300</span></div>
-- **Black:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #333"></span><span>#333</span></div>
-- **White:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #fefefe"></span><span>#fefefe</span></div>
-- **Gray:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #666"></span><span>#666</span></div>
-- **Error:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #dd3232"></span><span>#dd3232</span></div>
-- **Success:** <div style="display: flex; align-items: center; gap: 1rem"><span  style="width: 1rem; height: 1rem; background-color: #32dd32"></span><span>#32dd32</span></div>
+1. **Explore Our Services**: Head over to our [Services Page](https://www.tidalsites.com/services) to discover our full range of offerings.
+2. **Dive into Our Portfolio**: Visit our [Portfolio Page](https://www.tidalsites.com/portfolio) to see our successful projects.
+3. **Connect with Us**: Have questions or need assistance? Feel free to [contact us](link_to_contact_page).
+
+## Contributing
+
+We welcome contributions! Whether it's through suggestions, reporting issues, or even pull requests, your input is valuable. Please refer to our [Contribution Guidelines](CONTRIBUTING.md) for more details.
+
+## Stay Connected
+
+- Follow us on [Linkedin](https://www.linkedin.com/company/tidalsites) for the latest updates and industry insights.
+- Visit our website [tidalsites.com](https://www.tidalsites.com/) to learn more about our services.
+
+We're excited to help you take your online presence to the next level!
+
+![Tidal Sites Logo](/public/logo192.png)
