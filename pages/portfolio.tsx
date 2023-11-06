@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import styles from "../styles/Portfolio.module.scss";
-import Image from "next/image";
 import { PortfolioPiece } from "../components/Portfolio/PortfolioPiece";
 
 // Logos
@@ -14,11 +13,6 @@ import SunriseLogo from "../public/sunrise.svg";
 import PlanetLogo from "../public/planet.svg";
 import ConcrecalLogo from "../public/concrecal-logo.svg";
 
-import placeholder from "../public/placeholder-img.png";
-
-// Digital Marketing Images
-import brochure from "../public/brochure.svg";
-import lockBrochure from "../public/lock-brochure.svg";
 import { LogoCard } from "../components/Logo/LogoCard";
 
 const Portfolio: FC = () => {
@@ -29,8 +23,6 @@ const Portfolio: FC = () => {
     sites,
     logos,
     logo__items,
-    design,
-    design__items,
     section__header,
     section__header__bg,
   } = styles;
@@ -147,54 +139,6 @@ const Portfolio: FC = () => {
             />
           </div>
         </div>
-        {/* <div className={design}>
-          <span className={section__header}>Graphic Design</span>
-          <div className={design__items}>
-            <Image
-              onLoad={() => setFirstGraphicLoaded(true)}
-              src={brochure}
-              alt="Experto Home Lock Brochure"
-              style={{
-                visibility: `${firstGraphicLoaded ? "visible" : "hidden"}`,
-              }}
-              width="200"
-              height="282"
-            />
-            {!firstGraphicLoaded && (
-              <Image
-                style={{
-                  display: `${!firstGraphicLoaded ? "block" : "none"}`,
-                }}
-                src={placeholder}
-                width="200"
-                height="282"
-                alt="Loading"
-              />
-            )}
-
-            <Image
-              onLoad={() => setSecondGraphicLoaded(true)}
-              src={lockBrochure}
-              alt="Experto Home Services Brochure"
-              style={{
-                visibility: `${secondGraphicLoaded ? "visible" : "hidden"}`,
-              }}
-              width="200"
-              height="282"
-            />
-            {!secondGraphicLoaded && (
-              <Image
-                style={{
-                  display: `${!secondGraphicLoaded ? "block" : "none"}`,
-                }}
-                src={placeholder}
-                width="200"
-                height="282"
-                alt="Loading"
-              />
-            )}
-          </div>
-        </div> */}
       </div>
     </div>
   );

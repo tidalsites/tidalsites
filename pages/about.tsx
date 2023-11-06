@@ -1,10 +1,8 @@
 import { FC } from "react";
-import Image from "next/image";
 import styles from "../styles/About.module.scss";
-import decoration from "../public/decoration.svg";
 
 const About: FC = () => {
-  const { about, img, intro, cta } = styles;
+  const { about, intro, cta } = styles;
 
   const emailBody =
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";

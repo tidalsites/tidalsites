@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Link from "next/link";
-import { ParentLink } from "../../ParentLink";
 import styles from "../../../styles/ServiceSection.module.scss";
 import home_styles from "../../../styles/Home.module.scss";
 
