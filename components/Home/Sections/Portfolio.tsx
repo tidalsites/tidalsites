@@ -12,12 +12,11 @@ export const Portfolio = () => {
       </div>
       <div className={content}>
         <p>
-          Tidal Sites is a forward-thinking design company dedicated to
-          providing customized UI/UX solutions that enhance the digital
-          experiences of its clients. With a team of talented and creative
-          designers, Tidal Sites takes a comprehensive approach to web design,
-          ensuring that every website they create is both visually stunning and
-          highly functional.
+          Explore our success stories and witness the power of exemplary web
+          solutions in action. Visit our Portfolio page to delve into a diverse
+          collection of our accomplished projects. See how we've helped
+          businesses like yours achieve their online goals. Take a tour of
+          innovation and inspiration today.
         </p>
         <Link href="/portfolio">
           <a className={cta}>View Portfolio</a>

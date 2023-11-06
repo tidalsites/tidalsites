@@ -15,7 +15,7 @@ This project is the official website for Tidal Sites, LLC.
 
 ## Tech stack
 
-- **FrontEnd Framework:** React w/ Typescript
+- **FrontEnd Framework:** NextJS w/ Typescript
 - **CSS:** Sass with BEM
 - **Build Tool:** Vite
 - **CI/CD Pipeline:** AWS Amplify
