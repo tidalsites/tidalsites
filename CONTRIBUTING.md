@@ -41,7 +41,7 @@ All contributors will be recognized and credited in the project. Be sure to add 
 
 Thank you for considering contributing to Tidal Sites! Your efforts are instrumental in the growth and improvement of our project.
 
-Please refer to our [Code of Conduct](codeofconduct.md) for a more detailed outline of community standards.
+Please refer to our [Code of Conduct](CODE_OF_CONDUCT.md) for a more detailed outline of community standards.
 
 Happy contributing!
 
