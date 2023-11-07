@@ -26,10 +26,10 @@ const Services: FC = () => {
   return (
     <>
       <Head>
-        <title>Tidal Sites | Services</title>
+        <title>Tidal Sites Services</title>
         <meta
           name="description"
-          content="Branding, Web Design, Web Development, Hosting, Maintenance, and Consultations. Call today for professional service."
+          content="Explore our comprehensive suite of top-tier web solutions at Tidal Sites. From web design and development to branding, hosting, and maintenance services, discover how we elevate your online presence. Uncover tailored strategies for your digital success!"
         />
       </Head>
       <div className={services}>

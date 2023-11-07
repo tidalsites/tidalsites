@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Elevate your digital experience with a premium website from Tidal Sites. We offer branding, web design, web development, hosting, web maintenance, and consulting. Call today"
+          content="Welcome to Tidal Sites - Your Premier Web Services Partner in Hampton Roads, Virginia. Explore our top-tier web solutions including design, development, hosting, and branding. Elevate your online presence with our expert strategies and quality-focused services. Contact us today!"
         />
         <meta name="theme-color" content="#ffffff" />
         <title>
