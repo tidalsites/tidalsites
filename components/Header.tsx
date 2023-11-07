@@ -1,3 +1,5 @@
+"use client";
+
 import { FC, useState, useEffect } from "react";
 import Link from "next/link";
 import logo from "../public/logo.svg";
@@ -5,17 +7,6 @@ import Image from "next/image";
 import styles from "../styles/Header.module.scss";
 
 export const Header: FC = () => {
-  const {
-    navbar,
-    navbar__nav,
-    navbar__nav__burger,
-    navbar__nav__links,
-    navbar__nav__links_mobile,
-    navbar__nav__links_mobile__close,
-    navbar__nav__logo,
-    open,
-    link,
-  } = styles;
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
   const activateDropdown = () => {
@@ -33,46 +24,59 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <div className={navbar}>
-      <div className={navbar__nav}>
-        <div className={navbar__nav__logo}>
-          <Link href="/">
-            <div className={link}>
-              <Image src={logo} alt="Tidal Sites" width="35" height="35" />
-              <span aria-hidden>TIDAL SITES</span>
-            </div>
+    <header className="w-[100vw] fixed top-0 z-10 bg-white">
+      <div className="max-w-page mx-auto flex justify-between px-4 items-center h-navbar">
+        <div className="py-3">
+          <Link className="flex gap-2 relative text-gray-800 py-1" href="/">
+            <Image src={logo} alt="Tidal Sites" width="35" height="35" />
+            <span aria-hidden className="font-bold text-3xl text-gray-800">
+              TIDAL SITES
+            </span>
           </Link>
         </div>
-        <div className={navbar__nav__burger}>
+        <button className="hidden">
           <span className="material-icons md-24" onClick={activateDropdown}>
             menu_open
           </span>
-        </div>
-        <nav aria-label="Primary Navigation" className={navbar__nav__links}>
-          <ul>
-            <li>
-              <Link href="/">HOME</Link>
+        </button>
+        <nav aria-label="Primary Navigation" className="">
+          <ul className="flex gap-4 flex-wrap justify-end">
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/"
+              >
+                HOME
+              </Link>
             </li>
-            <li>
-              <Link href="/about">ABOUT</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/about"
+              >
+                ABOUT
+              </Link>
             </li>
-            <li>
-              <Link href="/services">SERVICES</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/services"
+              >
+                SERVICES
+              </Link>
             </li>
-            <li>
-              <Link href="/portfolio">PORTFOLIO</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/portfolio"
+              >
+                PORTFOLIO
+              </Link>
             </li>
           </ul>
         </nav>
-        <div
-          className={`${navbar__nav__links_mobile} ${
-            dropdownActivated ? open : ""
-          }`}
-        >
-          <span
-            onClick={deactivateDropdown}
-            className={`material-icons ${navbar__nav__links_mobile__close}`}
-          >
+        <div className={`${dropdownActivated ? "open" : "hidden"}`}>
+          <span onClick={deactivateDropdown} className="material-icons">
             close
           </span>
           <ul>
@@ -99,6 +103,6 @@ export const Header: FC = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   );
 };

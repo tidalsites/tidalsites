@@ -12,12 +12,10 @@ export const Services: FC = () => {
       <div className={services__header}>
         <span className={home__section__header}>SERVICES</span>
         <Link href="/services">
-          <a>
-            <span>View all services</span>
-            <span className="material-icons" role="img">
-              east
-            </span>
-          </a>
+          <span>View all services</span>
+          <span className="material-icons" role="img">
+            east
+          </span>
         </Link>
       </div>
       <div className={services__list}>

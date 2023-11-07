@@ -21,9 +21,7 @@ export const Portfolio = () => {
             helped businesses like yours achieve their online goals. Take a tour
             of innovation and inspiration today.
           </p>
-          <Link href="/portfolio">
-            <a className={cta}>View Portfolio</a>
-          </Link>
+          <Link href="/portfolio">View Portfolio</Link>
         </div>
         <div className={content__section}>
           <Image width="800" height="729" src={collageImg} alt="collage" />
