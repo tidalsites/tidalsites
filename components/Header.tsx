@@ -4,7 +4,7 @@ import { FC, useState, useEffect } from "react";
 import Link from "next/link";
 import logo from "../public/logo.svg";
 import Image from "next/image";
-import styles from "../styles/Header.module.scss";
+import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
 
 export const Header: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
@@ -34,12 +34,13 @@ export const Header: FC = () => {
             </span>
           </Link>
         </div>
-        <button className="hidden">
-          <span className="material-icons md-24" onClick={activateDropdown}>
-            menu_open
-          </span>
+        <button
+          className="md:hidden outline outline-black outline-2 p-1 transition-all hover:bg-black hover:text-white duration-400 hover:outline-offset-2"
+          onClick={activateDropdown}
+        >
+          <MdOutlineMenuOpen className="text-4xl" />
         </button>
-        <nav aria-label="Primary Navigation" className="">
+        <nav aria-label="Primary Navigation" className="hidden md:block">
           <ul className="flex gap-4 flex-wrap justify-end">
             <li className="relative">
               <Link
@@ -75,29 +76,56 @@ export const Header: FC = () => {
             </li>
           </ul>
         </nav>
-        <div className={`${dropdownActivated ? "open" : "hidden"}`}>
-          <span onClick={deactivateDropdown} className="material-icons">
-            close
-          </span>
-          <ul>
-            <li>
+        <div
+          className={`${
+            dropdownActivated
+              ? "translate-y-0 opacity-100 flex flex-col"
+              : "hidden translate-y-[-100vh]"
+          } fixed inset-0 justify-center bg-black/80 overflow-hidden z-50 transition-all`}
+        >
+          <button className="text-red-400 bg-white rounded-full shadow-md text-4xl absolute top-4 right-4 p-1">
+            <MdClose onClick={deactivateDropdown} />
+          </button>
+
+          <ul className="flex flex-col content-center items-center min-w-[300px] bg-white w-fit mx-auto rounded">
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/">
-                <span onClick={deactivateDropdown}>HOME</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  HOME
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/about">
-                <span onClick={deactivateDropdown}>ABOUT</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  ABOUT
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/services">
-                <span onClick={deactivateDropdown}>SERVICES</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  SERVICES
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center">
               <Link href="/portfolio">
-                <span onClick={deactivateDropdown}>PORTFOLIO</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  PORTFOLIO
+                </span>
               </Link>
             </li>
           </ul>

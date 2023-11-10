@@ -22,14 +22,14 @@ const config: Config = {
       height: {
         navbar: "70px",
       },
-      // animation: {
-      //   shiftUp: "shiftUp 750ms forwards",
-      // },
       keyframes: {
         shiftUp: {
           "0%": { transform: "translateY(100%)" },
           "75%": { transform: "translateY(-10%)" },
           "100%": { transform: "translateY(0)" },
+        },
+        fadeIn: {
+          to: { opacity: "1" },
         },
       },
     },
