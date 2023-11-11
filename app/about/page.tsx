@@ -34,11 +34,11 @@ const About: FC = () => {
             <p>
               Our team of skilled designers and developers works tirelessly to
               bring your vision to life. We understand that every business is
-              unique, and that's why we offer tailored website design solutions
-              that cater to your specific needs. Whether you're a startup, small
-              business, or established enterprise, we have the expertise to
-              deliver high-quality designs that showcase your brand in the best
-              light.
+              unique, and that&apos;s why we offer tailored website design
+              solutions that cater to your specific needs. Whether you&apos;re a
+              startup, small business, or established enterprise, we have the
+              expertise to deliver high-quality designs that showcase your brand
+              in the best light.
             </p>
           </div>
         </section>
@@ -46,10 +46,10 @@ const About: FC = () => {
           <h2>Comprehensive Branding Solutions</h2>
           <p>
             Beyond website design, our comprehensive branding services ensure
-            that your brand's personality shines through every aspect of your
-            online presence. From logo creation to color palettes and visual
-            elements, we meticulously curate your brand's identity to leave a
-            lasting impression on your audience.
+            that your brand&apos;s personality shines through every aspect of
+            your online presence. From logo creation to color palettes and
+            visual elements, we meticulously curate your brand&apos;s identity
+            to leave a lasting impression on your audience.
           </p>
         </section>
         <section>
@@ -65,11 +65,11 @@ const About: FC = () => {
         <section>
           <h2>SEO-Friendly Web Design</h2>
           <p>
-            In today's competitive digital landscape, having a stunning website
-            is not enough. That's why we implement SEO best practices right from
-            the start. Our SEO-friendly web design ensures that your site is
-            search engine optimized, helping you climb the ranks and reach a
-            wider audience.
+            In today&apos;s competitive digital landscape, having a stunning
+            website is not enough. That&apos;s why we implement SEO best
+            practices right from the start. Our SEO-friendly web design ensures
+            that your site is search engine optimized, helping you climb the
+            ranks and reach a wider audience.
           </p>
         </section>
         <section>
@@ -95,8 +95,8 @@ const About: FC = () => {
             Join our growing list of satisfied clients who have experienced the
             Tidal Sites difference. Discover the power of web design that
             captivates, converts, and stands out in the digital sea. Partner
-            with us today and let's embark on a journey towards web excellence
-            together.
+            with us today and let&apos;s embark on a journey towards web
+            excellence together.
           </p>
           <a
             href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}

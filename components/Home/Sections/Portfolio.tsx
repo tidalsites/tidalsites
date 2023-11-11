@@ -1,12 +1,10 @@
 import Link from "next/link";
-import styles from "../../../styles/PortfolioSection.module.scss";
-import home_styles from "../../../styles/Home.module.scss";
 import collageImg from "@/public/assets/images/collage.png";
 import Image from "next/image";
 
 export const Portfolio = () => {
   return (
-    <section className="mt-20">
+    <section className="mt-20 px-4">
       <div>
         <h2 className="text-4xl">DARE TO BE DIFFERENT</h2>
       </div>
@@ -15,7 +13,7 @@ export const Portfolio = () => {
           <p className="max-w-[50ch]">
             Explore our success stories and witness the power of exemplary web
             solutions in action. Visit our Portfolio page to delve into a
-            diverse collection of our accomplished projects. See how we've
+            diverse collection of our accomplished projects. See how we&apos;ve
             helped businesses like yours achieve their online goals. Take a tour
             of innovation and inspiration today.
           </p>

@@ -11,14 +11,16 @@ interface LogoCardProps {
   color?: string;
 }
 
-export const LogoCard: FC<LogoCardProps> = ({ title, alt, src, color }) => {
+export const LogoCard: FC<LogoCardProps> = ({
+  title,
+  alt,
+  src,
+  color = "black",
+}) => {
   const { card, card_title, img } = styles;
   return (
     <div className={card}>
-      <p
-        style={color ? { backgroundColor: color } : null}
-        className={card_title}
-      >
+      <p style={{ backgroundColor: color }} className={card_title}>
         {title}
       </p>
       <div className={img}>

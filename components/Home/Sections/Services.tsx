@@ -92,7 +92,7 @@ export const Services: FC = () => {
               seamless online presence. With reliable servers, top-tier
               security, and unmatched support, we ensure your website remains
               fast, secure, and accessible 24/7. Experience worry-free hosting,
-              optimizing your site's performance and reliability.
+              optimizing your site&apos;s performance and reliability.
             </p>
           </li>
           <li className="max-w-[450px] bg-[--white] p-4 shadow-lg rounded-lg border-2 border-black/10">

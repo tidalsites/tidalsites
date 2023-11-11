@@ -1,53 +1,33 @@
 import { FC } from "react";
-import checkbox from "@/public/checkbox.svg";
-import Image from "next/image";
-import styles from "../../../styles/HighlightsSection.module.scss";
-
-const imgSize = "35";
+import { LuCheckCircle } from "react-icons/lu";
 
 export const Highlights: FC = () => {
-  const { highlights, wrapper, highlight } = styles;
   return (
-    <div className={highlights}>
-      <span>The Tidal Sites Guarantee:</span>
-      <div className={wrapper}>
-        <div className={highlight}>
-          <Image
-            src={checkbox}
-            width={imgSize}
-            height={imgSize}
-            alt="Checkbox"
-          />
+    <section className="mt-20 flex flex-col items-center px-4">
+      <h2 className="text-4xl text-center">The Tidal Sites Guarantee</h2>
+      <p className="my-4 text-black/80 max-w-[70ch] text-center">
+        At Tidal Sites, we take pride in our unwavering commitment to delivering
+        websites that not only meet but exceed industry standards. When you
+        choose us, you are guaranteed:
+      </p>
+      <div className="flex flex-wrap justify-around w-full my-10 gap-8">
+        <div className="px-4 py-2 rounded-full border-2 border-[--purple] flex items-center gap-2">
+          <LuCheckCircle className="text-[--purple] text-2xl" />
           <span>SEO</span>
         </div>
-        <div className={highlight}>
-          <Image
-            src={checkbox}
-            width={imgSize}
-            height={imgSize}
-            alt="Checkbox"
-          />
+        <div className="px-4 py-2 rounded-full border-2 border-[--purple] flex items-center gap-2">
+          <LuCheckCircle className="text-[--purple] text-2xl" />
           <span>Mobile Responsiveness</span>
         </div>
-        <div className={highlight}>
-          <Image
-            src={checkbox}
-            width={imgSize}
-            height={imgSize}
-            alt="Checkbox"
-          />
+        <div className="px-4 py-2 rounded-full border-2 border-[--purple] flex items-center gap-2">
+          <LuCheckCircle className="text-[--purple] text-2xl" />
           <span>508 (Accessibility)</span>
         </div>
-        <div className={highlight}>
-          <Image
-            src={checkbox}
-            width={imgSize}
-            height={imgSize}
-            alt="Checkbox"
-          />
+        <div className="px-4 py-2 rounded-full border-2 border-[--purple] flex items-center gap-2">
+          <LuCheckCircle className="text-[--purple] text-2xl" />
           <span>Performance Optimizations</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

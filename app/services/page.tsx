@@ -136,10 +136,10 @@ const Services: FC = () => {
                   />
                 </div>
                 <p>
-                  Maintaining a website shouldn't be your burden to bear. Let
-                  Tidal Sites provide website maintenance so that you can focus
-                  on your business. We provide constant updates to make sure
-                  your website is secure and always online. <br />
+                  Maintaining a website shouldn&apos;t be your burden to bear.
+                  Let Tidal Sites provide website maintenance so that you can
+                  focus on your business. We provide constant updates to make
+                  sure your website is secure and always online. <br />
                   <br />
                   We implement a PRO-active approach to website maintenance and
                   always try to mitigate issues before they arise. Rest assured

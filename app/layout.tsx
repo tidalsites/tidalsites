@@ -1,4 +1,5 @@
 import { Metadata, Viewport } from "next";
+import { Montserrat } from "next/font/google";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import "./globals.css";
@@ -16,6 +17,8 @@ export const viewpost: Viewport = {
   themeColor: "#ffffff",
 };
 
+const montserrat = Montserrat({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: {
@@ -23,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={montserrat.className}>
         <Header />
         <main className="max-w-page mx-auto">{children}</main>
         <Footer />

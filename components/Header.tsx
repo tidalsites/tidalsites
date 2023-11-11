@@ -1,10 +1,13 @@
 "use client";
 
 import { FC, useState, useEffect } from "react";
+import { Rubik } from "next/font/google";
 import Link from "next/link";
 import logo from "@/public/assets/logos/logo.svg";
 import Image from "next/image";
 import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const Header: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
@@ -29,7 +32,10 @@ export const Header: FC = () => {
         <div className="py-3">
           <Link className="flex gap-2 relative text-gray-800 py-1" href="/">
             <Image src={logo} alt="Tidal Sites" width="35" height="35" />
-            <span aria-hidden className="font-bold text-3xl text-gray-800">
+            <span
+              aria-hidden
+              className={`font-bold text-3xl text-[--black] ${rubik.className}`}
+            >
               TIDAL SITES
             </span>
           </Link>
