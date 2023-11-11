@@ -3,15 +3,15 @@ import styles from "../styles/Portfolio.module.scss";
 import { PortfolioPiece } from "../components/Portfolio/PortfolioPiece";
 
 // Logos
-import GladiatorLogo from "../public/gladiator-logo.png";
-import DictumSquareLogo from "../public/dictum-square-logo.png";
-import AtoBLogo from "../public/atob.svg";
-import TidalSitesLogo from "../public/logo.svg";
-import XPRTHomeLogo from "../public/xprt-logo.png";
-import FourSquareCalcLogo from "../public/foursquare.svg";
-import SunriseLogo from "../public/sunrise.svg";
-import PlanetLogo from "../public/planet.svg";
-import ConcrecalLogo from "../public/concrecal-logo.svg";
+import GladiatorLogo from "@/public/assets/logos/gladiator-logo.png";
+import DictumSquareLogo from "@/public/assets/logos/dictum-square-logo.png";
+import AtoBLogo from "@/public/assets/logos/atob.svg";
+import TidalSitesLogo from "@/public/assets/logos/logo.svg";
+import XPRTHomeLogo from "@/public/assets/logos/xprt-logo.png";
+import FourSquareCalcLogo from "@/public/assets/logos/foursquare.svg";
+import SunriseLogo from "@/public/assets/logos/sunrise.svg";
+import PlanetLogo from "@/public/assets/logos/planet.svg";
+import ConcrecalLogo from "@/public/assets/logos/concrecal-logo.svg";
 
 import { LogoCard } from "../components/Logo/LogoCard";
 import Head from "next/head";

@@ -2,17 +2,17 @@ import { FC } from "react";
 import styles from "../../styles/PortfolioPiece.module.scss";
 import Image from "next/image";
 
-import ProsoftWeb from "../../public/prosoft-web.png";
-import ProsoftMobile from "../../public/prosoft-mobile.png";
-import AtoBWeb from "../../public/atob-web.png";
-import AtoBMobile from "../../public/atob-mobile.png";
-import HHGWeb from "../../public/hartshollergraphics-web.png";
-import HHGMobile from "../../public/hartshollergraphics-mobile.png";
-import DWBWeb from "../../public/dwbuilders-web.png";
-import DWBMobile from "../../public/dwbuilders-mobile.png";
-import XPRTHomeWeb from "../../public/xprt-web.png";
-import XPRTHomeMobile from "../../public/xprt-mobile.png";
-import ConcrecalWeb from "../../public/concrecal-web.png";
+import ProsoftWeb from "@/public/assets/images/prosoft-web.png";
+import ProsoftMobile from "@/public/assets/images/prosoft-mobile.png";
+import AtoBWeb from "@/public/assets/images/atob-web.png";
+import AtoBMobile from "@/public/assets/images/atob-mobile.png";
+import HHGWeb from "@/public/assets/images/hartshollergraphics-web.png";
+import HHGMobile from "@/public/assets/images/hartshollergraphics-mobile.png";
+import DWBWeb from "@/public/assets/images/dwbuilders-web.png";
+import DWBMobile from "@/public/assets/images/dwbuilders-mobile.png";
+import XPRTHomeWeb from "@/public/assets/images/xprt-web.png";
+import XPRTHomeMobile from "@/public/assets/images/xprt-mobile.png";
+import ConcrecalWeb from "@/public/assets/images/concrecal-web.png";
 
 interface IPortfolioPieceProps {
   project_name: string;

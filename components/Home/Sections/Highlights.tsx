@@ -1,5 +1,5 @@
 import { FC } from "react";
-import checkbox from "../../../public/checkbox.svg";
+import checkbox from "@/public/checkbox.svg";
 import Image from "next/image";
 import styles from "../../../styles/HighlightsSection.module.scss";
 

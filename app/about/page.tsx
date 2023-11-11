@@ -1,10 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
-import styles from "../styles/About.module.scss";
 
 const About: FC = () => {
-  const { about, intro, cta } = styles;
-
   const emailBody =
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
 
@@ -17,8 +14,8 @@ const About: FC = () => {
           content="Discover the story behind Tidal Sites - Your go-to web services partner in Hampton Roads, Virginia. Learn about our commitment to crafting exceptional online experiences, our team's expertise, and our dedication to elevating your digital presence. Explore our journey today!"
         />
       </Head>
-      <div className={about}>
-        <section className={intro}>
+      <div>
+        <section>
           <h1>
             Welcome to Tidal Sites - Your Gateway to Exceptional Web Experiences
           </h1>
@@ -93,7 +90,7 @@ const About: FC = () => {
             systems, and custom application development.
           </p>
         </section>
-        <section className={cta}>
+        <section>
           <p>
             Join our growing list of satisfied clients who have experienced the
             Tidal Sites difference. Discover the power of web design that

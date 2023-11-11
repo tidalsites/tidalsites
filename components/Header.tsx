@@ -2,7 +2,7 @@
 
 import { FC, useState, useEffect } from "react";
 import Link from "next/link";
-import logo from "../public/logo.svg";
+import logo from "@/public/assets/logos/logo.svg";
 import Image from "next/image";
 import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
 

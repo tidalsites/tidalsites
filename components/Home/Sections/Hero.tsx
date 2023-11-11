@@ -1,5 +1,5 @@
 import Image from "next/image";
-import illustration from "../../../public/splash-illustration.svg";
+import illustration from "@/public/assets/images/splash-illustration.svg";
 
 export const Hero = () => {
   const emailBody =
