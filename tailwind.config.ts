@@ -18,6 +18,8 @@ const config: Config = {
       },
       maxWidth: {
         page: "90em",
+        scale: "min(50ch, calc(100vw - 2rem))",
+        prose: "50ch",
       },
       height: {
         navbar: "70px",

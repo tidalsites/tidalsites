@@ -27,7 +27,7 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <header className="w-[100vw] fixed top-0 z-10 bg-white">
+    <header className="w-[100vw] fixed top-0 z-10 bg-white text-[--black] shadow lg:shadow-none">
       <div className="max-w-page mx-auto flex justify-between px-4 items-center h-navbar">
         <div className="py-3">
           <Link className="flex gap-2 relative text-gray-800 py-1" href="/">
@@ -41,6 +41,9 @@ export const Header: FC = () => {
           </Link>
         </div>
         <button
+          aria-label="Mobile Navigation Button"
+          aria-controls="mobile-menu"
+          aria-expanded={dropdownActivated}
           className="md:hidden outline outline-black outline-2 p-1 transition-all hover:bg-black hover:text-white duration-400 hover:outline-offset-2"
           onClick={activateDropdown}
         >
@@ -83,6 +86,7 @@ export const Header: FC = () => {
           </ul>
         </nav>
         <div
+          id="mobile-menu"
           className={`${
             dropdownActivated
               ? "translate-y-0 opacity-100 flex flex-col"

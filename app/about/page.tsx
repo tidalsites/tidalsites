@@ -16,8 +16,8 @@ const About: FC = () => {
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
 
   return (
-    <div className="mt-[--navbar-height] leading-6 max-w-[70ch] mx-auto">
-      <section className="relative py-4 px-9  mb-8 after:h-12 after:w-12 after:border-b-2 after:border-r-2 after:border-[--purple] after:bottom-0 after:right-0 after:absolute before:h-12 before:w-12 before:border-t-2 before:border-l-2 before:border-[--purple] before:top-0 before:left-0 before:absolute">
+    <div className="mt-[--navbar-height] leading-6 max-w-[65ch] mx-auto">
+      <section className="relative py-4 px-9 my-10 mx-4 after:h-12 after:w-12 after:border-b-2 after:border-r-2 after:border-[--purple] after:bottom-0 after:right-0 after:absolute before:h-12 before:w-12 before:border-t-2 before:border-l-2 before:border-[--purple] before:top-0 before:left-0 before:absolute">
         <h1
           className={`text-center font-bold text-2xl py-4 ${rubik.className}`}
         >
@@ -32,7 +32,7 @@ const About: FC = () => {
           and drive measurable results for your business.
         </p>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <div>
           <h2
             className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
@@ -50,7 +50,7 @@ const About: FC = () => {
           </p>
         </div>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <h2
           className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
         >
@@ -64,7 +64,7 @@ const About: FC = () => {
           lasting impression on your audience.
         </p>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <h2
           className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
         >
@@ -78,7 +78,7 @@ const About: FC = () => {
           mind.
         </p>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <h2
           className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
         >
@@ -92,7 +92,7 @@ const About: FC = () => {
           a wider audience.
         </p>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <h2
           className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
         >
@@ -105,7 +105,7 @@ const About: FC = () => {
           providing a smooth and engaging user experience across all devices.
         </p>
       </section>
-      <section className="py-8">
+      <section className="py-8 mx-4">
         <h2
           className={`text-2xl border-b-2 border-[--purple] w-fit pr-8 py-2 mb-8 font-bold ${rubik.className}`}
         >
@@ -117,8 +117,6 @@ const About: FC = () => {
           includes e-commerce development, content management systems, and
           custom application development.
         </p>
-      </section>
-      <section className="p-8 rounded my-20 bg-[--purple] text-[--white] outline outline-2 outline-[--white] -outline-offset-4">
         <p>
           Join our growing list of satisfied clients who have experienced the
           Tidal Sites difference. Discover the power of web design that
@@ -129,9 +127,9 @@ const About: FC = () => {
         <a
           href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
           target="_blank"
-          className="flex gap-2 bg-white text-[--black] w-fit px-4 py-2 rounded-full items-center my-4 outline outline-2 outline-[--white] -outline-offset-2 hover:outline-offset-4 transition-all"
+          className="flex gap-2 bg-[--purple] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-4 transition-all"
         >
-          <FaEnvelope className="text-[--purple] text-2xl" />
+          <FaEnvelope className="text-[--white] text-2xl" />
           Email Us Today
         </a>
       </section>

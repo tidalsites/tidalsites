@@ -14,26 +14,20 @@ export const Hero = () => {
         <h1
           className={`flex flex-col gap-2 text-5xl font-bold ${rubik.className}`}
         >
-          <span className="translate-y-[100%] animate-[shiftUp_750ms_linear_250ms_forwards]">
+          <span className="lg:translate-y-[100%] lg:animate-[shiftUp_750ms_linear_250ms_forwards]">
             ELEVATE
           </span>
-          <span className="translate-y-[100%] animate-[shiftUp_750ms_linear_500ms_forwards]">
+          <span className="lg:translate-y-[100%] lg:animate-[shiftUp_750ms_linear_500ms_forwards]">
             YOUR DIGITAL
           </span>
-          <span className="translate-y-[100%] animate-[shiftUp_750ms_linear_750ms_forwards]">
+          <span className="lg:translate-y-[100%] lg:animate-[shiftUp_750ms_linear_750ms_forwards]">
             EXPERIENCE
           </span>
         </h1>
-        <p className="text-lg opacity-0 mt-4 animate-[fadeIn_750ms_linear_750ms_forwards] max-w-[30ch]">
+        <p className="text-lg lg:opacity-0 mt-4 lg:animate-[fadeIn_750ms_linear_750ms_forwards] max-w-[30ch]">
           Tailored Web Design Solutions to Enhance Your Brands Unique Voice
         </p>
         <div className="flex gap-4 mt-4">
-          {/* <button onClick={handleShowContactModal}>
-            <span className="material-icons" role="img">
-              email
-            </span>
-            Get Quote
-          </button> */}
           <a
             href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
             target="_blank"
