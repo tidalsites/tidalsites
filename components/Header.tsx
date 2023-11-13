@@ -1,21 +1,15 @@
+"use client";
+
 import { FC, useState, useEffect } from "react";
+import { Rubik } from "next/font/google";
 import Link from "next/link";
-import logo from "../public/logo.svg";
+import logo from "@/public/assets/logos/logo.svg";
 import Image from "next/image";
-import styles from "../styles/Header.module.scss";
+import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
+
+const rubik = Rubik({ subsets: ["latin"] });
 
 export const Header: FC = () => {
-  const {
-    navbar,
-    navbar__nav,
-    navbar__nav__burger,
-    navbar__nav__links,
-    navbar__nav__links_mobile,
-    navbar__nav__links_mobile__close,
-    navbar__nav__logo,
-    open,
-    link,
-  } = styles;
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
   const activateDropdown = () => {
@@ -33,72 +27,120 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <div className={navbar}>
-      <div className={navbar__nav}>
-        <div className={navbar__nav__logo}>
-          <Link href="/">
-            <div className={link}>
-              <Image src={logo} alt="Tidal Sites" width="35" height="35" />
-              <span aria-hidden>TIDAL SITES</span>
-            </div>
+    <header className="w-[100vw] fixed top-0 z-10 bg-white text-[--black] shadow lg:shadow-none">
+      <div className="max-w-page mx-auto flex justify-between px-4 items-center h-navbar">
+        <div className="py-3">
+          <Link className="flex gap-2 relative text-gray-800 py-1" href="/">
+            <Image src={logo} alt="Tidal Sites" width="35" height="35" />
+            <span
+              aria-hidden
+              className={`font-bold text-3xl text-[--black] ${rubik.className}`}
+            >
+              TIDAL SITES
+            </span>
           </Link>
         </div>
-        <div className={navbar__nav__burger}>
-          <span className="material-icons md-24" onClick={activateDropdown}>
-            menu_open
-          </span>
-        </div>
-        <nav aria-label="Primary Navigation" className={navbar__nav__links}>
-          <ul>
-            <li>
-              <Link href="/">HOME</Link>
+        <button
+          aria-label="Mobile Navigation Button"
+          aria-controls="mobile-menu"
+          aria-expanded={dropdownActivated}
+          className="md:hidden outline outline-black outline-2 p-1 transition-all hover:bg-black hover:text-white duration-400 hover:outline-offset-2"
+          onClick={activateDropdown}
+        >
+          <MdOutlineMenuOpen className="text-4xl" />
+        </button>
+        <nav aria-label="Primary Navigation" className="hidden md:block">
+          <ul className="flex gap-4 flex-wrap justify-end">
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/"
+              >
+                HOME
+              </Link>
             </li>
-            <li>
-              <Link href="/about">ABOUT</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/about"
+              >
+                ABOUT
+              </Link>
             </li>
-            <li>
-              <Link href="/services">SERVICES</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/services"
+              >
+                SERVICES
+              </Link>
             </li>
-            <li>
-              <Link href="/portfolio">PORTFOLIO</Link>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/portfolio"
+              >
+                PORTFOLIO
+              </Link>
             </li>
           </ul>
         </nav>
         <div
-          className={`${navbar__nav__links_mobile} ${
-            dropdownActivated ? open : ""
-          }`}
+          id="mobile-menu"
+          className={`${
+            dropdownActivated
+              ? "translate-y-0 opacity-100 flex flex-col"
+              : "hidden translate-y-[-100vh]"
+          } fixed inset-0 justify-center bg-black/80 overflow-hidden z-50 transition-all`}
         >
-          <span
-            onClick={deactivateDropdown}
-            className={`material-icons ${navbar__nav__links_mobile__close}`}
-          >
-            close
-          </span>
-          <ul>
-            <li>
+          <button className="text-red-400 bg-white rounded-full shadow-md text-4xl absolute top-4 right-4 p-1">
+            <MdClose onClick={deactivateDropdown} />
+          </button>
+
+          <ul className="flex flex-col content-center items-center min-w-[300px] bg-white w-fit mx-auto rounded">
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/">
-                <span onClick={deactivateDropdown}>HOME</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  HOME
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/about">
-                <span onClick={deactivateDropdown}>ABOUT</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  ABOUT
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/services">
-                <span onClick={deactivateDropdown}>SERVICES</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  SERVICES
+                </span>
               </Link>
             </li>
-            <li>
+            <li className="w-full text-center">
               <Link href="/portfolio">
-                <span onClick={deactivateDropdown}>PORTFOLIO</span>
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  PORTFOLIO
+                </span>
               </Link>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
