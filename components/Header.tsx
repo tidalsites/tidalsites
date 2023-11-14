@@ -83,6 +83,14 @@ export const Header: FC = () => {
                 PORTFOLIO
               </Link>
             </li>
+            <li className="relative">
+              <Link
+                className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-purple-800 after:transition-all hover:text-purple-800 hover:after:w-full hover:after:left-0"
+                href="/contact"
+              >
+                CONTACT
+              </Link>
+            </li>
           </ul>
         </nav>
         <div
@@ -135,6 +143,16 @@ export const Header: FC = () => {
                   onClick={deactivateDropdown}
                 >
                   PORTFOLIO
+                </span>
+              </Link>
+            </li>
+            <li className="w-full text-center">
+              <Link href="/contact">
+                <span
+                  className="flex justify-center w-full h-full py-4"
+                  onClick={deactivateDropdown}
+                >
+                  Contact
                 </span>
               </Link>
             </li>

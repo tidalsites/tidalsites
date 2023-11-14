@@ -24,6 +24,9 @@ const config: Config = {
       height: {
         navbar: "70px",
       },
+      minHeight: {
+        page: "calc(100vh - var(--navbar-height))",
+      },
       keyframes: {
         shiftUp: {
           "0%": { transform: "translateY(100%)" },

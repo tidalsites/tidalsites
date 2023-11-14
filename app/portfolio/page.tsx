@@ -39,9 +39,9 @@ export const metadata: Metadata = {
 const Portfolio: FC = () => {
   return (
     <div className="mt-[--navbar-height]">
-      <div className="py-10 mx-4">
+      <div className="py-20 mx-4">
         <h1 className="text-4xl">Portfolio</h1>
-        <p className="py-2 text-lg">Check out our work</p>
+        <span>Check out our work</span>
         <p className="text-center my-10 text-xl max-w-prose px-9 py-4 mx-auto font-bold relative before:absolute before:border-t-2 before:border-l-2 before:border-[--purple] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--purple] after:w-12 after:h-12 after:bottom-0 after:right-0">
           Tidal Sites is dedicated to ensuring your designs are unique,
           beautiful, and functional across any device.
