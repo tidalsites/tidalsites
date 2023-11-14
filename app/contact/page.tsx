@@ -1,6 +1,11 @@
 import { RiSendPlaneLine } from "react-icons/ri";
 import { MdOutlineCorporateFare } from "react-icons/md";
-import { FaEnvelope } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 
 function Contact() {
@@ -15,6 +20,47 @@ function Contact() {
           information below or fill out the form, and we&apos;ll get back to you
           promptly.
         </p>
+        <div>
+          <a
+            href="mailto:devin@tidalsites.com"
+            target="_blank"
+            className="flex gap-2 items-center my-4 py-2 w-fit underline"
+          >
+            <FaEnvelope className="text-xl" />
+            devin@tidalsites.com
+          </a>
+
+          <a
+            href="tel:757-550-0830"
+            className="flex gap-2 items-center my-4 py-2 w-fit underline"
+          >
+            <FaPhone />
+            (757) 550-0830
+          </a>
+          <div className="flex gap-8 pt-4">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/tidalsites"
+              aria-label="Linkedin"
+            >
+              <FaLinkedin className="text-4xl" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/people/Tidal-Sites/61553610020184/"
+              aria-label="Facebook"
+            >
+              <FaFacebook className="text-4xl" />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/tidalsites/"
+              aria-label="Instagram"
+            >
+              <FaInstagram className="text-4xl" />
+            </a>
+          </div>
+        </div>
       </div>
 
       <form
@@ -51,7 +97,7 @@ function Contact() {
             htmlFor="company_name"
           >
             Company Name
-            <div className="border-[1px] border-[--black] flex rounded-lg px-2 py-1 bg-white">
+            <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white">
               <input
                 className="text-lg text-[--black]"
                 name="company_name"
@@ -63,7 +109,7 @@ function Contact() {
           </label>
           <label className="flex flex-col text-sm text-white" htmlFor="phone">
             Phone
-            <div className="border-[1px] border-[--black] flex rounded-lg px-2 py-1 bg-white items-center">
+            <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white items-center">
               <input
                 className="text-lg text-[--black]"
                 name="phone"
@@ -75,7 +121,7 @@ function Contact() {
           </label>
           <label className="flex flex-col text-sm text-white" htmlFor="email">
             Email
-            <div className="border-[1px] border-[--black] flex rounded-lg px-2 py-1 bg-white items-center">
+            <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white items-center">
               <input
                 className="text-lg text-[--black]"
                 name="email"
@@ -102,11 +148,11 @@ function Contact() {
             ></textarea>
           </label>
           <button
-            className="flex items-center gap-[1px] mt-8 ml-auto bg-[--white] text-[--purple] rounded-full px-4 py-1 text-lg"
+            className="flex items-center gap-[1px] mt-8 ml-auto bg-[--white] text-[--black] rounded-full px-4 py-1 text-lg outline outline-2 -outline-offset-2 outline-white group hover:outline-offset-2 transition-all"
             type="submit"
           >
             Submit
-            <RiSendPlaneLine className="text-2xl" />
+            <RiSendPlaneLine className="text-2xl text-[--purple] group-hover:text-3xl group-hover:translate-x-2 transition-all" />
           </button>
         </div>
       </form>
