@@ -34,6 +34,11 @@ export const Footer = () => {
                 Portfolio
               </Link>
             </li>
+            <li>
+              <Link className="underline" href="/contact">
+                Contact
+              </Link>
+            </li>
           </ul>
         </nav>
         <div className="flex flex-col justify-between gap-4">
