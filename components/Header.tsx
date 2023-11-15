@@ -136,7 +136,7 @@ export const Header: FC = () => {
                 </span>
               </Link>
             </li>
-            <li className="w-full text-center">
+            <li className="w-full text-center border-b-[1px] border-black">
               <Link href="/portfolio">
                 <span
                   className="flex justify-center w-full h-full py-4"
@@ -152,7 +152,7 @@ export const Header: FC = () => {
                   className="flex justify-center w-full h-full py-4"
                   onClick={deactivateDropdown}
                 >
-                  Contact
+                  CONTACT
                 </span>
               </Link>
             </li>

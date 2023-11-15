@@ -2,6 +2,8 @@ import { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,7 +30,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
-        <main className="max-w-page mx-auto">{children}</main>
+        <main className="max-w-page mx-auto">
+          <ToastContainer className="mt-[--navbar-height]" />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
