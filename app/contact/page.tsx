@@ -183,9 +183,8 @@ function Contact() {
             Description
             <textarea
               {...register("description")}
-              cols={30}
               rows={10}
-              className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black]"
+              className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black] min-w-[300px] w-full"
               placeholder="Describe what it is you are looking for today..."
             ></textarea>
             {errors["description"] && (
