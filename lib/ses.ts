@@ -5,8 +5,8 @@ import { SendEmailRequest } from "aws-sdk/clients/ses";
 import { TContactSchema } from "./ContactSchema";
 
 config.credentials = {
-  accessKeyId: process.env.AWS_ACCESS_KEY || "",
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || "",
+  accessKeyId: process.env.SES_ACCESS_KEY || "",
+  secretAccessKey: process.env.SES_SECRET_ACCESS_KEY || "",
 };
 
 config.update({
