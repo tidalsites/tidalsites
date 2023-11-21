@@ -10,7 +10,7 @@ export const Footer = () => {
   const emailBody =
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
   return (
-    <div className="bg-[--black] text-[--white] px-4">
+    <div className="bg-[--black] text-[--white] px-4 border-t-2 border-t-[--white]">
       <div className="max-w-[--page-max-width] mx-auto flex justify-between  items-center py-4">
         <nav aria-label="Footer Navigation">
           <ul className="flex flex-col gap-4">
