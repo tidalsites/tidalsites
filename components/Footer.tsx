@@ -6,6 +6,7 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import { Lighthouse } from "./Lighthouse";
 export const Footer = () => {
   const emailBody =
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
@@ -83,16 +84,21 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[--page-max-width] mx-auto py-2">
-        Already a customer?{" "}
-        <a
-          className="text-[--link-light] underline"
-          href="https://g.page/r/CRXKrwtrLyweEBM/review"
-          target="_blank"
-        >
-          Leave a review
-        </a>
+      <div className="max-w-[--page-max-width] mx-auto py-2 flex justify-between">
+        <div>
+          <span>Already a customer?</span>
+          <a
+            className="text-[--link-light] underline"
+            href="https://g.page/r/CRXKrwtrLyweEBM/review"
+            target="_blank"
+          >
+            Leave a review
+          </a>
+        </div>
+
+        <Lighthouse />
       </div>
+
       <div className="border-t-2 border-[--white] max-w-[--page-max-width] mx-auto text-center py-2">
         &copy; Tidal Sites, LLC 2023
       </div>

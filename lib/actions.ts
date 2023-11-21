@@ -3,6 +3,7 @@
 import { ZodError } from "zod";
 import { ContactSchema, type TContactSchema } from "./ContactSchema";
 import { sendSESEmail } from "./ses";
+import lighthouse from "lighthouse";
 
 type EmailResponse = {
   success: boolean;
@@ -26,3 +27,9 @@ export const sendEmail = async (
 
   return { success: false, error: "unknown" };
 };
+
+export async function createLighthouseReport(url: string) {
+  const report = await lighthouse("https://tidalsites.com");
+  console.log(report?.report);
+  return report?.report;
+}

@@ -4,6 +4,7 @@ import { Services } from "@/components/Services";
 import { Highlights } from "@/components/Highlights";
 import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
+import { Lighthouse } from "@/components/Lighthouse";
 
 export default function Home() {
   return (
