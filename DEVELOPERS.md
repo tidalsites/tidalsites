@@ -11,15 +11,15 @@ This project is the official website for Tidal Sites, LLC.
 ## Deploy
 
 1. Merge or commit changes to main
-2. Push changes to Github <-- This will automatically deploy to AWS via Github Actions
+2. Push changes to Github <-- This will automatically deploy to Vercel
 
 ## Tech stack
 
 - **FrontEnd Framework:** NextJS w/ Typescript
-- **CSS:** Sass with BEM
-- **Build Tool:** Vite
-- **CI/CD Pipeline:** AWS Amplify
-- **Deployment Environment:** AWS Amplify
+- **CSS:** Tailwind
+- **Build Tool:** NextJS
+- **CI/CD Pipeline:** Vercel
+- **Deployment Environment:** Vercel
 
 ## Color Palette
 

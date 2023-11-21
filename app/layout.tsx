@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
-        <main className="max-w-page mx-auto">
+        <main>
           <ToastContainer className="mt-[--navbar-height]" />
           {children}
         </main>

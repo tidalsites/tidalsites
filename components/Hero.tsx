@@ -9,7 +9,7 @@ export const Hero = () => {
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
 
   return (
-    <section className="flex h-[100vh] w-full relative">
+    <section className="flex h-[100vh] w-full relative max-w-page mx-auto">
       <div className="flex self-center bg-white/80 rounded-2xl py-10 flex-col gap-4 content-center text-gray-800 px-12 my-auto mx-auto md:mx-0">
         <h1
           className={`flex flex-col gap-2 text-5xl font-bold ${rubik.className}`}
