@@ -14,16 +14,25 @@ export const Process = () => {
         </div>
         <div className="flex flex-wrap gap-8 justify-center">
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            <span className="text-4xl text-[--black] border-b-2 border-b-[--black] self-start w-full p-2 bg-[--white] rounded-t-lg">
-              Design
-            </span>
-            <Image
-              src={webDesignIllustrationNew}
-              alt="Woman designing web app"
-              width="400"
-              height="309"
-            />
-            <p className="w-full p-4 mt-auto">
+            <div className="p-4 bg-gray-100 rounded-t-lg">
+              <Image
+                src={webDesignIllustrationNew}
+                alt="Woman designing web app"
+                width="400"
+                height="309"
+              />
+            </div>
+
+            <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
+              <div className="bg-[--purple] flex items-center justify-center p-2 text-white text-2xl rounded">
+                1
+              </div>
+              <span className="text-2xl w-fit pr-4 border-b-2 border-[--purple] self-end">
+                Design
+              </span>
+            </div>
+
+            <p className="w-full p-4 text-gray-700">
               All websites from Tidal Sites are custom designed. No templates!
               Each customer is unique and we value and encourage anyone with a
               website to create their own unique experience on the web. Our web
@@ -32,16 +41,23 @@ export const Process = () => {
             </p>
           </div>
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            <span className="text-4xl text-[--black] border-b-2 border-b-[--black] self-start w-full p-2 bg-[--white] rounded-t-lg">
-              Develop
-            </span>
-            <Image
-              src={webDesignIllustrationAlt}
-              alt="Computer and phone with digital connections"
-              width="400"
-              height="309"
-            />
-            <p className="w-full p-4 mt-auto">
+            <div className="p-4 bg-gray-100 rounded-t-lg">
+              <Image
+                src={webDesignIllustrationAlt}
+                alt="Computer and phone with digital connections"
+                width="400"
+                height="309"
+              />
+            </div>
+            <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
+              <div className="bg-[--purple] flex items-center justify-center p-2 text-white text-2xl rounded">
+                2
+              </div>
+              <span className="text-2xl w-fit pr-4 border-b-2 border-[--purple] self-end">
+                Develop
+              </span>
+            </div>
+            <p className="w-full p-4 text-gray-700">
               After a website is designed, it is time to build it. Once a base
               portion of the site is ready, we put it on a temporary hosting
               platform and send you a link. This allows you to have a keep
@@ -49,16 +65,23 @@ export const Process = () => {
             </p>
           </div>
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            <span className="text-4xl text-[--black] border-b-2 border-b-[--black] self-start w-full p-2 bg-[--white] rounded-t-lg">
-              Deploy
-            </span>
-            <Image
-              src={deployIllustration}
-              alt="Man uploading ideas into the cloud"
-              width="400"
-              height="309"
-            />
-            <p className="w-full p-4 mt-auto">
+            <div className="p-4 bg-gray-100 rounded-t-lg">
+              <Image
+                src={deployIllustration}
+                alt="Man uploading ideas into the cloud"
+                width="400"
+                height="309"
+              />
+            </div>
+            <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
+              <div className="bg-[--purple] flex items-center justify-center p-2 text-white text-2xl rounded">
+                3
+              </div>
+              <span className="text-2xl w-fit pr-4 border-b-2 border-[--purple] self-end">
+                Deploy
+              </span>
+            </div>
+            <p className="w-full p-4 text-gray-700">
               The site is designed. The site is built and looks just the way you
               want it. Now it is time to deploy. This is when your website goes
               publi Whether you choose your own hosting platform or choose to

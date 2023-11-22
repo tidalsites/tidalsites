@@ -19,19 +19,19 @@ export const metadata: Metadata = {
 const Services: FC = () => {
   return (
     <div className="mt-[--navbar-height]">
-      <div className="py-20 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
         <div className="mx-auto max-w-page">
           <h1 className="text-4xl">Services</h1>
           <span>What can we do for you?</span>
         </div>
-        <p className="max-w-[50ch] px-9 py-4 mx-auto mt-10 font-bold text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
+        <p className="max-w-[50ch] px-9 py-4 mx-auto mt-6 text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
           We love the web and we love helping people improve their online
           profile! Tidal Sites offers a variety of services to get you noticed
           online.
         </p>
       </div>
       <div className="mx-auto max-w-page">
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Branding
           </h2>
@@ -85,7 +85,7 @@ const Services: FC = () => {
             </ul>
           </div>
         </section>
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Web Design
           </h2>
@@ -108,7 +108,7 @@ const Services: FC = () => {
             </p>
           </div>
         </section>
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Web Development
           </h2>
@@ -131,7 +131,7 @@ const Services: FC = () => {
             </p>
           </div>
         </section>
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Hosting
           </h2>
@@ -151,7 +151,7 @@ const Services: FC = () => {
             </p>
           </div>
         </section>
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Maintenance
           </h2>
@@ -196,7 +196,7 @@ const Services: FC = () => {
             </ul>
           </div>
         </section>
-        <section className="mx-4 mb-20 bg-gradient-to-bl from-purple-900 via-[--purple] to-purple-900 border-2 border-[--black] rounded-lg shadow-lg">
+        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
           <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
             Consulting
           </h2>

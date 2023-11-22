@@ -17,11 +17,11 @@ const About: FC = () => {
 
   return (
     <div className="mt-[--navbar-height]">
-      <div className="py-20 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="px-4 py-6 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
         <div className="mx-auto max-w-page">
           <h1 className="text-4xl">About Us</h1>
           <span>Who are we?</span>
-          <p className="max-w-[50ch] px-9 py-4 mx-auto mt-10 font-bold text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
+          <p className="max-w-[50ch] px-9 py-4 mx-auto mt-6 text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
             We are passionate about crafting unparalleled web experiences that
             make a lasting impact. Our mission is to enhance your online
             presence, improve user engagement, and drive measurable results for

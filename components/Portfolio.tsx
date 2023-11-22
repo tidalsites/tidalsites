@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Portfolio = () => {
   return (
-    <section className="mt-20 px-4">
+    <section className="py-20 px-4 bg-gradient-to-br from-gray-100 to-slate-200">
       <div className="mx-auto max-w-page">
         <h2 className="text-4xl">DARE TO BE DIFFERENT</h2>
         <div className="flex justify-center lg:justify-between mt-10">
