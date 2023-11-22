@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const Services: FC = () => {
   return (
     <div className="mt-[--navbar-height]">
-      <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
         <div className="mx-auto max-w-page">
           <h1 className="text-4xl">Services</h1>
           <span>What can we do for you?</span>
@@ -30,21 +30,19 @@ const Services: FC = () => {
           online.
         </p>
       </div>
-      <div className="mx-auto max-w-page">
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Branding
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-10 pt-8">
-            <Image
-              src={brandingImg}
-              alt="Woman with branding notes"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-              priority
-            />
-            <p className="max-w-[50ch] px-4 text-[--white]">
+      <section className="py-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 pt-8">
+          <Image
+            src={brandingImg}
+            alt="Woman with branding notes"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+            priority
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Branding</h2>
+            <p className="max-w-[50ch] px-4">
               Building a brand can be challenging to new businesses. There is a
               lot to think about. Let Tidal Sites guide you through the process.
               Whether you are starting from scratch or need a new facelift, we
@@ -56,48 +54,46 @@ const Services: FC = () => {
               about marketing and bringing in more customers.
             </p>
           </div>
+        </div>
 
-          <div className="text-center mt-8">
-            <span className="text-[--white]">
-              Branding can include any of the following:
-            </span>
-            <ul className="flex flex-wrap justify-center gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Logo Design
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Company Naming
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Slogans, Mottos, Catchphrases
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Color Pallete Choices
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Iconography
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Web Design
-          </h2>
-          <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
-            <Image
-              src={designImg}
-              alt="Notebook with layouts drawn on it"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-            />
-            <p className="max-w-[50ch] px-4 text-[--white]">
+        <div className="text-center mt-8">
+          <span>Branding can include any of the following:</span>
+          <ul className="flex flex-wrap justify-center gap-4 py-8">
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Logo Design
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Company Naming
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Slogans, Mottos, Catchphrases
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Color Pallete Choices
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Iconography
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
+          <Image
+            src={designImg}
+            alt="Notebook with layouts drawn on it"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Web Design</h2>
+            <p className="max-w-[50ch] px-4">
               Web Design is all about making your audience happy. Tidal Sites
               designs combine functionality with a visually appealing user
               interface. We specialize in custom web design to help you stand
@@ -107,20 +103,20 @@ const Services: FC = () => {
               feedback.
             </p>
           </div>
-        </section>
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Web Development
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-10 py-8">
-            <Image
-              src={developmentImg}
-              alt="Computer with code"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-            />
-            <p className="max-w-[50ch] px-4 text-[--white]">
+        </div>
+      </section>
+      <section className="py-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 py-8">
+          <Image
+            src={developmentImg}
+            alt="Computer with code"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Web Development</h2>
+            <p className="max-w-[50ch] px-4">
               Tidal Sites offers secure and reliable web development. We always
               use the latest web technologies to stay ahead of the curve. Every
               website developed by us is coded by hand. Though this process may
@@ -130,19 +126,19 @@ const Services: FC = () => {
               possible!
             </p>
           </div>
-        </section>
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Hosting
-          </h2>
-          <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
-            <Image
-              src={hostingImg}
-              alt="Server rack"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-            />
+        </div>
+      </section>
+      <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
+          <Image
+            src={hostingImg}
+            alt="Server rack"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Hosting</h2>
             <p className="max-w-[50ch] px-4 text-[--white]">
               Web Hosting from Tidal Sites is secure, reliable, and affordable.
               We do not lock ourselves into a single hosting platform, as every
@@ -150,20 +146,20 @@ const Services: FC = () => {
               variety of options that match your needs.
             </p>
           </div>
-        </section>
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Maintenance
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-10 pt-8">
-            <Image
-              src={maintenanceImg}
-              alt="Hand plugging in computer component"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-            />
-            <p className="max-w-[50ch] px-4 text-[--white]">
+        </div>
+      </section>
+      <section className="py-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 pt-8">
+          <Image
+            src={maintenanceImg}
+            alt="Hand plugging in computer component"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Maintenance</h2>
+            <p className="max-w-[50ch] px-4">
               Maintaining a website shouldn&apos;t be your burden to bear. Let
               Tidal Sites provide website maintenance so that you can focus on
               your business. We provide constant updates to make sure your
@@ -174,40 +170,40 @@ const Services: FC = () => {
               your website will be highly available.
             </p>
           </div>
-          <div className="text-center mt-8">
-            <span className="text-[--white]">Maintenance items include:</span>
-            <ul className="flex flex-wrap justify-center gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Security Updates
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Content Updates
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Color Modifications
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Font Modifications
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section className="mx-4 bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat mb-20 border-2 border-[--black] rounded-lg shadow-lg">
-          <h2 className="text-2xl lg:text-4xl bg-white translate-y-4 py-4 border-2 border-t-[--black] border-b-[--black] border-l-0 border-r-0 uppercase pl-4">
-            Consulting
-          </h2>
-          <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 pt-8">
-            <Image
-              src={consultImg}
-              alt="Hands pointing at data on graph"
-              width="512"
-              height="512"
-              className="rounded-lg shadow-md"
-            />
+        </div>
+        <div className="text-center mt-8">
+          <span className="text-[--white]">Maintenance items include:</span>
+          <ul className="flex flex-wrap justify-center gap-4 py-8">
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Security Updates
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Content Updates
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Color Modifications
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--purple]" />
+              Font Modifications
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 pt-8">
+          <Image
+            src={consultImg}
+            alt="Hands pointing at data on graph"
+            width="512"
+            height="512"
+            className="rounded-lg shadow-md"
+          />
+          <div>
+            <h2 className="text-2xl py-4 uppercase pl-4">Consulting</h2>
             <p className="max-w-[50ch] px-4 text-[--white]">
               Sometimes, you just need some advice. If your question is
               technical, it is likely that Tidal Sites can help. Web advice is
@@ -217,39 +213,39 @@ const Services: FC = () => {
               to help.
             </p>
           </div>
-          <div className="text-center mt-8">
-            <span className="text-[--white]">
-              Our consultations can include any of the following:
-            </span>
-            <ul className="flex flex-wrap justify-center gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Website Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Project Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Cloud Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                UI/UX Design
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Mobile Apps
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center bg-[--white]">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
-                Automation Services
-              </li>
-            </ul>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className="text-center mt-8">
+          <span className="text-[--white]">
+            Our consultations can include any of the following:
+          </span>
+          <ul className="flex flex-wrap justify-center gap-4 py-8">
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              Website Management
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              Project Management
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              Cloud Management
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              UI/UX Design
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              Mobile Apps
+            </li>
+            <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
+              <LuCheckCircle className="text-2xl text-[--white]" />
+              Automation Services
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 };
