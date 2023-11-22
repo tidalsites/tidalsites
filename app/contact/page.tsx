@@ -41,11 +41,11 @@ function Contact() {
   }
   return (
     <div className="mt-[--navbar-height]">
-      <div className="py-20 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
         <div className="mx-auto max-w-page">
           <h1 className="text-4xl">Contact Us</h1>
           <span>Get in Touch</span>
-          <p className="max-w-[50ch] px-9 py-4 mx-auto mt-10 font-bold text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
+          <p className="max-w-[50ch] px-9 py-4 mx-auto mt-6 text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
             Have questions, need a quote, or ready to kickstart your digital
             transformation? We&apos;re here to help! Reach out to us using the
             information below or fill out the form, and we&apos;ll get back to
