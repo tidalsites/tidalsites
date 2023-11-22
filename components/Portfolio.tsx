@@ -24,7 +24,7 @@ export const Portfolio = () => {
             </Link>
           </div>
           <div className="hidden lg:block">
-            <Image width="800" height="729" src={collageImg} alt="collage" />
+            <Image src={collageImg} alt="collage" />
           </div>
         </div>
       </div>
