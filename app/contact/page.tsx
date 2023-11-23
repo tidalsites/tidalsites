@@ -16,6 +16,13 @@ import {
 } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { sendEmail } from "@/lib/actions";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Tidal Sites Contact",
+  description:
+    "Connect with Tidal Sites – Your Gateway to Digital Excellence. Reach out for inquiries, quotes, or consultations. Let's collaborate to turn your digital vision into reality. Elevate your brand with tailored web solutions.",
+};
 
 function Contact() {
   const {
