@@ -53,20 +53,18 @@ const Portfolio: FC = () => {
           </div>
         </div>
 
-        <section className="px-4 mx-auto max-w-page">
+        <section className="px-4">
           <div className="py-4 mb-10">
             <h2 className="text-2xl">WEBSITES</h2>
           </div>
           <div className="flex flex-col gap-20 items-center">
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                Concrecal
-              </div>
-              <div className="flex flex-wrap gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">Concrecal</div>
+              <div className="flex flex-wrap gap-8 justify-center items-center">
                 <Image
                   src={ConcrecalWeb}
                   alt="Concrecal"
-                  className="border-2 border-[--white] rounded-lg shadow-lg"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="454"
                   priority
@@ -82,7 +80,7 @@ const Portfolio: FC = () => {
                   identity.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 py-2 px-4 justify-start">
+              <div className="flex flex-wrap gap-4 py-2 justify-start">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>
@@ -97,15 +95,13 @@ const Portfolio: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                XPRT Home
-              </div>
-              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">XPRT Home</div>
+              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center">
                 <Image
                   src={XPRTHomeWeb}
                   alt="XPRT Home"
-                  className="border-2 border-[--white] rounded-lg shadow-lg"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="455"
                 />
@@ -119,7 +115,7 @@ const Portfolio: FC = () => {
                   Home is impeccably represented.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 py-2 px-4 justify-end">
+              <div className="flex flex-wrap gap-4 py-2 justify-end">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>
@@ -138,11 +134,9 @@ const Portfolio: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                AtoB Towing
-              </div>
-              <div className="flex flex-wrap gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">AtoB Towing</div>
+              <div className="flex flex-wrap gap-8 justify-center items-center">
                 <Image
                   src={AtoBWeb}
                   alt="AtoB Towing"
@@ -161,7 +155,7 @@ const Portfolio: FC = () => {
                   assistance.
                 </p>
               </div>
-              <div className="flex gap-4 py-2 px-4 justify-start">
+              <div className="flex flex-wrap gap-4 py-2 justify-start">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>
@@ -172,15 +166,13 @@ const Portfolio: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                Prosoft
-              </div>
-              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">Prosoft</div>
+              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center">
                 <Image
                   src={ProsoftWeb}
                   alt="Prosoft Engineering"
-                  className="border-2 border-[--white] rounded-lg shadow-lg"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="388"
                 />
@@ -201,15 +193,13 @@ const Portfolio: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                Harts Holler Graphics
-              </div>
-              <div className="flex flex-wrap gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">Harts Holler Graphics</div>
+              <div className="flex flex-wrap gap-8 justify-center items-center">
                 <Image
                   src={HHGWeb}
                   alt="Harts Holler Graphics"
-                  className="border-2 border-[--white] rounded-lg shadow-lg"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="454"
                 />
@@ -234,15 +224,13 @@ const Portfolio: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="border-2 border-[--black] rounded-lg bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-white shadow-2xl">
-              <div className="text-xl py-4 my-4 bg-[--white] border-l-0 border-r-0 border-t-2 border-b-2 border-[--black] pl-4 text-[--black]">
-                D.W. Builders
-              </div>
-              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center p-4">
+            <div>
+              <div className="text-xl py-4 my-4">D.W. Builders</div>
+              <div className="flex flex-wrap flex-row-reverse gap-8 justify-center items-center">
                 <Image
                   src={DWBWeb}
                   alt="D.W. Builders"
-                  className="border-2 border-[--white] rounded-lg shadow-lg"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="388"
                 />
