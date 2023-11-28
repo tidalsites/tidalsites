@@ -181,7 +181,7 @@ const About: FC = () => {
                 </div>
               </div>
               <div className="hidden xl:flex items-center">
-                <Image src={illustration} alt="" />
+                <Image src={illustration} alt="" loading="lazy" />
               </div>
             </div>
           </section>
