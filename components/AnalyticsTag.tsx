@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-function GTag() {
+function AnalyticsTag() {
   return (
     <>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-9VYB96T625" />
@@ -17,4 +17,4 @@ function GTag() {
   );
 }
 
-export default GTag;
+export default AnalyticsTag;

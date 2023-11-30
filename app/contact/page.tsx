@@ -1,14 +1,15 @@
 // Icons
+import AdsTag from "@/components/AdsTag";
+import AnalyticsTag from "@/components/AnalyticsTag";
+import { Metadata } from "next";
 import {
   FaEnvelope,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaPhone,
 } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
-import { Metadata } from "next";
 import ContactForm from "./form";
-import GTag from "@/components/GTag";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Contact",
@@ -19,7 +20,8 @@ export const metadata: Metadata = {
 function Contact() {
   return (
     <>
-      <GTag />
+      <AnalyticsTag />
+      <AdsTag />
       <div className="mt-[--navbar-height]">
         <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
           <div className="mx-auto max-w-page">
