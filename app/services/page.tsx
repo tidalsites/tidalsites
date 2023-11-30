@@ -1,15 +1,16 @@
-import { FC } from "react";
 import { Metadata } from "next";
 import Image from "next/image";
+import { FC } from "react";
 import { LuCheckCircle } from "react-icons/lu";
 
-import consultImg from "@/public/assets/images/services-consultation.png";
+import AdsTag from "@/components/AdsTag";
+import AnalyticsTag from "@/components/AnalyticsTag";
 import brandingImg from "@/public/assets/images/services-branding.png";
-import hostingImg from "@/public/assets/images/services-hosting.png";
+import consultImg from "@/public/assets/images/services-consultation.png";
 import designImg from "@/public/assets/images/services-design.png";
 import developmentImg from "@/public/assets/images/services-development.png";
+import hostingImg from "@/public/assets/images/services-hosting.png";
 import maintenanceImg from "@/public/assets/images/services-maintenance.png";
-import GTag from "@/components/GTag";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Services",
@@ -20,7 +21,8 @@ export const metadata: Metadata = {
 const Services: FC = () => {
   return (
     <>
-      <GTag />
+      <AnalyticsTag />
+      <AdsTag />
       <div className="mt-[--navbar-height]">
         <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
           <div className="mx-auto max-w-page">

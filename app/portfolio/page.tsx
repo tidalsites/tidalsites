@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { Metadata } from "next";
+import { FC } from "react";
 
 // Images
 // import ProsoftWeb from "@/public/assets/images/prosoft-web.png";
@@ -7,29 +7,30 @@ import ProsoftWeb from "@/public/assets/images/prosoft-web-min.png";
 // import AtoBWeb from "@/public/assets/images/atob-web.png";
 import AtoBWeb from "@/public/assets/images/atob-web-min.png";
 // import HHGWeb from "@/public/assets/images/hartshollergraphics-web.png";
-import HHGWeb from "@/public/assets/images/hartshollergraphics-web-min.png";
 import DWBWeb from "@/public/assets/images/dwbuilders-web.png";
+import HHGWeb from "@/public/assets/images/hartshollergraphics-web-min.png";
 // import XPRTHomeWeb from "@/public/assets/images/xprt-web.png";
 import XPRTHomeWeb from "@/public/assets/images/xprt-web-min.png";
 // import ConcrecalWeb from "@/public/assets/images/concrecal-web.png";
 import ConcrecalWeb from "@/public/assets/images/concrecal-web-min.png";
 
 // Logos
-import GladiatorLogo from "@/public/assets/logos/gladiator-logo.png";
-import DictumSquareLogo from "@/public/assets/logos/dictum-square-logo.png";
 import AtoBLogo from "@/public/assets/logos/atob.svg";
-import TidalSitesLogo from "@/public/assets/logos/logo.svg";
-import XPRTHomeLogo from "@/public/assets/logos/xprt-logo.png";
-import FourSquareCalcLogo from "@/public/assets/logos/foursquare.svg";
-import SunriseLogo from "@/public/assets/logos/sunrise.svg";
-import PlanetLogo from "@/public/assets/logos/planet.svg";
 import ConcrecalLogo from "@/public/assets/logos/concrecal-logo.svg";
+import DictumSquareLogo from "@/public/assets/logos/dictum-square-logo.png";
 import ElevatorLogo from "@/public/assets/logos/elevator.png";
+import FourSquareCalcLogo from "@/public/assets/logos/foursquare.svg";
+import GladiatorLogo from "@/public/assets/logos/gladiator-logo.png";
+import TidalSitesLogo from "@/public/assets/logos/logo.svg";
+import PlanetLogo from "@/public/assets/logos/planet.svg";
+import SunriseLogo from "@/public/assets/logos/sunrise.svg";
+import XPRTHomeLogo from "@/public/assets/logos/xprt-logo.png";
 
 // Components
+import AdsTag from "@/components/AdsTag";
+import AnalyticsTag from "@/components/AnalyticsTag";
 import Image from "next/image";
 import { LuCheckCircle } from "react-icons/lu";
-import GTag from "@/components/GTag";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Portfolio",
@@ -40,7 +41,8 @@ export const metadata: Metadata = {
 const Portfolio: FC = () => {
   return (
     <>
-      <GTag />
+      <AnalyticsTag />
+      <AdsTag />
       <div className="mt-[--navbar-height]">
         <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
           <div className="mx-auto max-w-page">

@@ -1,11 +1,12 @@
-import { FC } from "react";
+import AdsTag from "@/components/AdsTag";
+import AnalyticsTag from "@/components/AnalyticsTag";
+import illustration from "@/public/assets/images/about-illustration.png";
+import bio from "@/public/assets/images/bio-pic.png";
 import { Metadata } from "next";
 import { Rubik } from "next/font/google";
-import { FaEnvelope } from "react-icons/fa";
-import GTag from "@/components/GTag";
-import bio from "@/public/assets/images/bio-pic.png";
-import illustration from "@/public/assets/images/about-illustration.png";
 import Image from "next/image";
+import { FC } from "react";
+import { FaEnvelope } from "react-icons/fa";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -21,7 +22,8 @@ const About: FC = () => {
 
   return (
     <>
-      <GTag />
+      <AnalyticsTag />
+      <AdsTag />
       <div className="mt-[--navbar-height]">
         <div className="px-4 py-6 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
           <div className="mx-auto max-w-page">
