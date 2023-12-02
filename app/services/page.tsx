@@ -63,7 +63,7 @@ const Services: FC = () => {
 
           <div className="text-center mt-8">
             <span>Branding can include any of the following:</span>
-            <ul className="flex flex-wrap justify-center gap-4 py-8">
+            <ul className="flex flex-wrap md:justify-center px-4 gap-4 py-8">
               <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
                 <LuCheckCircle className="text-2xl text-[--purple]" />
                 Logo Design
@@ -223,7 +223,7 @@ const Services: FC = () => {
             <span className="text-[--white]">
               Our consultations can include any of the following:
             </span>
-            <ul className="flex flex-wrap justify-center gap-4 py-8">
+            <ul className="flex flex-wrap md:justify-center px-4 gap-4 py-8">
               <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
                 <LuCheckCircle className="text-2xl text-[--white]" />
                 Website Management

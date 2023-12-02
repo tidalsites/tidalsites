@@ -56,7 +56,7 @@ const Portfolio: FC = () => {
         </div>
 
         <section className="px-4">
-          <div className="py-4 mb-10">
+          <div className="py-4 mb-10 max-w-page mx-auto">
             <h2 className="text-2xl">WEBSITES</h2>
           </div>
           <div className="flex flex-col gap-20 items-center">
@@ -117,7 +117,7 @@ const Portfolio: FC = () => {
                   Home is impeccably represented.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 py-2 justify-end">
+              <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>
@@ -188,7 +188,7 @@ const Portfolio: FC = () => {
                   various devices.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 py-2 px-4 justify-end">
+              <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>
@@ -247,7 +247,7 @@ const Portfolio: FC = () => {
                   commitment to transparency and excellence.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 py-2 px-4 justify-end">
+              <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
                 <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
                   <LuCheckCircle className="text-[--purple] text-2xl" />
                   <span>Web Design</span>

@@ -33,7 +33,7 @@ export default function ContactForm() {
   }
   return (
     <form
-      className="flex flex-wrap mx-4 gap-20 p-8 rounded-lg shadow-2xl bg-gradient-to-br from-[--purple] to-violet-600"
+      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-2xl bg-gradient-to-br from-[--purple] to-violet-600"
       onSubmit={handleSubmit(sendContactForm)}
     >
       <div className="flex flex-col gap-4">
@@ -123,7 +123,7 @@ export default function ContactForm() {
           <textarea
             {...register("description")}
             rows={10}
-            className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black] min-w-[300px] w-full"
+            className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black] min-w-[300px]"
             placeholder="Describe what it is you are looking for today..."
           ></textarea>
           {errors["description"] && (

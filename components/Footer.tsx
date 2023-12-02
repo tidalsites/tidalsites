@@ -11,9 +11,9 @@ export const Footer = () => {
     "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
   return (
     <div className="bg-[--black] text-[--white] px-4 border-t-2 border-t-[--white]">
-      <div className="max-w-[--page-max-width] mx-auto flex justify-between  items-center py-4">
+      <div className="max-w-[--page-max-width] mx-auto flex flex-wrap justify-between items-center py-4">
         <nav aria-label="Footer Navigation">
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-wrap gap-4">
             <li>
               <Link className="underline" href="/">
                 Home
@@ -45,24 +45,13 @@ export const Footer = () => {
           <span className="py-4 border-b-2 border-[--white]">
             Contact Us Today
           </span>
-          <div className="flex gap-2 items-center">
-            <FaPhone />
-            <a href="tel:757-550-0830">(757) 550-0830</a>
-          </div>
-          <div className="flex gap-2 items-center">
-            <FaEnvelope />
-            <a
-              href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
-              target="_blank"
-            >
-              devin@tidalsites.com
-            </a>
-          </div>
-          <div className="flex gap-4 justify-start py-4">
+
+          <div className="flex gap-4 items-center">
             <a
               target="_blank"
               href="https://www.facebook.com/people/Tidal-Sites/61553610020184/"
               aria-label="Facebook"
+              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
             >
               <FaFacebook className="text-2xl" />
             </a>
@@ -70,6 +59,7 @@ export const Footer = () => {
               target="_blank"
               href="https://www.instagram.com/tidalsites/"
               aria-label="Instagram"
+              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
             >
               <FaInstagram className="text-2xl" />
             </a>
@@ -77,8 +67,21 @@ export const Footer = () => {
               target="_blank"
               href="https://www.linkedin.com/company/tidalsites"
               aria-label="Linkedin"
+              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
             >
               <FaLinkedin className="text-2xl" />
+            </a>
+            <Link
+              href="/contact"
+              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
+            >
+              <FaEnvelope className="text-2xl" />
+            </Link>
+            <a
+              href="tel:757-550-0830"
+              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
+            >
+              <FaPhone className="text-xl" />
             </a>
           </div>
         </div>

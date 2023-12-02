@@ -1,7 +1,9 @@
 import AdsTag from "@/components/AdsTag";
 import AnalyticsTag from "@/components/AnalyticsTag";
+import { Bio } from "@/components/Bio";
 import illustration from "@/public/assets/images/about-illustration.png";
 import bio from "@/public/assets/images/bio-pic.png";
+import { TBio } from "@/types/types";
 import { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import Image from "next/image";
@@ -15,6 +17,18 @@ export const metadata: Metadata = {
   description:
     "Discover the story behind Tidal Sites - Your go-to web services partner in Hampton Roads, Virginia. Learn about our commitment to crafting exceptional online experiences, our team's expertise, and our dedication to elevating your digital presence. Explore our journey today!",
 };
+
+const bios: TBio[] = [
+  {
+    name: "Devin Haynes",
+    title: "Founder",
+    bio: [
+      "Devin has over 14 years of experience in the IT industry. His passion brought him into Web Development, where he strives to build the best web experiences for his clients.",
+      "Devin currently oversees all Marketing and Services for Tidal Sites.",
+      "Devin achieved his B.S. in Computer Science from ECPI University in 2019.",
+    ],
+  },
+];
 
 const About: FC = () => {
   const emailBody =
@@ -192,23 +206,15 @@ const About: FC = () => {
               <h2 className="w-fit text-xl italic border-b-4 border-b-[--purple] pr-4 mb-8">
                 The Team
               </h2>
-              <div className="flex flex-wrap gap-4">
-                <Image
-                  width="200"
-                  height="200"
-                  src={bio}
-                  alt="Devin Haynes"
-                  className="max-w-[200px] max-h-[200px] outline-double outline-[8px] outline-[--white] -outline-offset-4 rounded-full"
-                />
-                <div className="max-w-prose flex flex-col">
-                  <span className="text-lg">Devin Haynes</span>
-                  <span className="text-sm">Founder</span>
-                  <p className="py-4 text-white/80">
-                    Devin is the founder and sole-proprietor of Tidal Sites. He
-                    is currently the only member of the team and manages all
-                    services and aspects of the business.
-                  </p>
-                </div>
+              <div className="flex flex-wrap gap-12">
+                {bios.map((bio, i) => (
+                  <Bio
+                    key={`bio_${i}`}
+                    name={bio.name}
+                    title={bio.title}
+                    bio={bio.bio}
+                  />
+                ))}
               </div>
             </div>
           </section>
