@@ -71,13 +71,12 @@ export const Footer = () => {
             >
               <FaLinkedin className="text-2xl" />
             </a>
-            <a
-              href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
-              target="_blank"
+            <Link
+              href="/contact"
               className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
             >
               <FaEnvelope className="text-2xl" />
-            </a>
+            </Link>
             <a
               href="tel:757-550-0830"
               className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
