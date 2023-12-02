@@ -14,7 +14,7 @@ export const Services: FC = () => {
   return (
     <section className="px-4 bg-[url(/assets/images/section-bg.svg)] bg-no-repeat bg-cover">
       <div className="max-w-page mx-auto py-10">
-        <div className="mb-10 flex items-center justify-between">
+        <div className="mb-10 flex flex-wrap items-center justify-between">
           <h2 className="text-4xl text-[--white]">SERVICES</h2>
           <Link
             className="flex items-center gap-2 rounded-full outline outline-2 -outline-offset-2 outline-[--white] py-2 px-4 bg-[--purple] text-[--white] hover:outline-offset-2 transition-all"

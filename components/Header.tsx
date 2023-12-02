@@ -34,7 +34,7 @@ export const Header: FC = () => {
             <Image src={logo} alt="Tidal Sites" width="35" height="35" />
             <span
               aria-hidden
-              className={`font-bold text-3xl text-[--black] ${rubik.className}`}
+              className={`font-bold text-3xl text-[--black] hidden xs:block ${rubik.className}`}
             >
               TIDAL SITES
             </span>

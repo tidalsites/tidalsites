@@ -10,9 +10,9 @@ export const Hero = () => {
 
   return (
     <section className="flex h-[100vh] w-full relative max-w-page mx-auto">
-      <div className="flex self-center bg-white/80 rounded-2xl py-10 flex-col gap-4 content-center text-gray-800 px-12 my-auto mx-auto md:mx-0">
+      <div className="flex self-center bg-white/80 rounded-2xl py-10 flex-col gap-4 content-center text-gray-800 px-4 sm:px-12 my-auto mx-auto md:mx-0">
         <h1
-          className={`flex flex-col gap-2 text-5xl font-bold ${rubik.className}`}
+          className={`flex flex-col gap-2 text-4xl sm:text-5xl font-bold ${rubik.className}`}
         >
           <span className="lg:translate-y-[100%] lg:animate-[shiftUp_750ms_linear_250ms_forwards]">
             ELEVATE

@@ -11,7 +11,7 @@ export const Highlights: FC = () => {
           delivering websites that not only meet but exceed industry standards.
           When you choose us, you are guaranteed:
         </p>
-        <div className="flex flex-wrap justify-around w-full my-10 gap-8">
+        <div className="flex flex-wrap w-full my-10 gap-8">
           <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
             <LuCheckCircle className="text-[--white] text-2xl" />
             <span>SEO</span>
@@ -22,7 +22,7 @@ export const Highlights: FC = () => {
           </div>
           <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
             <LuCheckCircle className="text-[--white] text-2xl" />
-            <span>508 (Accessibility)</span>
+            <span>Accessibility</span>
           </div>
           <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
             <LuCheckCircle className="text-[--white] text-2xl" />
