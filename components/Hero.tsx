@@ -31,13 +31,13 @@ export const Hero = () => {
         <div className="flex gap-4 mt-4">
           <Link
             href="/contact"
-            className="text-lg flex items-center bg-[--purple] text-[--white] rounded px-4 py-1 font-bold outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-2 transistion-all duration-100"
+            className="text-lg flex items-center bg-[--purple] text-[--white] rounded px-4 py-1 font-bold outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transistion-all duration-100"
           >
             Get Quote
           </Link>
           <a
             href="tel:757-550-0830"
-            className="text-lg flex items-center outline outline-2 outline-[--purple] -outline-offset-2 bg-white px-4 py-1 font-bold rounded hover:outline-offset-2 transistion-all duration-100 border-2 border-[--purple]"
+            className="text-lg flex items-center outline outline-2 outline-[--purple] -outline-offset-2 bg-white px-4 py-1 font-bold rounded hover:outline-offset-2 focus:outline-offset-2 transistion-all duration-100 border-2 border-[--purple]"
           >
             Call now
           </a>

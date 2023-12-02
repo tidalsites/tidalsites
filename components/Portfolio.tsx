@@ -17,7 +17,7 @@ export const Portfolio = () => {
               goals. Take a tour of innovation and inspiration today.
             </p>
             <Link
-              className="bg-[--purple] text-[--white] px-4 py-2 rounded-full w-fit outline outline-2 -outline-offset-2 outline-[--purple] hover:outline-offset-2 transition-all"
+              className="bg-[--purple] text-[--white] px-4 py-2 rounded-full w-fit outline outline-2 -outline-offset-2 outline-[--purple] hover:outline-offset-2 focus:outline-offset-2 transition-all"
               href="/portfolio"
             >
               View Portfolio
