@@ -7,6 +7,7 @@ import { TBio } from "@/types/types";
 import { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { FaEnvelope } from "react-icons/fa";
 
@@ -186,14 +187,13 @@ const About: FC = () => {
                     the digital sea. Partner with us today and let&apos;s embark
                     on a journey towards web excellence together.
                   </p>
-                  <a
-                    href={`mailto:devin@tidalsites.com?subject=Service Inquiry&body=${emailBody}`}
-                    target="_blank"
-                    className="flex gap-2 bg-[--purple] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-4 transition-all"
+                  <Link
+                    href="/contact"
+                    className="flex gap-2 bg-[--purple] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transition-all"
                   >
                     <FaEnvelope className="text-[--white] text-2xl" />
                     Email Us Today
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="hidden xl:flex items-center">

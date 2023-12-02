@@ -17,11 +17,11 @@ export const Services: FC = () => {
         <div className="mb-10 flex flex-wrap items-center justify-between">
           <h2 className="text-4xl text-[--white]">SERVICES</h2>
           <Link
-            className="flex items-center gap-2 rounded-full outline outline-2 -outline-offset-2 outline-[--white] py-2 px-4 bg-[--purple] text-[--white] hover:outline-offset-2 transition-all"
+            className="flex items-center gap-2 rounded-full outline outline-2 -outline-offset-2 outline-[--white] py-2 px-4 bg-[--purple] text-[--white] hover:outline-offset-2 focus:outline-offset-2 focus:bg-[--white] focus:text-[--black] transition-all"
             href="/services"
           >
             <span>View all services</span>
-            <MdEast className="text-[--white] text-2xl" />
+            <MdEast className="text-2xl" />
           </Link>
         </div>
         <div className="text-[--black]">
