@@ -74,12 +74,14 @@ export const Footer = () => {
             <Link
               href="/contact"
               className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
+              aria-label="email"
             >
               <FaEnvelope className="text-2xl" />
             </Link>
             <a
               href="tel:757-550-0830"
               className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
+              aria-label="phone"
             >
               <FaPhone className="text-xl" />
             </a>
