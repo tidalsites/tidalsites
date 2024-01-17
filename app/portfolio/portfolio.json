@@ -1,0 +1,58 @@
+{
+  "portfolio": [
+    {
+      "title": "Olokun",
+      "imgSrc": "olokun",
+      "alt": "Olokun LLC",
+      "description": "Olokun LLC sought to improve their website in order to stand out amongst their competition. Tidal Sites provided a comprehensive design strategy to improve their digital presence. Not only did Tidal Sites improve their mobile responsiveness and overall design asthetic, but we also improved the User Experience by strategically placing content across pages and sections. The resulting website provides a great visual and intuitive experience for Olokuns clientelle.",
+      "tags": ["Web Design", "Hosting"],
+      "link": "https://olokunllc.com"
+    },
+    {
+      "title": "Concrecal",
+      "imgSrc": "concrecal",
+      "alt": "Concrecal",
+      "description": "Concrecal Proyectos, based in the Dominican Republic, sought to enhance their digital presence. Tidal Sites stepped in, crafting a captivating website that beautifully showcases their services. We also took their existing logo to the next level, ensuring a polished and refined brand image. Witness how Tidal Sites brought a touch of professionalism and aesthetic finesse to Concrecal Proyectos' online identity.",
+      "tags": ["Web Design", "Hosting", "Branding - Logo"],
+      "link": "http://concrecal-staging.s3-website-us-east-1.amazonaws.com/"
+    },
+    {
+      "title": "XPRT Home",
+      "imgSrc": "xprt",
+      "alt": "XPRT Home",
+      "description": "XPRT Home, specializing in home renovation and building services, recognized the importance of a strong online presence. Tidal Sites stepped in to create a compelling website that not only attracts additional clients but also establishes a solid foundation for this new company. Our services extended to crafting a brand new logo, ensuring XPRT Home is impeccably represented.",
+      "tags": ["Web Design", "Hosting", "Branding - Logo", "Graphic Design"]
+    },
+    {
+      "title": "AtoB Towing",
+      "imgSrc": "atob",
+      "alt": "AtoB Towing",
+      "description": "AtoB Towing, a local towing company in the Hampton Roads area of Virginia, sought to distinguish themselves in a competitive market. Tidal Sites embarked on a website redesign mission, delivering not only a modern and functional layout but also integrating a unique 'find-me' service on their homepage. Now, potential tow clients can effortlessly send their exact coordinates to AtoB Towing, ensuring swift assistance.",
+      "tags": ["Web Design", "Hosting"],
+      "link": "https://atobtowing.netlify.app/"
+    },
+    {
+      "title": "Prosoft",
+      "imgSrc": "prosoft",
+      "alt": "Prosoft",
+      "description": "Prosoft Engineering, a provider of engineering services, recognized the importance of a modern online presence to showcase their capabilities. Tidal Sites answered the call, delivering a revamped website designed for a seamless user experience. Our touch extended to ensuring mobile responsiveness, providing a dynamic platform that adapts to various devices.",
+      "tags": ["Web Design"],
+      "link": "http://prosoft-staging.s3-website-us-east-1.amazonaws.com"
+    },
+    {
+      "title": "Harts Holler Graphics",
+      "imgSrc": "hhg",
+      "alt": "Harts Holler Graphics",
+      "description": "Harts Holler Graphics, a go-to for sublimation and printing excellence, envisioned a digital showcase that matched the creativity they infused into every project. Tidal Sites responded with more than just a stellar website - we seamlessly hosted their platform, ensuring not only an impressive online display of their work but also a reliable and accessible hub for clients.",
+      "tags": ["Web Design", "Hosting"],
+      "link": "http://hartshollergraphics-staging.s3-website-us-east-1.amazonaws.com/"
+    },
+    {
+      "title": "D.W. Builders",
+      "imgSrc": "dwb",
+      "alt": "D.W. Builders",
+      "description": "D.W. Builders, a prominent General Contracting company in Virginia Beach, sought a straightforward yet impactful website to enhance their online visibility. Tidal Sites responded with a simple and effective design that not only facilitates easy discovery for customers but also showcases their impressive portfolio. Our solution ensures D.W. Builders' information is readily available online, reflecting their commitment to transparency and excellence.",
+      "tags": ["Web Design", "Hosting"]
+    }
+  ]
+}

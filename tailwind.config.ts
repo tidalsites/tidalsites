@@ -32,6 +32,9 @@ const config: Config = {
       minHeight: {
         page: "calc(100vh - var(--navbar-height))",
       },
+      gridTemplateColumns: {
+        portfolio: "repeat(auto-fit, minmax(550px, 1fr))",
+      },
       keyframes: {
         shiftUp: {
           "0%": { transform: "translateY(100%)" },

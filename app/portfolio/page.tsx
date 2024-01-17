@@ -1,18 +1,16 @@
 import { Metadata } from "next";
 import { FC } from "react";
 
+import portfolioData from "./portfolio.json";
+
 // Images
-// import ProsoftWeb from "@/public/assets/images/prosoft-web.png";
 import ProsoftWeb from "@/public/assets/images/prosoft-web-min.png";
-// import AtoBWeb from "@/public/assets/images/atob-web.png";
 import AtoBWeb from "@/public/assets/images/atob-web-min.png";
-// import HHGWeb from "@/public/assets/images/hartshollergraphics-web.png";
 import DWBWeb from "@/public/assets/images/dwbuilders-web.png";
 import HHGWeb from "@/public/assets/images/hartshollergraphics-web-min.png";
-// import XPRTHomeWeb from "@/public/assets/images/xprt-web.png";
 import XPRTHomeWeb from "@/public/assets/images/xprt-web-min.png";
-// import ConcrecalWeb from "@/public/assets/images/concrecal-web.png";
 import ConcrecalWeb from "@/public/assets/images/concrecal-web-min.png";
+import OlokunWeb from "@/public/assets/images/olokun-web.webp";
 
 // Logos
 import AtoBLogo from "@/public/assets/logos/atob.svg";
@@ -30,7 +28,7 @@ import XPRTHomeLogo from "@/public/assets/logos/xprt-logo.png";
 import AdsTag from "@/components/AdsTag";
 import AnalyticsTag from "@/components/AnalyticsTag";
 import Image from "next/image";
-import { LuCheckCircle } from "react-icons/lu";
+import { PortfolioCard } from "./PortfolioCard";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Portfolio",
@@ -38,7 +36,29 @@ export const metadata: Metadata = {
     "Discover our success stories at Tidal Sites' Portfolio. Explore a diverse collection of accomplished projects showcasing our web design, development, and branding expertise. Witness how we've empowered businesses to thrive online.",
 };
 
+function getImage(imgName: string) {
+  switch (imgName) {
+    case "olokun":
+      return OlokunWeb;
+    case "concrecal":
+      return ConcrecalWeb;
+    case "xprt":
+      return XPRTHomeWeb;
+    case "atob":
+      return AtoBWeb;
+    case "prosoft":
+      return ProsoftWeb;
+    case "hhg":
+      return HHGWeb;
+    case "dwb":
+      return DWBWeb;
+    default:
+      return OlokunWeb;
+  }
+}
+
 const Portfolio: FC = () => {
+  const { portfolio } = portfolioData;
   return (
     <>
       <AnalyticsTag />
@@ -55,11 +75,61 @@ const Portfolio: FC = () => {
           </div>
         </div>
 
-        <section className="px-4">
-          <div className="py-4 mb-10 max-w-page mx-auto">
+        <section className="sm:px-4">
+          <div className="py-4 px-4 sm:px-0 mb-10 max-w-page mx-auto">
             <h2 className="text-2xl">WEBSITES</h2>
           </div>
-          <div className="flex flex-col gap-20 items-center">
+          <div className="grid sm:grid-cols-portfolio grid-rows-[300px_auto_auto_auto] gap-y-20 place-items-center">
+            {portfolio.map((item, i) => {
+              const { title, imgSrc, alt, description, tags, link } = item;
+              const position = i % 2 === 0 ? "left" : "right";
+
+              const img = getImage(imgSrc);
+              return (
+                <PortfolioCard
+                  title={title}
+                  imgSrc={img}
+                  alt={alt}
+                  description={description}
+                  tags={tags}
+                  position={position}
+                  link={link}
+                  key={`PortfolioCard_${title}`}
+                />
+              );
+            })}
+            {/* <div>
+              <div className="text-xl py-4 my-4">Olokun</div>
+              <div className="flex flex-wrap gap-8 justify-center items-center">
+                <Image
+                  src={OlokunWeb}
+                  alt="Olokun LLC"
+                  className="border-2 border-[--black] rounded-lg shadow-lg"
+                  width="768"
+                  priority
+                />
+                <p className="max-w-scale">
+                  Olokun LLC sought to improve their website in order to stand
+                  out amongst their competition. Tidal Sites provided a
+                  comprehensive design strategy to improve their digital
+                  presence. Not only did Tidal Sites improve their mobile
+                  responsiveness and overall design asthetic, but we also
+                  improved the User Experience by strategically placing content
+                  across pages and sections. The resulting website provides a
+                  great visual and intuitive experience for Olokuns clientelle.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 py-2 justify-start">
+                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                  <span>Web Design</span>
+                </div>
+                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                  <span>Hosting</span>
+                </div>
+              </div>
+            </div>
             <div>
               <div className="text-xl py-4 my-4">Concrecal</div>
               <div className="flex flex-wrap gap-8 justify-center items-center">
@@ -69,7 +139,6 @@ const Portfolio: FC = () => {
                   className="border-2 border-[--black] rounded-lg shadow-lg"
                   width="768"
                   height="454"
-                  priority
                 />
                 <p className="max-w-scale">
                   Concrecal Proyectos, based in the Dominican Republic, sought
@@ -257,7 +326,7 @@ const Portfolio: FC = () => {
                   <span>Hosting</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
         <section className="px-4 bg-[url(/assets/images/section-bg.svg)] bg-no-repeat bg-cover">
