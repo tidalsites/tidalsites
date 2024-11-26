@@ -3,7 +3,7 @@ import { LuCheckCircle } from "react-icons/lu";
 
 export const Highlights: FC = () => {
   return (
-    <section className="border-t-2 border-t-[--white] flex flex-col items-center px-4 py-8 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
+    <section className="border-t-2 border-t-[--white] flex flex-col items-center px-4 py-8 text-[--white]">
       <div className="mx-auto max-w-page">
         <h2 className="text-4xl text-center">The Tidal Sites Guarantee</h2>
         <p className="my-4 mx-auto max-w-[70ch] text-center">

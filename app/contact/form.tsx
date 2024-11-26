@@ -33,7 +33,7 @@ export default function ContactForm() {
   }
   return (
     <form
-      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-2xl bg-gradient-to-br from-[--purple] to-violet-600"
+      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-2xl bg-gradient-to-br from-[--theme] to-violet-600"
       onSubmit={handleSubmit(sendContactForm)}
     >
       <div className="flex flex-col gap-4">
@@ -142,7 +142,7 @@ export default function ContactForm() {
           {isSubmitting ? (
             <FaSpinner className="animate-spin" />
           ) : (
-            <RiSendPlaneLine className="text-2xl text-[--purple] group-hover:text-3xl group-hover:translate-x-2 transition-all" />
+            <RiSendPlaneLine className="text-2xl text-[--theme] group-hover:text-3xl group-hover:translate-x-2 transition-all" />
           )}
         </button>
       </div>

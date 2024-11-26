@@ -4,24 +4,28 @@ import Image from "next/image";
 
 export const Portfolio = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-gray-100 to-slate-200">
+    <section className="px-4">
       <div className="mx-auto max-w-page">
-        <h2 className="text-4xl">DARE TO BE DIFFERENT</h2>
         <div className="flex justify-center lg:justify-between mt-10">
           <div className="flex flex-col justify-center gap-4">
-            <p className="max-w-[50ch]">
-              Explore our success stories and witness the power of exemplary web
-              solutions in action. Visit our Portfolio page to delve into a
-              diverse collection of our accomplished projects. See how
-              we&apos;ve helped businesses like yours achieve their online
-              goals. Take a tour of innovation and inspiration today.
+            <h2 className="text-4xl my-4 border-b-[--theme] uppercase border-b-2 border-[--theme]">
+              Explore our success stories!
+            </h2>
+            <p className="max-w-[50ch] text-2xl flex flex-col relative isolate">
+              Visit our Portfolio page to delve into a diverse collection of our
+              accomplished projects.
             </p>
-            <Link
-              className="bg-[--purple] text-[--white] px-4 py-2 rounded-full w-fit outline outline-2 -outline-offset-2 outline-[--purple] hover:outline-offset-2 focus:outline-offset-2 transition-all"
-              href="/portfolio"
-            >
-              View Portfolio
-            </Link>
+            <div className="rounded-lg p-4 flex justify-between bg-[rgba(0,0,0,.25)] backdrop-filter backdrop-blur-[10px] shadow-[0_0_16px_-8px_rgba(255,255,255,.25)]">
+              <span className="text-lg uppercase text-center">
+                See what makes us different
+              </span>
+              <Link
+                className="bg-[--theme] text-[--white] px-4 py-1 rounded-full w-fit outline outline-2 -outline-offset-2 outline-[--theme] hover:outline-offset-2 focus:outline-offset-2 transition-all z-10"
+                href="/portfolio"
+              >
+                View Portfolio
+              </Link>
+            </div>
           </div>
           <div className="hidden lg:block">
             <Image src={collageImg} alt="collage" />

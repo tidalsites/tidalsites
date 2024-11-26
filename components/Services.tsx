@@ -1,4 +1,6 @@
-import { FC } from "react";
+"use client";
+
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import Link from "next/link";
 import {
   MdFingerprint,
@@ -10,21 +12,60 @@ import {
   MdEast,
 } from "react-icons/md";
 
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+
+type Service =
+  | "Branding"
+  | "Web Design"
+  | "Web Development"
+  | "Hosting"
+  | "Maintenance"
+  | "Consulting";
+
 export const Services: FC = () => {
+  const [activeService, setActiveService] = useState<Service>("Branding");
+
+  const services: Service[] = [
+    "Branding",
+    "Web Design",
+    "Web Development",
+    "Hosting",
+    "Maintenance",
+    "Consulting",
+  ];
+
+  type ServiceContent = {
+    [key in Service]: string;
+  };
+
+  const ServiceContent = {
+    Branding: `Branding is the bedrock of your business identity, encompassing the creation of a distinctive and memorable presence in your industry. Our comprehensive branding service ensures strategic communication of your story, values, and essence, fostering recognition and trust to boost your online visibility and business success.`,
+    "Web Design": `Our web design service merges creativity and functionality, crafting visually captivating and user-centric digital experiences. We prioritize seamless navigation, aesthetic appeal, and responsive design, creating websites that captivate visitors and enhance your online presence.`,
+    "Web Development": `Our web development service is the force behind your online success, translating your vision into robust, high-performance websites using cutting-edge technology. From seamless functionality to efficient coding, our development ensures a powerful online presence, fostering user engagement for long-term success.`,
+    Hosting: `Our hosting service provides the digital infrastructure for a seamless online presence. With reliable servers, top-tier security, and unmatched support, we ensure your website remains fast, secure, and accessible 24/7. Experience worry-free hosting, optimizing your site's performance and reliability.`,
+    Maintenance: `Cultivating a thriving online presence requires consistent care and upkeep. Our maintenance service ensures your website remains at its peak performance. From regular updates, security checks, to technical optimizations, we safeguard your online investment, guaranteeing a seamless and reliable user experience.`,
+    Consulting: `Our consultation services are your gateway to unlocking digital potential. With tailored strategies, we offer expert guidance, analyzing your specific needs and goals. Gain actionable insights and a roadmap for success, empowering your online presence and business growth.`,
+  };
+
   return (
-    <section className="px-4 bg-[url(/assets/images/section-bg.svg)] bg-no-repeat bg-cover">
+    <section className="px-4 relative isolate">
       <div className="max-w-page mx-auto py-10">
-        <div className="mb-10 flex flex-wrap items-center justify-between">
-          <h2 className="text-4xl text-[--white]">SERVICES</h2>
+        <div className="">
+          {/* <h2 className="text-2xl">Services</h2> */}
+          <p className="text-4xl uppercase pt-10 mb-10 border-b-2 border-[--theme]">
+            Find out how our services can help you
+          </p>
+          {/* <div className="absolute top-0 bg-[radial-gradient(ellipse_at_25%_50%,var(--theme)_2px,transparent_50%)] z-[-1] overflow-visible"></div> */}
+          {/* <h2 className="text-4xl text-[--white]">SERVICES</h2>
           <Link
-            className="flex items-center gap-2 rounded-full outline outline-2 -outline-offset-2 outline-[--white] py-2 px-4 bg-[--purple] text-[--white] hover:outline-offset-2 focus:outline-offset-2 focus:bg-[--white] focus:text-[--black] transition-all"
+            className="flex items-center gap-2 rounded-full outline outline-2 -outline-offset-2 outline-[--white] py-2 px-4 bg-[--theme] text-[--white] hover:outline-offset-2 focus:outline-offset-2 focus:bg-[--white] focus:text-[--black] transition-all"
             href="/services"
           >
             <span>View all services</span>
             <MdEast className="text-2xl" />
-          </Link>
+          </Link> */}
         </div>
-        <div className="text-[--black]">
+        {/* <div className="text-[--black]">
           <ul className="flex flex-wrap gap-4 justify-center">
             <li className="max-w-[450px] bg-[--white] p-4 rounded-lg shadow-lg border-2 border-black/10">
               <div className="flex justify-between w-full py-4">
@@ -32,7 +73,7 @@ export const Services: FC = () => {
                   Branding
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-[--black]">
-                  <MdFingerprint className="text-[--purple] text-4xl w-20" />
+                  <MdFingerprint className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -50,7 +91,7 @@ export const Services: FC = () => {
                   Web Design
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-gray-900">
-                  <MdWeb className="text-[--purple] text-4xl w-20" />
+                  <MdWeb className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -67,7 +108,7 @@ export const Services: FC = () => {
                   Web Development
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-gray-900">
-                  <MdCode className="text-[--purple] text-4xl w-20" />
+                  <MdCode className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -85,7 +126,7 @@ export const Services: FC = () => {
                   Hosting
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-gray-900">
-                  <MdCloud className="text-[--purple] text-4xl w-20" />
+                  <MdCloud className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -103,7 +144,7 @@ export const Services: FC = () => {
                   Maintenance
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-gray-900">
-                  <MdBuild className="text-[--purple] text-4xl w-20" />
+                  <MdBuild className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -120,7 +161,7 @@ export const Services: FC = () => {
                   Consulting
                 </span>
                 <div className="h-20 w-20 flex justify-center items-center rounded-full border-2 border-gray-900">
-                  <MdContactSupport className="text-[--purple] text-4xl w-20" />
+                  <MdContactSupport className="text-[--theme] text-4xl w-20" />
                 </div>
               </div>
               <p className="py-8 text-[--black] rounded">
@@ -132,8 +173,53 @@ export const Services: FC = () => {
               </p>
             </li>
           </ul>
+        </div> */}
+        <div className="grid grid-cols-2 gap-4">
+          <ul className="text-3xl flex flex-col gap-2">
+            {services.map((service) => (
+              <ServiceItem
+                key={service}
+                service={service}
+                active={service === activeService}
+                setActive={setActiveService}
+              />
+            ))}
+          </ul>
+          <div className="w-full h-full box-border p-4 bg-[rgba(0,0,0,.5)] rounded-lg max-w-[60ch] outline outline-1 outline-[rgba(0,200,255,.25)]">
+            <p className="text-lg">{ServiceContent[activeService]}</p>
+          </div>
         </div>
       </div>
     </section>
+  );
+};
+
+type ServiceItemProps = {
+  service: Service;
+  active: boolean;
+  setActive: Dispatch<SetStateAction<Service>>;
+};
+
+const ServiceItem: FC<ServiceItemProps> = ({ service, active, setActive }) => {
+  return (
+    <li
+      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex justify-between rounded-lg cursor-pointer hover:bg-[rgba(0,0,0,.5)] hover:px-4 ${
+        active
+          ? "bg-[rgba(0,0,0,.5)] outline outline-1 outline-[rgba(0,200,255,.25)] hover:px-0"
+          : ""
+      }`}
+      onClick={() => setActive(service)}
+    >
+      <p
+        className={
+          active
+            ? "[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] px-4"
+            : ""
+        }
+      >
+        {service}
+      </p>
+      <FaRegArrowAltCircleRight className="text-4xl hover:text-5xl transition-all md:hidden" />
+    </li>
   );
 };

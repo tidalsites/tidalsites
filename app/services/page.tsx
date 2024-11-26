@@ -23,8 +23,8 @@ const Services: FC = () => {
     <>
       <AnalyticsTag />
       <AdsTag />
-      <div className="mt-[--navbar-height]">
-        <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
+      <div className="pt-[--navbar-height]">
+        <div className="py-6 px-4">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Services</h1>
             <span>What can we do for you?</span>
@@ -64,30 +64,30 @@ const Services: FC = () => {
           <div className="text-center mt-8">
             <span>Branding can include any of the following:</span>
             <ul className="flex flex-wrap md:justify-center px-4 gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Logo Design
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Company Naming
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Slogans, Mottos, Catchphrases
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Color Pallete Choices
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Iconography
               </li>
             </ul>
           </div>
         </section>
-        <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <section className="text-[--white] py-10">
           <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
             <Image
               src={designImg}
@@ -133,7 +133,7 @@ const Services: FC = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <section className="py-10">
           <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 py-8">
             <Image
               src={hostingImg}
@@ -179,26 +179,26 @@ const Services: FC = () => {
           <div className="text-center mt-8">
             <span className="text-[--white]">Maintenance items include:</span>
             <ul className="flex flex-wrap justify-center gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Security Updates
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Content Updates
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Color Modifications
               </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--purple] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--purple]" />
+              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
+                <LuCheckCircle className="text-2xl text-[--theme]" />
                 Font Modifications
               </li>
             </ul>
           </div>
         </section>
-        <section className="bg-[url(/assets/images/card-bg.svg)] bg-cover bg-no-repeat text-[--white] py-10">
+        <section className="py-10">
           <div className="flex flex-wrap flex-row-reverse items-center justify-center gap-10 pt-8">
             <Image
               src={consultImg}

@@ -9,7 +9,7 @@
   --white: #fefefe;
   --darkgray: #666;
   --lightpurple: #edf;
-  --purple: #8a3fa2;
+  --theme: #8a3fa2;
   --gold: #d1c300;
   --error: #dd3232;
   --success: #32dd32;
@@ -19,6 +19,8 @@
   --border-radius-subtle: 5px;
   --border-radius-rounded: 500px;
   --navbar-height: 70px;
+  --dark-theme: #020d16;
+  --theme: #b40b0b;
 }
 
 html,
