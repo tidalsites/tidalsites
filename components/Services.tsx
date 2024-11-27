@@ -1,18 +1,19 @@
 "use client";
 
-import { Dispatch, FC, SetStateAction, useState } from "react";
-import Link from "next/link";
-import {
-  MdFingerprint,
-  MdWeb,
-  MdCode,
-  MdCloud,
-  MdBuild,
-  MdContactSupport,
-  MdEast,
-} from "react-icons/md";
+import { FC, useEffect, useState } from "react";
+// import Link from "next/link";
+// import {
+//   MdFingerprint,
+//   MdWeb,
+//   MdCode,
+//   MdCloud,
+//   MdBuild,
+//   MdContactSupport,
+//   MdEast,
+// } from "react-icons/md";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaForward } from "react-icons/fa";
 
 type Service =
   | "Branding"
@@ -24,6 +25,17 @@ type Service =
 
 export const Services: FC = () => {
   const [activeService, setActiveService] = useState<Service>("Branding");
+  const [autoPlayServices, setAutoPlayServices] = useState<boolean>(true);
+
+  const switchViewWithTransition = (service: Service) => {
+    if (!document.startViewTransition) {
+      console.warn("View Transitions API is not supported in this browser.");
+      return setActiveService(service);
+    }
+    document.startViewTransition(() => {
+      setActiveService(service);
+    });
+  };
 
   const services: Service[] = [
     "Branding",
@@ -47,14 +59,43 @@ export const Services: FC = () => {
     Consulting: `Our consultation services are your gateway to unlocking digital potential. With tailored strategies, we offer expert guidance, analyzing your specific needs and goals. Gain actionable insights and a roadmap for success, empowering your online presence and business growth.`,
   };
 
+  const handleServiceClick = (service: Service) => {
+    switchViewWithTransition(service);
+    // Temporarily disable auto-play functionality
+    setAutoPlayServices(false);
+  };
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout;
+
+    if (autoPlayServices) {
+      interval = setInterval(() => {
+        const currentIndex = services.indexOf(activeService);
+        const nextIndex =
+          currentIndex === services.length - 1 ? 0 : currentIndex + 1;
+        switchViewWithTransition(services[nextIndex]);
+      }, 4000);
+    } else {
+      timeout = setTimeout(() => {
+        setAutoPlayServices(true);
+      }, 12000);
+    }
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
+  }, [activeService, autoPlayServices]);
+
   return (
-    <section className="px-4 relative isolate">
+    <section className="px-4 mb-20 relative isolate">
       <div className="max-w-page mx-auto py-10">
         <div className="">
           {/* <h2 className="text-2xl">Services</h2> */}
-          <p className="text-4xl uppercase pt-10 mb-10 border-b-2 border-[--theme]">
+          {/* <p className="text-4xl uppercase pt-10 mb-10 border-b-2 border-[--theme]">
             Find out how our services can help you
-          </p>
+          </p> */}
           {/* <div className="absolute top-0 bg-[radial-gradient(ellipse_at_25%_50%,var(--theme)_2px,transparent_50%)] z-[-1] overflow-visible"></div> */}
           {/* <h2 className="text-4xl text-[--white]">SERVICES</h2>
           <Link
@@ -181,12 +222,14 @@ export const Services: FC = () => {
                 key={service}
                 service={service}
                 active={service === activeService}
-                setActive={setActiveService}
+                handleServiceClick={handleServiceClick}
               />
             ))}
           </ul>
-          <div className="w-full h-full box-border p-4 bg-[rgba(0,0,0,.5)] rounded-lg max-w-[60ch] outline outline-1 outline-[rgba(0,200,255,.25)]">
-            <p className="text-lg">{ServiceContent[activeService]}</p>
+          <div className="w-full h-full box-border p-4 rounded-lg grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
+            <p className="text-lg max-w-[40ch] mx-auto ">
+              {ServiceContent[activeService]}
+            </p>
           </div>
         </div>
       </div>
@@ -197,19 +240,25 @@ export const Services: FC = () => {
 type ServiceItemProps = {
   service: Service;
   active: boolean;
-  setActive: Dispatch<SetStateAction<Service>>;
+  handleServiceClick: (service: Service) => void;
 };
 
-const ServiceItem: FC<ServiceItemProps> = ({ service, active, setActive }) => {
+const ServiceItem: FC<ServiceItemProps> = ({
+  service,
+  active,
+  handleServiceClick,
+}) => {
   return (
     <li
-      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex justify-between rounded-lg cursor-pointer hover:bg-[rgba(0,0,0,.5)] hover:px-4 ${
+      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:bg-[rgba(0,0,0,.5)] hover:px-4 ${
         active
-          ? "bg-[rgba(0,0,0,.5)] outline outline-1 outline-[rgba(0,200,255,.25)] hover:px-0"
+          ? "bg-[rgba(0,0,0,.5)] outline outline-1 outline-[rgba(0,200,255,.25)] px-4"
           : ""
       }`}
-      onClick={() => setActive(service)}
+      onClick={() => handleServiceClick(service)}
     >
+      {active && <FaForward className="text-3xl transition-all" />}
+
       <p
         className={
           active

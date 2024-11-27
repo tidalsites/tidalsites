@@ -23,7 +23,10 @@ export const Hero = () => {
         <h1
           className={`flex gap-2 text-4xl sm:text-5xl lg:text-6xl lg:py-8 lg:translate-y-[150%] [text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)] lg:animate-[shiftUp_750ms_linear_forwards] ${rubik.className} `}
         >
-          ELEVATE YOUR DIGITAL EXPERIENCE
+          DIGITAL SOLUTIONS.{" "}
+          <span className="relative after:w-full after:h-2 after:bg-[rgba(0,200,255,1)] after:absolute after:right-0 after:-bottom-4 after:rounded-full | before:w-[75%] before:h-1 before:bg-[rgba(0,200,255,1)] before:absolute before:right-0 before:-bottom-1 before:rounded-full">
+            YOUR WAY.
+          </span>
         </h1>
         <p className="text-xl max-w-[60ch] lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_750ms_forwards] text-left">
           At Tidal Sites, we believe a website should do more than just exist—it
@@ -33,7 +36,7 @@ export const Hero = () => {
         </p>
         <div className="flex justify-between gap-4 mt-20 bg-[rgba(0,0,0,.25)] py-6 px-4 rounded-2xl">
           <span className="uppercase text-2xl border-b-[1px] border-[--theme]">
-            Let&apos;s build something amazing together.
+            Let&apos;s build it!
           </span>
           <div className="flex gap-4">
             <Link

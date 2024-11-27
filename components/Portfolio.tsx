@@ -1,10 +1,14 @@
 import Link from "next/link";
 import collageImg from "@/public/assets/images/collage.png";
 import Image from "next/image";
+import hex from "@/public/assets/images/digital-hexagons.svg";
 
 export const Portfolio = () => {
   return (
-    <section className="px-4">
+    <section className="px-4 my-20 relative">
+      <div className="absolute -top-6 left-0 max-w-2xl hidden md:block opacity-10 -rotate-6">
+        <Image src={hex} alt="Digital Hexagons" />
+      </div>
       <div className="mx-auto max-w-page">
         <div className="flex justify-center lg:justify-between mt-10">
           <div className="flex flex-col justify-center gap-4">
@@ -27,7 +31,7 @@ export const Portfolio = () => {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden lg:block bg-transparent shadow-[0_0_20px_0_rgba(255,255,255,.125)] rounded-lg overflow-hidden">
             <Image src={collageImg} alt="collage" />
           </div>
         </div>

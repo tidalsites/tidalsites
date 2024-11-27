@@ -3,7 +3,7 @@
 import { FC, useState, useEffect } from "react";
 import { Rubik } from "next/font/google";
 import Link from "next/link";
-import logo from "@/public/assets/logos/logo.svg";
+import logo from "@/public/assets/logos/logo-new-white.svg";
 import Image from "next/image";
 import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
