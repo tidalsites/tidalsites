@@ -19,6 +19,32 @@ export const metadata: Metadata = {
 };
 
 const Services: FC = () => {
+  const serviceOfferings = {
+    Branding: [
+      "Logo Design",
+      "Company Naming",
+      "Slogans, Mottos, Catchphrases",
+      "Color Pallete Choices",
+      "Iconography",
+    ],
+    "Web Design": [],
+    "Web Development": [],
+    Hosting: [],
+    Maintenance: [
+      "Security Updates",
+      "Content Updates",
+      "Color Modifications",
+      "Font Modifications",
+    ],
+    Consulting: [
+      "Website Management",
+      "Project Management",
+      "Cloud Management",
+      "UI/UX Design",
+      "Mobile Apps",
+      "Automation Services",
+    ],
+  };
   return (
     <>
       <AnalyticsTag />
@@ -64,26 +90,9 @@ const Services: FC = () => {
           <div className="text-center mt-8">
             <span>Branding can include any of the following:</span>
             <ul className="flex flex-wrap md:justify-center px-4 gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Logo Design
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Company Naming
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Slogans, Mottos, Catchphrases
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Color Pallete Choices
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Iconography
-              </li>
+              {serviceOfferings.Branding.map((content) => (
+                <ServiceListItem key={content} content={content} />
+              ))}
             </ul>
           </div>
         </section>
@@ -179,22 +188,9 @@ const Services: FC = () => {
           <div className="text-center mt-8">
             <span className="text-[--white]">Maintenance items include:</span>
             <ul className="flex flex-wrap justify-center gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Security Updates
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Content Updates
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Color Modifications
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--theme] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--theme]" />
-                Font Modifications
-              </li>
+              {serviceOfferings.Maintenance.map((content) => (
+                <ServiceListItem key={content} content={content} />
+              ))}
             </ul>
           </div>
         </section>
@@ -224,35 +220,27 @@ const Services: FC = () => {
               Our consultations can include any of the following:
             </span>
             <ul className="flex flex-wrap md:justify-center px-4 gap-4 py-8">
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                Website Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                Project Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                Cloud Management
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                UI/UX Design
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                Mobile Apps
-              </li>
-              <li className="px-4 py-2 rounded-full border-2 border-[--white] flex gap-2 items-center">
-                <LuCheckCircle className="text-2xl text-[--white]" />
-                Automation Services
-              </li>
+              {serviceOfferings.Consulting.map((content) => (
+                <ServiceListItem key={content} content={content} />
+              ))}
             </ul>
           </div>
         </section>
       </div>
     </>
+  );
+};
+
+type ServiceListItemProps = {
+  content: string;
+};
+
+const ServiceListItem: FC<ServiceListItemProps> = ({ content }) => {
+  return (
+    <li className="px-4 py-2 rounded-full shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] flex gap-2 items-center">
+      <LuCheckCircle className="text-2xl" />
+      {content}
+    </li>
   );
 };
 

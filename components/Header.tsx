@@ -6,12 +6,15 @@ import Link from "next/link";
 import logo from "@/public/assets/logos/logo-new-white.svg";
 import Image from "next/image";
 import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { useTheme } from "next-themes";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const Header: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
+
+  const { theme, setTheme } = useTheme();
 
   const activateDropdown = () => {
     document.body.classList.add("no-scroll");
@@ -162,8 +165,15 @@ export const Header: FC = () => {
             </ul>
           </div>
         </div>
-        <button className="rounded-full p-2 backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] w-fit">
-          <MdDarkMode className="text-4xl" />
+        <button
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className="rounded-full p-2 backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] w-fit"
+        >
+          {theme === "light" ? (
+            <MdLightMode className="text-4xl" />
+          ) : (
+            <MdDarkMode className="text-4xl" />
+          )}
         </button>
       </div>
     </header>

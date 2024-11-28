@@ -19,14 +19,11 @@ export const Hero = () => {
       >
         <source src="/assets/videos/hero.mp4" />
       </video>
-      <div className="shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] dark:bg-[rgba(0,0,0,.25)] rounded-2xl py-10 px-4 flex-col gap-8 text-gray-800 dark:text-gray-100 sm:px-12 my-auto mx-auto text-center">
+      <div className="shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] rounded-2xl py-10 px-4 flex-col gap-8 text-gray-100 sm:px-12 my-auto mx-auto text-center">
         <h1
           className={`flex gap-2 text-4xl sm:text-5xl lg:text-6xl lg:py-8 lg:translate-y-[150%] [text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)] lg:animate-[shiftUp_750ms_linear_forwards] ${rubik.className} `}
         >
-          DIGITAL SOLUTIONS.{" "}
-          <span className="relative after:w-full after:h-2 after:bg-[rgba(0,200,255,1)] after:absolute after:right-0 after:-bottom-4 after:rounded-full | before:w-[75%] before:h-1 before:bg-[rgba(0,200,255,1)] before:absolute before:right-0 before:-bottom-1 before:rounded-full">
-            YOUR WAY.
-          </span>
+          DIGITAL SOLUTIONS. <span>YOUR WAY.</span>
         </h1>
         <p className="text-xl max-w-[60ch] lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_750ms_forwards] text-left">
           At Tidal Sites, we believe a website should do more than just exist—it
@@ -41,7 +38,7 @@ export const Hero = () => {
           <div className="flex gap-4">
             <Link
               href="/contact"
-              className="text-lg flex items-center rounded px-4 py-1 bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.5),rgba(0,200,255,.5))] [text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline outline-1 outline-offset-[3px] outline-[rgba(0,200,255,.5)] hover:outline-offset-4 hover:outline-1 focus:outline-offset-2 hover:bg-[radial-gradient(circle_at_25%_75%,rgba(0,150,200,.45),rgba(0,200,255,.45))] transistion-all duration-100"
+              className="text-lg flex items-center rounded px-4 py-1 bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.5),rgba(0,200,255,.5))] [text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline outline-1 outline-offset-[3px] outline-[rgba(0,200,255,.5)] hover:outline-offset-4 hover:outline-1 focus:outline-offset-2 hover:bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.65),rgba(0,200,255,.65))] transistion-all duration-100"
             >
               Get Quote
             </Link>

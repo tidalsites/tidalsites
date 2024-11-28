@@ -33,7 +33,8 @@ const config: Config = {
         page: "calc(100vh - var(--navbar-height))",
       },
       gridTemplateColumns: {
-        portfolio: "repeat(auto-fit, minmax(550px, 1fr))",
+        portfolio: "repeat(auto-fit, minmax(500px, 1fr))",
+        "portfolio-lg": "repeat(auto-fit, minmax(600px, 1fr))",
       },
       keyframes: {
         shiftUp: {

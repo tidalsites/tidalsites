@@ -49,7 +49,7 @@ const About: FC = () => {
             </p>
           </div>
         </div>
-        <section className="px-4 flex flex-col max-w-page mx-auto place-content-center md:flex-row w-full dark:bg-[rgba(0,0,0,.5)] rounded">
+        <section className="shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] px-4 flex flex-col max-w-page mx-auto place-content-center md:flex-row w-full dark:bg-[rgba(0,0,0,.5)] rounded-2xl">
           <div className="p-4 flex justify-between flex-col md:w-[50%] border-b-gray-200 border-b-2 relative after:absolute after:w-4 after:h-4 after:bg-gray-200 after:border-2 after:border-gray-300 after:bottom-[-9px] after:left-[50%] after:rotate-45 after:shadow-xl md:border-0 md:border-r-2 md:after:top-[50%] md:after:left-auto md:after:right-[-9px]">
             <h2 className="text-lg italic">Mission</h2>
             <p className="text-xl py-20">

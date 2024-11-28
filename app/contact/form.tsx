@@ -33,108 +33,108 @@ export default function ContactForm() {
   }
   return (
     <form
-      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-2xl bg-gradient-to-br from-[--theme] to-violet-600"
+      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)]"
       onSubmit={handleSubmit(sendContactForm)}
     >
       <div className="flex flex-col gap-4">
-        <label className="flex flex-col text-sm text-white">
+        <label className="flex flex-col text-sm">
           First Name
           <input
-            className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black]"
+            className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)]"
             {...register("first_name")}
             type="text"
           />
           {errors["first_name"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["first_name"].message}
             </span>
           )}
         </label>
-        <label className="flex flex-col text-sm text-white">
+        <label className="flex flex-col text-sm">
           Last Name
           <input
-            className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black]"
+            className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)]"
             {...register("last_name")}
             type="text"
           />
           {errors["last_name"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["last_name"].message}
             </span>
           )}
         </label>
-        <label className="flex flex-col text-sm text-white">
+        <label className="flex flex-col text-sm">
           Company Name
-          <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white">
+          <div className="flex gap-2 items-center rounded-lg py-1">
             <input
-              className="text-lg text-[--black]"
+              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
               {...register("company_name")}
               type="text"
             />
             <MdOutlineCorporateFare className="text-gray-400 text-2xl" />
           </div>
           {errors["company_name"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["company_name"].message}
             </span>
           )}
         </label>
-        <label className="flex flex-col text-sm text-white">
+        <label className="flex flex-col text-sm ">
           Phone
-          <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white items-center">
+          <div className="flex gap-2 items-center rounded-lg py-1">
             <input
-              className="text-lg text-[--black]"
+              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
               {...register("phone")}
               type="text"
             />
             <FaPhone className="text-gray-400 text-xl" />
           </div>
           {errors["phone"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["phone"].message}
             </span>
           )}
         </label>
-        <label className="flex flex-col text-sm text-white">
+        <label className="flex flex-col text-sm">
           Email
-          <div className="border-[1px] border-[--black] flex gap-2 rounded-lg px-2 py-1 bg-white items-center">
+          <div className="flex gap-2 items-center rounded-lg py-1">
             <input
-              className="text-lg text-[--black]"
+              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
               {...register("email")}
               type="email"
             />
             <FaEnvelope className="text-gray-400 text-xl" />
           </div>
           {errors["email"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm  mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["email"].message}
             </span>
           )}
         </label>
       </div>
-      <div className="flex flex-col justify-between">
-        <label className="flex flex-col text-sm text-white">
+      <div className="flex flex-col justify-between grow">
+        <label className="flex flex-col">
           Description
           <textarea
             {...register("description")}
             rows={10}
-            className="border-[1px] border-[--black] rounded-lg px-2 py-1 text-lg text-[--black] min-w-[300px]"
+            className="rounded-lg px-2 py-1 min-w-[300px]"
             placeholder="Describe what it is you are looking for today..."
           ></textarea>
           {errors["description"] && (
-            <span className="text-sm text-white mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 bg-white rounded-full" />
+            <span className="text-sm  mt-1 flex items-center gap-1">
+              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
               {errors["description"].message}
             </span>
           )}
         </label>
         <button
-          className="flex items-center gap-[1px] mt-8 ml-auto bg-[--white] text-[--black] rounded-full px-4 py-1 text-lg outline outline-2 -outline-offset-2 outline-white group hover:outline-offset-2 transition-all"
+          className="[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline outline-1 outline-offset-[3px] outline-[rgba(0,200,255,.5)] hover:outline-offset-4 hover:outline-1 focus:outline-offset-2 hover:bg-[radial-gradient(circle_at_25%_75%,rgba(0,150,200,.45),rgba(0,200,255,.45))] flex items-center gap-2 mt-8 ml-auto rounded-full px-4 py-1 text-lg group transition-all duration-200"
           type="submit"
           disabled={isSubmitting}
         >
@@ -142,7 +142,7 @@ export default function ContactForm() {
           {isSubmitting ? (
             <FaSpinner className="animate-spin" />
           ) : (
-            <RiSendPlaneLine className="text-2xl text-[--theme] group-hover:text-3xl group-hover:translate-x-2 transition-all" />
+            <RiSendPlaneLine className="text-2xl rotate-45 group-hover:translate-x-2 transition-all" />
           )}
         </button>
       </div>

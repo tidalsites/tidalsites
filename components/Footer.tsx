@@ -8,96 +8,109 @@ import {
 } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className="bg-[radial-gradient(circle_at_50%_99%,var(--dark-theme)_0%,var(--dark-theme)_75%,black_100%)] text-[--white] px-4 border-t-2 border-t-[--white]">
-      <div className="max-w-[--page-max-width] mx-auto flex flex-wrap justify-between items-center py-4">
-        <nav aria-label="Footer Navigation">
+    <div className="py-4 text-[--white]">
+      <div className="max-w-[--page-max-width] w-fit mx-auto flex gap-2 flex-wrap items-center">
+        <nav
+          className="px-4 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] py-2"
+          aria-label="Footer Navigation"
+        >
           <ul className="flex flex-wrap gap-4">
             <li>
-              <Link className="underline" href="/">
+              <Link
+                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                href="/"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link className="underline" href="/about">
+              <Link
+                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                href="/about"
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link className="underline" href="/services">
+              <Link
+                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                href="/services"
+              >
                 Services
               </Link>
             </li>
             <li>
-              <Link className="underline" href="/portfolio">
+              <Link
+                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                href="/portfolio"
+              >
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link className="underline" href="/contact">
+              <Link
+                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                href="/contact"
+              >
                 Contact
               </Link>
             </li>
           </ul>
         </nav>
-        <div className="flex flex-col justify-between gap-4">
-          <span className="py-4 border-b-2 border-[--white]">
-            Contact Us Today
-          </span>
-
-          <div className="flex gap-4 items-center">
-            <a
-              target="_blank"
-              href="https://www.facebook.com/people/Tidal-Sites/61553610020184/"
-              aria-label="Facebook"
-              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
-            >
-              <FaFacebook className="text-2xl" />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.instagram.com/tidalsites/"
-              aria-label="Instagram"
-              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
-            >
-              <FaInstagram className="text-2xl" />
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/company/tidalsites"
-              aria-label="Linkedin"
-              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
-            >
-              <FaLinkedin className="text-2xl" />
-            </a>
-            <Link
-              href="/contact"
-              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
-              aria-label="email"
-            >
-              <FaEnvelope className="text-2xl" />
-            </Link>
-            <a
-              href="tel:757-550-0830"
-              className="w-10 h-10 grid place-content-center bg-black/30 rounded-full"
-              aria-label="phone"
-            >
-              <FaPhone className="text-xl" />
-            </a>
-          </div>
+        <div className="flex gap-2 items-center">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/people/Tidal-Sites/61553610020184/"
+            aria-label="Facebook"
+            className="w-10 h-10 grid place-content-center rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+          >
+            <FaFacebook className="text-2xl" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/tidalsites/"
+            aria-label="Instagram"
+            className="w-10 h-10 grid place-content-center bg-black/30 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+          >
+            <FaInstagram className="text-2xl" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/company/tidalsites"
+            aria-label="Linkedin"
+            className="w-10 h-10 grid place-content-center bg-black/30 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+          >
+            <FaLinkedin className="text-2xl" />
+          </a>
+          <Link
+            href="/contact"
+            className="w-10 h-10 grid place-content-center bg-black/30 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+            aria-label="email"
+          >
+            <FaEnvelope className="text-2xl" />
+          </Link>
+          <a
+            href="tel:757-550-0830"
+            className="w-10 h-10 grid place-content-center bg-black/30 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+            aria-label="phone"
+          >
+            <FaPhone className="text-xl" />
+          </a>
         </div>
       </div>
-      <div className="max-w-[--page-max-width] mx-auto py-2">
-        Already a customer?{" "}
-        <a
-          className="text-[--link-light] underline"
-          href="https://g.page/r/CRXKrwtrLyweEBM/review"
-          target="_blank"
-        >
-          Leave a review
-        </a>
-      </div>
-      <div className="border-t-2 border-[--white] max-w-[--page-max-width] mx-auto text-center py-2">
-        &copy; Tidal Sites, LLC 2023
+      <div className="max-w-[--page-max-width] mx-auto py-2 flex justify-between">
+        <p>
+          Already a customer?
+          <a
+            className="text-[--link-light] underline"
+            href="https://g.page/r/CRXKrwtrLyweEBM/review"
+            target="_blank"
+          >
+            Leave a review
+          </a>
+        </p>
+
+        <span>&copy; Tidal Sites, LLC 2023</span>
       </div>
     </div>
   );
