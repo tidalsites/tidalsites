@@ -166,6 +166,7 @@ export const Header: FC = () => {
           </div>
         </div>
         <button
+          aria-label="Toggle Theme"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           className="rounded-full p-2 backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] w-fit"
         >
