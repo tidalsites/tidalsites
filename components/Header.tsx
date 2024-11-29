@@ -112,6 +112,7 @@ export const Header: FC = () => {
           >
             <button
               onClick={deactivateDropdown}
+              aria-label="Close Mobile Menu"
               className=" bg-black/30 rounded-full shadow-md text-2xl absolute top-4 right-4 p-1"
             >
               <MdClose />
