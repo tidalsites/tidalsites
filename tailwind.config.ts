@@ -8,10 +8,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens: {
-      xs: "385px",
-      ...defaultTheme.screens,
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -45,6 +41,10 @@ const config: Config = {
         fadeIn: {
           to: { opacity: "1" },
         },
+      },
+      screens: {
+        xs: "385px",
+        md: "820px",
       },
     },
   },

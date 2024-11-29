@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className="py-4 text-[--white]">
+    <div className="py-4 px-2 text-[--white]">
       <div className="max-w-[--page-max-width] w-fit mx-auto flex gap-2 flex-wrap items-center">
         <nav
           className="px-4 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] py-2"
@@ -98,7 +98,7 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="max-w-[--page-max-width] mx-auto py-2 flex justify-between">
+      <div className="max-w-[--page-max-width] mx-auto p-2 flex justify-between flex-wrap gap-2">
         <p>
           Already a customer?
           <a
@@ -110,7 +110,7 @@ export const Footer = () => {
           </a>
         </p>
 
-        <span>&copy; Tidal Sites, LLC 2023</span>
+        <span className="ml-auto">&copy; Tidal Sites, LLC 2024</span>
       </div>
     </div>
   );

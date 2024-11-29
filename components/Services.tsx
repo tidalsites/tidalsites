@@ -1,16 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { FC, useEffect, useState } from "react";
-// import Link from "next/link";
-// import {
-//   MdFingerprint,
-//   MdWeb,
-//   MdCode,
-//   MdCloud,
-//   MdBuild,
-//   MdContactSupport,
-//   MdEast,
-// } from "react-icons/md";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaForward } from "react-icons/fa";
@@ -69,6 +60,14 @@ export const Services: FC = () => {
     let interval: NodeJS.Timeout;
     let timeout: NodeJS.Timeout;
 
+    // If window is resized, disable auto-play functionality
+    window.addEventListener("resize", () => setAutoPlayServices(false));
+
+    // If window is less than 820px, disable auto-play functionality
+    if (window.innerWidth < 820) {
+      setAutoPlayServices(false);
+    }
+
     if (autoPlayServices) {
       interval = setInterval(() => {
         const currentIndex = services.indexOf(activeService);
@@ -91,7 +90,7 @@ export const Services: FC = () => {
   return (
     <section className="px-4 mb-20 relative isolate">
       <div className="max-w-page mx-auto py-10">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-4">
           <ul className="text-3xl flex flex-col gap-2">
             {services.map((service) => (
               <ServiceItem
@@ -102,12 +101,21 @@ export const Services: FC = () => {
               />
             ))}
           </ul>
-          <div className="w-full h-full box-border p-4 rounded-lg grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
+          <div className="hidden w-full h-full box-border p-4 rounded-lg lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
             <p className="text-lg max-w-[40ch] mx-auto ">
               {ServiceContent[activeService]}
             </p>
           </div>
         </div>
+        <Link
+          href="/services"
+          className="lg:mx-auto group flex items-center gap-2 px-4 mt-10 text-xl shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] w-fit py-2 rounded-full bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[10px] hover:lg:bg-[rgba(0,0,0,.75)] hover:lg:px-4 hover:lg:shadow-[0_0_16px_-8px_rgba(255,255,255,.25)] hover:lg:outline hover:lg:outline-1 hover:lg:outline-[rgba(0,200,255,.25)]"
+        >
+          <span className="group-hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)]">
+            Explore All Services
+          </span>
+          <FaRegArrowAltCircleRight className="text-2xl group-hover:text-[rgba(0,200,255,.85)] transition-colors" />
+        </Link>
       </div>
     </section>
   );
@@ -126,25 +134,26 @@ const ServiceItem: FC<ServiceItemProps> = ({
 }) => {
   return (
     <li
-      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:bg-[rgba(0,0,0,.5)] hover:px-4 ${
+      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:lg:bg-[rgba(0,0,0,.5)] hover:lg:px-4 ${
         active
-          ? "bg-[rgba(0,0,0,.5)] outline outline-1 outline-[rgba(0,200,255,.25)] px-4"
+          ? "lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)] lg:px-4"
           : ""
       }`}
       onClick={() => handleServiceClick(service)}
     >
-      {active && <FaForward className="text-3xl transition-all" />}
+      {active && (
+        <FaForward className="hidden lg:block text-3xl transition-all" />
+      )}
 
       <p
         className={
           active
-            ? "[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] px-4"
+            ? "lg:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] lg:px-4"
             : ""
         }
       >
         {service}
       </p>
-      <FaRegArrowAltCircleRight className="text-4xl hover:text-5xl transition-all md:hidden" />
     </li>
   );
 };

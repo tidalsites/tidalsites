@@ -6,15 +6,15 @@ import Link from "next/link";
 import logo from "@/public/assets/logos/logo-new-white.svg";
 import Image from "next/image";
 import { MdOutlineMenuOpen, MdClose } from "react-icons/md";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { useTheme } from "next-themes";
+// import { MdDarkMode, MdLightMode } from "react-icons/md";
+// import { useTheme } from "next-themes";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const Header: FC = () => {
   const [dropdownActivated, setDropdownActivated] = useState<boolean>(false);
 
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
 
   const activateDropdown = () => {
     document.body.classList.add("no-scroll");
@@ -35,11 +35,14 @@ export const Header: FC = () => {
       <div className="w-full max-w-page flex gap-2 mx-auto">
         <div className="grow flex justify-between px-10 items-center rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]">
           <div className="py-1">
-            <Link className="flex gap-2 relative py-1" href="/">
+            <Link
+              className="flex gap-2 relative py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] rounded-full focus:px-4"
+              href="/"
+            >
               <Image src={logo} alt="Tidal Sites" width="35" height="35" />
               <span
                 aria-hidden
-                className={`font-bold text-3xl hidden xs:block ${rubik.className}`}
+                className={`font-bold text-3xl hidden sm:block ${rubik.className}`}
               >
                 TIDAL SITES
               </span>
@@ -103,16 +106,19 @@ export const Header: FC = () => {
             id="mobile-menu"
             className={`${
               dropdownActivated
-                ? "translate-y-0 opacity-100 flex flex-col"
-                : "hidden translate-y-[-100vh]"
-            } fixed inset-0 justify-center bg-black/80 overflow-hidden z-50 transition-all`}
+                ? "translate-y-0 flex flex-col"
+                : "translate-y-[-100vh]"
+            } fixed inset-0 -top-2 -left-2 justify-center bg-black/90 overflow-hidden z-50 transition-all duration-300 w-[100vw] h-[100vh] backdrop-filter backdrop-blur-[40px]`}
           >
-            <button className="text-red-400 bg-white rounded-full shadow-md text-4xl absolute top-4 right-4 p-1">
-              <MdClose onClick={deactivateDropdown} />
+            <button
+              onClick={deactivateDropdown}
+              className=" bg-black/30 rounded-full shadow-md text-2xl absolute top-4 right-4 p-1"
+            >
+              <MdClose />
             </button>
 
-            <ul className="flex flex-col content-center items-center min-w-[300px] bg-white w-fit mx-auto rounded">
-              <li className="w-full text-center border-b-[1px] border-black">
+            <ul className="flex flex-col content-center items-center min-w-[300px] mx-auto rounded-2xl overflow-hidden shadow-[0_0_20px_-10px_rgba(255,255,255,.25)] bg-black/90">
+              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
                 <Link href="/">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -122,7 +128,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-black">
+              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
                 <Link href="/about">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -132,7 +138,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-black">
+              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
                 <Link href="/services">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -142,7 +148,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-black">
+              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
                 <Link href="/portfolio">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -165,7 +171,7 @@ export const Header: FC = () => {
             </ul>
           </div>
         </div>
-        <button
+        {/* <button
           aria-label="Toggle Theme"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           className="rounded-full p-2 backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] w-fit"
@@ -175,7 +181,7 @@ export const Header: FC = () => {
           ) : (
             <MdDarkMode className="text-4xl" />
           )}
-        </button>
+        </button> */}
       </div>
     </header>
   );

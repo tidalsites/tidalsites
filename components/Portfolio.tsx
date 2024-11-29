@@ -19,7 +19,7 @@ export const Portfolio = () => {
               Visit our Portfolio page to delve into a diverse collection of our
               accomplished projects.
             </p>
-            <div className="rounded-lg p-4 flex justify-between bg-[rgba(0,0,0,.25)] backdrop-filter backdrop-blur-[10px] shadow-[0_0_16px_-8px_rgba(255,255,255,.25)]">
+            <div className="rounded-lg p-4 flex flex-wrap justify-between bg-[rgba(0,0,0,.25)] backdrop-filter backdrop-blur-[10px] shadow-[0_0_16px_-8px_rgba(255,255,255,.25)]">
               <span className="text-lg uppercase text-center">
                 See what makes us different
               </span>
