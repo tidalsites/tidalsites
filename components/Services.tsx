@@ -101,14 +101,21 @@ export const Services: FC = () => {
     <section className="px-4 mb-20 relative isolate">
       <div className="max-w-page mx-auto py-10">
         <div className="grid lg:grid-cols-2 gap-4">
-          <ul className="text-3xl flex flex-col gap-2">
+          <ul className="text-3xl flex lg:flex-col justify-center flex-wrap gap-8 lg:gap-2 [&>*:nth-child(odd)]:lg:bg-none [&>*:nth-child(even)]:lg:bg-none [&>*:nth-child(odd)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(45deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)] [&>*:nth-child(even)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(135deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)]">
             {services.map((service) => (
-              <ServiceItem
+              <div
                 key={service}
-                service={service}
-                active={service === activeService}
-                handleServiceClick={setActiveService}
-              />
+                className="w-fit lg:w-full px-4 sm:px-20 rounded-2xl lg:bg-transparent lg:bg-none shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] lg:shadow-none outline-1 outline outline-[rgba(0,200,255,.25)] lg:outline-none"
+              >
+                <ServiceItem
+                  service={service}
+                  active={service === activeService}
+                  handleServiceClick={setActiveService}
+                />
+                <p className="xs:text-lg text-base max-w-[40ch] lg:hidden pb-8">
+                  {ServiceContent[service]}
+                </p>
+              </div>
             ))}
           </ul>
           <div className="hidden w-full h-full box-border p-4 rounded-lg lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
@@ -117,15 +124,14 @@ export const Services: FC = () => {
             </p>
           </div>
         </div>
-        <Link
-          href="/services"
-          className="transition-all lg:mx-auto group flex items-center gap-2 px-4 mt-10 text-xl shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] w-fit py-2 rounded-full bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[10px] hover:lg:bg-[rgba(0,0,0,.75)] hover:lg:px-6 hover:lg:shadow-[0_0_16px_-8px_rgba(255,255,255,.25)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)]"
-        >
-          <span className="group-hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)]">
+        <div className="mt-10 flex justify-center py-10">
+          <Link
+            href="/services"
+            className="transition-all w-fit rounded-full px-4 hover:px-6 py-2 outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
+          >
             Explore All Services
-          </span>
-          <FaRegArrowAltCircleRight className="text-2xl group-hover:ml-2 transition-all" />
-        </Link>
+          </Link>
+        </div>
       </div>
     </section>
   );
@@ -158,8 +164,8 @@ const ServiceItem: FC<ServiceItemProps> = ({
       <p
         className={
           active
-            ? "lg:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] lg:px-4"
-            : ""
+            ? "lg:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] lg:px-4 border-b-2 border-[rgba(0,200,255,.5)] pr-8 lg:border-none"
+            : "border-b-2 border-[rgba(0,200,255,.5)] pr-8 lg:border-none"
         }
       >
         {service}
