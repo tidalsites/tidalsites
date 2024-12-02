@@ -37,7 +37,7 @@ export const PortfolioCard = ({
           <Link
             href={link}
             target="_blank"
-            className="text-xl my-4 py-2 rounded-lg flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-zinc-200 "
+            className="text-xl my-4 py-2 rounded-lg flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
           >
             <span>{title}</span>
             <LuExternalLink className="text-2xl" />

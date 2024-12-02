@@ -1,7 +1,14 @@
 "use client";
 
+/**
+ *
+ * TODO:
+ * Fix view transition to only apply to the content section
+ * Currently the entire page transitions, causing screen flicker
+ */
+
 import Link from "next/link";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaForward } from "react-icons/fa";
@@ -18,24 +25,26 @@ export const Services: FC = () => {
   const [activeService, setActiveService] = useState<Service>("Branding");
   const [autoPlayServices, setAutoPlayServices] = useState<boolean>(true);
 
-  const switchViewWithTransition = (service: Service) => {
-    if (!document.startViewTransition) {
-      console.warn("View Transitions API is not supported in this browser.");
-      return setActiveService(service);
-    }
-    document.startViewTransition(() => {
-      setActiveService(service);
-    });
-  };
+  // const switchViewWithTransition = (service: Service) => {
+  //   if (!document.startViewTransition) {
+  //     console.warn("View Transitions API is not supported in this browser.");
+  //     return setActiveService(service);
+  //   }
+  //   document.startViewTransition(() => {
+  //     setActiveService(service);
+  //   });
+  // };
 
-  const services: Service[] = [
-    "Branding",
-    "Web Design",
-    "Web Development",
-    "Hosting",
-    "Maintenance",
-    "Consulting",
-  ];
+  const services: Service[] = useMemo(() => {
+    return [
+      "Branding",
+      "Web Design",
+      "Web Development",
+      "Hosting",
+      "Maintenance",
+      "Consulting",
+    ];
+  }, []);
 
   type ServiceContent = {
     [key in Service]: string;
@@ -50,11 +59,11 @@ export const Services: FC = () => {
     Consulting: `Our consultation services are your gateway to unlocking digital potential. With tailored strategies, we offer expert guidance, analyzing your specific needs and goals. Gain actionable insights and a roadmap for success, empowering your online presence and business growth.`,
   };
 
-  const handleServiceClick = (service: Service) => {
-    switchViewWithTransition(service);
-    // Temporarily disable auto-play functionality
-    setAutoPlayServices(false);
-  };
+  // const handleServiceClick = (service: Service) => {
+  //   switchViewWithTransition(service);
+  //   // Temporarily disable auto-play functionality
+  //   setAutoPlayServices(false);
+  // };
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -73,7 +82,8 @@ export const Services: FC = () => {
         const currentIndex = services.indexOf(activeService);
         const nextIndex =
           currentIndex === services.length - 1 ? 0 : currentIndex + 1;
-        switchViewWithTransition(services[nextIndex]);
+        // switchViewWithTransition(services[nextIndex]);
+        setActiveService(services[nextIndex]);
       }, 4000);
     } else {
       timeout = setTimeout(() => {
@@ -85,7 +95,7 @@ export const Services: FC = () => {
       clearInterval(interval);
       clearTimeout(timeout);
     };
-  }, [activeService, autoPlayServices]);
+  }, [activeService, autoPlayServices, services]);
 
   return (
     <section className="px-4 mb-20 relative isolate">
@@ -97,7 +107,7 @@ export const Services: FC = () => {
                 key={service}
                 service={service}
                 active={service === activeService}
-                handleServiceClick={handleServiceClick}
+                handleServiceClick={setActiveService}
               />
             ))}
           </ul>
@@ -109,12 +119,12 @@ export const Services: FC = () => {
         </div>
         <Link
           href="/services"
-          className="lg:mx-auto group flex items-center gap-2 px-4 mt-10 text-xl shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] w-fit py-2 rounded-full bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[10px] hover:lg:bg-[rgba(0,0,0,.75)] hover:lg:px-4 hover:lg:shadow-[0_0_16px_-8px_rgba(255,255,255,.25)] hover:lg:outline hover:lg:outline-1 hover:lg:outline-[rgba(0,200,255,.25)]"
+          className="transition-all lg:mx-auto group flex items-center gap-2 px-4 mt-10 text-xl shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] w-fit py-2 rounded-full bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[10px] hover:lg:bg-[rgba(0,0,0,.75)] hover:lg:px-6 hover:lg:shadow-[0_0_16px_-8px_rgba(255,255,255,.25)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)]"
         >
           <span className="group-hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)]">
             Explore All Services
           </span>
-          <FaRegArrowAltCircleRight className="text-2xl group-hover:text-[rgba(0,200,255,.85)] transition-colors" />
+          <FaRegArrowAltCircleRight className="text-2xl group-hover:ml-2 transition-all" />
         </Link>
       </div>
     </section>
