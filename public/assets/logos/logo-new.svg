@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="66.145828mm"
+   height="64.119728mm"
+   viewBox="0 0 66.145828 64.119728"
+   version="1.1"
+   id="svg1805"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="logo-newsvg.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1807"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.49073519"
+     inkscape:cx="-414.68393"
+     inkscape:cy="466.64678"
+     inkscape:window-width="1920"
+     inkscape:window-height="995"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1802" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-23.651729,-56.39013)">
+    <path
+       id="path2974"
+       style="color:#000000;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 32.235701 57.051588 C 27.840743 57.051588 24.313187 60.901409 24.313187 65.70119 L 24.313187 117.16782 C 24.313187 118.07188 24.846376 119.19261 25.782348 119.84827 C 37.505287 119.06734 46.339232 90.87142 68.132735 94.538189 C 68.609269 94.599486 70.139593 94.953289 69.365735 95.65285 C 60.978633 101.26747 63.177591 111.33666 74.654301 117.23655 C 78.815058 119.27131 82.996247 119.79437 85.745613 119.84827 C 88.527069 119.51613 89.136104 118.36125 89.136104 117.16782 L 89.136104 65.70119 C 89.136104 60.901409 85.610617 57.051588 81.215657 57.051588 L 32.235701 57.051588 z M 74.242956 59.694321 A 12.834066 12.834063 0 0 1 84.234594 64.541054 A 12.834066 12.834063 0 0 1 82.224381 82.535304 L 82.029044 82.6893 A 12.834066 12.834063 0 0 1 64.0658 80.417604 A 12.834066 12.834063 0 0 1 66.250679 62.443507 A 12.834066 12.834063 0 0 1 74.242956 59.694321 z " />
+  </g>
+</svg>

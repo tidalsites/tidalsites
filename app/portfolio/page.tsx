@@ -63,8 +63,8 @@ const Portfolio: FC = () => {
     <>
       <AnalyticsTag />
       <AdsTag />
-      <div className="mt-[--navbar-height]">
-        <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="pt-[--navbar-height]">
+        <div className="py-6 px-4 text-[--white] mb-20">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Portfolio</h1>
             <span>Check out our work</span>
@@ -79,7 +79,7 @@ const Portfolio: FC = () => {
           <div className="py-4 px-4 sm:px-0 mb-10 max-w-page mx-auto">
             <h2 className="text-2xl">WEBSITES</h2>
           </div>
-          <div className="grid sm:grid-cols-portfolio grid-rows-[300px_auto_auto_auto] gap-y-20 place-items-center">
+          <div className="grid sm:grid-cols-portfolio lg:grid-cols-portfolio-lg gap-y-12 place-items-center">
             {portfolio.map((item, i) => {
               const { title, imgSrc, alt, description, tags, link } = item;
               const position = i % 2 === 0 ? "left" : "right";
@@ -120,12 +120,12 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 justify-start">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
               </div>
@@ -152,16 +152,16 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 justify-start">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Branding - Logo</span>
                 </div>
               </div>
@@ -187,20 +187,20 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Branding - Logo</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Graphic Design</span>
                 </div>
               </div>
@@ -227,12 +227,12 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 justify-start">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
               </div>
@@ -258,8 +258,8 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
               </div>
@@ -285,12 +285,12 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 px-4 justify-start">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
               </div>
@@ -317,19 +317,19 @@ const Portfolio: FC = () => {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 py-2 md:justify-center xl:justify-end">
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Web Design</span>
                 </div>
-                <div className="px-4 py-2 rounded-lg border-2 border-[--purple] flex items-center gap-2 bg-white text-[--black]">
-                  <LuCheckCircle className="text-[--purple] text-2xl" />
+                <div className="px-4 py-2 rounded-lg border-2 border-[--theme] flex items-center gap-2 bg-white text-[--black]">
+                  <LuCheckCircle className="text-[--theme] text-2xl" />
                   <span>Hosting</span>
                 </div>
               </div>
             </div> */}
           </div>
         </section>
-        <section className="px-4 bg-[url(/assets/images/section-bg.svg)] bg-no-repeat bg-cover">
+        <section className="px-4">
           <div className="mt-20 py-10 px-4 mx-auto max-w-page">
             <h2 className="text-2xl text-[--white]">LOGOS</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 place-items-center mx-auto mt-10 text-sm w-fit">

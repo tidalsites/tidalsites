@@ -8,10 +8,6 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    screens: {
-      xs: "385px",
-      ...defaultTheme.screens,
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -33,7 +29,8 @@ const config: Config = {
         page: "calc(100vh - var(--navbar-height))",
       },
       gridTemplateColumns: {
-        portfolio: "repeat(auto-fit, minmax(550px, 1fr))",
+        portfolio: "repeat(auto-fit, minmax(500px, 1fr))",
+        "portfolio-lg": "repeat(auto-fit, minmax(600px, 1fr))",
       },
       keyframes: {
         shiftUp: {
@@ -44,6 +41,10 @@ const config: Config = {
         fadeIn: {
           to: { opacity: "1" },
         },
+      },
+      screens: {
+        xs: "385px",
+        md: "820px",
       },
     },
   },

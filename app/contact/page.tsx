@@ -22,8 +22,8 @@ function Contact() {
     <>
       <AnalyticsTag />
       <AdsTag />
-      <div className="mt-[--navbar-height]">
-        <div className="py-6 px-4 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white] mb-20">
+      <div className="pt-[--navbar-height]">
+        <div className="py-6 px-4 text-[--white] mb-20">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Contact Us</h1>
             <span>Get in Touch</span>
@@ -35,7 +35,7 @@ function Contact() {
             </p>
           </div>
         </div>
-        <section className="flex flex-wrap gap-8 justify-between max-w-page mx-auto items-center mb-20">
+        <section className="flex flex-wrap gap-8 justify-between max-w-page mx-auto items-center pb-20">
           <div className="mx-4">
             <h2 className="text-2xl">CONTACT INFORMATION</h2>
             <a

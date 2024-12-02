@@ -32,15 +32,12 @@ const bios: TBio[] = [
 ];
 
 const About: FC = () => {
-  const emailBody =
-    "First Name: %0aLast Name: %0aPhone Number: %0aEmail: %0a%0aPlease describe what service or services Tidal Sites can help you with: %0a";
-
   return (
     <>
       <AnalyticsTag />
       <AdsTag />
-      <div className="mt-[--navbar-height]">
-        <div className="px-4 py-6 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
+      <div className="pt-[--navbar-height] dark:bg-[--dark-theme]">
+        <div className="px-4 py-6">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">About Us</h1>
             <span>Who are we?</span>
@@ -52,32 +49,21 @@ const About: FC = () => {
             </p>
           </div>
         </div>
-        <section className="px-4 flex flex-col max-w-page mx-auto place-content-center md:flex-row w-full">
+        <section className="shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] px-4 flex flex-col max-w-page mx-auto place-content-center md:flex-row w-full dark:bg-[rgba(0,0,0,.5)] rounded-2xl">
           <div className="p-4 flex justify-between flex-col md:w-[50%] border-b-gray-200 border-b-2 relative after:absolute after:w-4 after:h-4 after:bg-gray-200 after:border-2 after:border-gray-300 after:bottom-[-9px] after:left-[50%] after:rotate-45 after:shadow-xl md:border-0 md:border-r-2 md:after:top-[50%] md:after:left-auto md:after:right-[-9px]">
             <h2 className="text-lg italic">Mission</h2>
-            <p className="text-xl text-[--black] py-20">
+            <p className="text-xl py-20">
               To craft digital success stories that help businesses thrive.
             </p>
           </div>
           <div className="p-4 grid placeholder-center md:w-[50%]">
             <h2 className="text-lg italic">Values</h2>
-            <p className="text-xl text-[--black] py-20 mx-auto">
-              Quality, Quality, Quality
-            </p>
+            <p className="text-xl py-20 mx-auto">Quality, Quality, Quality</p>
           </div>
         </section>
-        <section className="bg-gray-200">
+        <section>
           <div className="max-w-page mx-auto py-10 flex gap-8 flex-col px-4">
-            <p className="max-w-[65ch] mx-auto text-lg">
-              Our mission and core values are not mere statements on a website;
-              they are the guiding principles that fuel our passion, drive our
-              innovation, and ensure that your experience with Tidal Sites is
-              nothing short of exceptional. Crafted success and unparalleled
-              Quality are not just ideals for us; they are the very fabric of
-              who we are and what we offer to businesses seeking to thrive in
-              the digital landscape.
-            </p>
-            <p className="max-w-[65ch] mx-auto text-lg font-bold">
+            <p className="max-w-[65ch] mx-auto text-3xl font-bold pt-10 py-2 uppercase border-b-2 border-[--theme]">
               Welcome to Tidal Sites, where your success story begins.
             </p>
           </div>
@@ -87,7 +73,7 @@ const About: FC = () => {
           <section className="pt-20 px-4">
             <div className="max-w-page mx-auto flex justify-between gap-8">
               <div className="max-w-[65ch] leading-6">
-                <h2 className="w-fit text-xl italic border-b-4 border-b-[--purple] pr-4">
+                <h2 className="w-fit text-xl italic border-b-4 border-b-[--theme] pr-4">
                   The Company
                 </h2>
                 <div className="py-8">
@@ -189,7 +175,7 @@ const About: FC = () => {
                   </p>
                   <Link
                     href="/contact"
-                    className="flex gap-2 bg-[--purple] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--purple] -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transition-all"
+                    className="flex gap-2 bg-[--theme] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--theme] -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transition-all"
                   >
                     <FaEnvelope className="text-[--white] text-2xl" />
                     Email Us Today
@@ -201,9 +187,9 @@ const About: FC = () => {
               </div>
             </div>
           </section>
-          <section className="bg-gradient-to-tr from-gray-900 via-black via-30% to-gray-900 text-[--white] py-10 px-4 w-full">
+          <section className="py-10 px-4 w-full">
             <div className="max-w-page mx-auto">
-              <h2 className="w-fit text-xl italic border-b-4 border-b-[--purple] pr-4 mb-8">
+              <h2 className="w-fit text-xl italic border-b-4 border-b-[--theme] pr-4 mb-8">
                 The Team
               </h2>
               <div className="flex flex-wrap gap-12">

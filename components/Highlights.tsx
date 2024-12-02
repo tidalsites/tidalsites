@@ -3,7 +3,7 @@ import { LuCheckCircle } from "react-icons/lu";
 
 export const Highlights: FC = () => {
   return (
-    <section className="border-t-2 border-t-[--white] flex flex-col items-center px-4 py-8 bg-[url('/assets/images/header-bg.png')] bg-no-repeat bg-cover bg-center text-[--white]">
+    <section className="flex flex-col items-center px-4 py-8">
       <div className="mx-auto max-w-page">
         <h2 className="text-4xl text-center">The Tidal Sites Guarantee</h2>
         <p className="my-4 mx-auto max-w-[70ch] text-center">
@@ -11,21 +11,21 @@ export const Highlights: FC = () => {
           delivering websites that not only meet but exceed industry standards.
           When you choose us, you are guaranteed:
         </p>
-        <div className="flex flex-wrap w-full my-10 gap-8">
-          <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
-            <LuCheckCircle className="text-[--white] text-2xl" />
+        <div className="flex flex-col w-full my-10 gap-8 max-w-[clamp(400px,30vw,600px)] mx-auto lg:flex-row lg:mx-0 lg:max-w-none">
+          <div className="w-fit px-4 py-2 rounded-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] outline outline-[1px] outline-[rgba(0,200,255,.5)] flex items-center gap-2">
+            <LuCheckCircle className=" text-2xl" />
             <span>SEO</span>
           </div>
-          <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
-            <LuCheckCircle className="text-[--white] text-2xl" />
+          <div className="w-fit ml-auto px-4 py-2 rounded-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] outline outline-[1px] outline-[rgba(0,200,255,.5)] flex items-center gap-2">
+            <LuCheckCircle className=" text-2xl" />
             <span>Mobile Responsiveness</span>
           </div>
-          <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
-            <LuCheckCircle className="text-[--white] text-2xl" />
+          <div className="w-fit px-4 py-2 rounded-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] outline outline-[1px] outline-[rgba(0,200,255,.5)] flex items-center gap-2">
+            <LuCheckCircle className=" text-2xl" />
             <span>Accessibility</span>
           </div>
-          <div className="px-4 py-2 rounded-full border-2 border-[--white] flex items-center gap-2">
-            <LuCheckCircle className="text-[--white] text-2xl" />
+          <div className="w-fit ml-auto px-4 py-2 rounded-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] outline outline-[1px] outline-[rgba(0,200,255,.5)] flex items-center gap-2">
+            <LuCheckCircle className=" text-2xl" />
             <span>Performance Optimizations</span>
           </div>
         </div>
