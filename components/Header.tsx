@@ -107,7 +107,7 @@ export const Header: FC = () => {
             className={`${
               dropdownActivated
                 ? "translate-y-0 flex flex-col"
-                : "translate-y-[-100vh]"
+                : "translate-y-[-100vh] invisible"
             } fixed inset-0 -top-2 -left-2 justify-center bg-black/90 overflow-hidden z-50 transition-all duration-300 w-[100vw] h-[100vh] backdrop-filter backdrop-blur-[40px]`}
           >
             <button
