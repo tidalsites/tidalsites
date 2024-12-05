@@ -103,7 +103,7 @@ export const Services: FC = () => {
         <div className="grid lg:grid-cols-2 gap-4">
           <ul className="text-3xl flex lg:flex-col justify-center flex-wrap gap-8 lg:gap-2 [&>*:nth-child(odd)]:lg:bg-none [&>*:nth-child(even)]:lg:bg-none [&>*:nth-child(odd)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(45deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)] [&>*:nth-child(even)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(135deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)]">
             {services.map((service) => (
-              <div
+              <li
                 key={service}
                 className="w-fit lg:w-full px-4 sm:px-20 rounded-2xl lg:bg-transparent lg:bg-none shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] lg:shadow-none outline-1 outline outline-[rgba(0,200,255,.25)] lg:outline-none"
               >
@@ -115,7 +115,7 @@ export const Services: FC = () => {
                 <p className="xs:text-lg text-base max-w-[40ch] lg:hidden pb-8">
                   {ServiceContent[service]}
                 </p>
-              </div>
+              </li>
             ))}
           </ul>
           <div className="hidden w-full h-full box-border p-4 rounded-lg lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
@@ -149,7 +149,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
   handleServiceClick,
 }) => {
   return (
-    <li
+    <div
       className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:lg:bg-[rgba(0,0,0,.5)] hover:lg:px-4 ${
         active
           ? "lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)] lg:px-4"
@@ -170,6 +170,6 @@ const ServiceItem: FC<ServiceItemProps> = ({
       >
         {service}
       </p>
-    </li>
+    </div>
   );
 };

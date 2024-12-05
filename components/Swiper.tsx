@@ -3,9 +3,7 @@
 import { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { A11y, Autoplay, Pagination } from "swiper/modules";
+import { A11y, Autoplay } from "swiper/modules";
 import Image, { StaticImageData } from "next/image";
 
 type SlideImage = {
@@ -38,8 +36,7 @@ export const SwiperComponent: FC<Props> = ({ slides }) => {
       wrapperClass="items-center"
       slidesPerView={slidesPerView}
       spaceBetween={20}
-      modules={[Pagination, A11y, Autoplay]}
-      pagination={{ clickable: true }}
+      modules={[A11y, Autoplay]}
       loop
       autoplay={{ delay: 5000 }}
     >
