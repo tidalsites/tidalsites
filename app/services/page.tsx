@@ -11,6 +11,7 @@ import designImg from "@/public/assets/images/services-design.png";
 import developmentImg from "@/public/assets/images/services-development.png";
 import hostingImg from "@/public/assets/images/services-hosting.png";
 import maintenanceImg from "@/public/assets/images/services-maintenance.png";
+import { Chip } from "@/components/Chip";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Services",
@@ -237,9 +238,8 @@ type ServiceListItemProps = {
 
 const ServiceListItem: FC<ServiceListItemProps> = ({ content }) => {
   return (
-    <li className="px-4 py-2 rounded-full shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] flex gap-2 items-center">
-      <LuCheckCircle className="text-2xl" />
-      {content}
+    <li>
+      <Chip text={content} />
     </li>
   );
 };

@@ -134,16 +134,12 @@ export default function ContactForm() {
           )}
         </label>
         <button
-          className="[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline outline-1 outline-offset-[3px] outline-[rgba(0,200,255,.5)] hover:outline-offset-4 hover:outline-1 focus:outline-offset-2 hover:bg-[radial-gradient(circle_at_25%_75%,rgba(0,150,200,.45),rgba(0,200,255,.45))] flex items-center gap-2 mt-8 ml-auto rounded-full px-4 py-1 text-lg group transition-all duration-200"
+          className="ml-auto px-4 hover:px-6 py-2 transition-all w-fit rounded-full outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
           type="submit"
           disabled={isSubmitting}
         >
           Submit
-          {isSubmitting ? (
-            <FaSpinner className="animate-spin" />
-          ) : (
-            <RiSendPlaneLine className="text-2xl rotate-45 group-hover:translate-x-2 transition-all" />
-          )}
+          {isSubmitting && <FaSpinner className="animate-spin" />}
         </button>
       </div>
     </form>

@@ -12,6 +12,7 @@ import { FC, useEffect, useMemo, useState } from "react";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaForward } from "react-icons/fa";
+import { CTA } from "./cta";
 
 type Service =
   | "Branding"
@@ -125,12 +126,7 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="mt-10 flex justify-center py-10">
-          <Link
-            href="/services"
-            className="transition-all w-fit rounded-full px-4 hover:px-6 py-2 outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
-          >
-            Explore All Services
-          </Link>
+          <CTA href="/services" text="Explore All Services" />
         </div>
       </div>
     </section>
@@ -158,7 +154,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
       onClick={() => handleServiceClick(service)}
     >
       {active && (
-        <FaForward className="hidden lg:block text-3xl transition-all" />
+        <FaForward className="hidden lg:block text-3xl transition-all text-[--theme]" />
       )}
 
       <p
