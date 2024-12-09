@@ -3,7 +3,9 @@
 import { ContactSchema, TContactSchema } from "@/lib/ContactSchema";
 import { sendEmail } from "@/lib/actions";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { FC } from "react";
+import { useForm, UseFormRegister } from "react-hook-form";
+import { IconType } from "react-icons";
 import { FaEnvelope, FaPhone, FaSpinner } from "react-icons/fa";
 import { MdOutlineCorporateFare } from "react-icons/md";
 import { RiErrorWarningFill, RiSendPlaneLine } from "react-icons/ri";
@@ -33,91 +35,41 @@ export default function ContactForm() {
   }
   return (
     <form
-      className="flex flex-wrap justify-center xs:mx-4 gap-20 p-2 xs:p-8 rounded-lg shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)]"
+      className="flex flex-wrap lg:justify-center xs:mx-4 gap-x-20 gap-y-4 p-2 xs:p-8 rounded-lg shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)]"
       onSubmit={handleSubmit(sendContactForm)}
     >
       <div className="flex flex-col gap-4">
-        <label className="flex flex-col text-sm">
-          First Name
-          <input
-            className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)]"
-            {...register("first_name")}
-            type="text"
-          />
-          {errors["first_name"] && (
-            <span className="text-sm mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
-              {errors["first_name"].message}
-            </span>
-          )}
-        </label>
-        <label className="flex flex-col text-sm">
-          Last Name
-          <input
-            className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)]"
-            {...register("last_name")}
-            type="text"
-          />
-          {errors["last_name"] && (
-            <span className="text-sm mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
-              {errors["last_name"].message}
-            </span>
-          )}
-        </label>
-        <label className="flex flex-col text-sm">
-          Company Name
-          <div className="flex gap-2 items-center rounded-lg py-1">
-            <input
-              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
-              {...register("company_name")}
-              type="text"
-            />
-            <MdOutlineCorporateFare className="text-gray-400 text-2xl" />
-          </div>
-          {errors["company_name"] && (
-            <span className="text-sm mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
-              {errors["company_name"].message}
-            </span>
-          )}
-        </label>
-        <label className="flex flex-col text-sm ">
-          Phone
-          <div className="flex gap-2 items-center rounded-lg py-1">
-            <input
-              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
-              {...register("phone")}
-              type="text"
-            />
-            <FaPhone className="text-gray-400 text-xl" />
-          </div>
-          {errors["phone"] && (
-            <span className="text-sm mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
-              {errors["phone"].message}
-            </span>
-          )}
-        </label>
-        <label className="flex flex-col text-sm">
-          Email
-          <div className="flex gap-2 items-center rounded-lg py-1">
-            <input
-              className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
-              {...register("email")}
-              type="email"
-            />
-            <FaEnvelope className="text-gray-400 text-xl" />
-          </div>
-          {errors["email"] && (
-            <span className="text-sm  mt-1 flex items-center gap-1">
-              <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
-              {errors["email"].message}
-            </span>
-          )}
-        </label>
+        <Label
+          name="First Name"
+          error={errors["first_name"]?.message}
+          registration={{ name: "first_name", register }}
+        />
+        <Label
+          name="Last Name"
+          error={errors["last_name"]?.message}
+          registration={{ name: "last_name", register }}
+        />
+        <Label
+          name="Company Name"
+          error={errors["company_name"]?.message}
+          registration={{ name: "company_name", register }}
+          Icon={MdOutlineCorporateFare}
+        />
+        <Label
+          name="Phone"
+          error={errors["phone"]?.message}
+          registration={{ name: "phone", register }}
+          Icon={FaPhone}
+        />
+        <Label
+          name="Email"
+          error={errors["email"]?.message}
+          registration={{ name: "email", register }}
+          Icon={FaEnvelope}
+          type="email"
+        />
       </div>
-      <div className="flex flex-col justify-between grow">
+      <div className="flex flex-col gap-4 justify-between grow">
         <label className="flex flex-col">
           Description
           <textarea
@@ -145,3 +97,42 @@ export default function ContactForm() {
     </form>
   );
 }
+
+type LabelProps = {
+  name: string;
+  error?: string;
+  registration: {
+    name: keyof TContactSchema;
+    register: UseFormRegister<TContactSchema>;
+  };
+  Icon?: IconType;
+  type?: "email" | "text" | "tel";
+};
+
+const Label: FC<LabelProps> = ({
+  name,
+  error,
+  registration,
+  Icon,
+  type = "text",
+}) => {
+  return (
+    <label className="flex flex-col">
+      {name}
+      <div className="flex gap-2 items-center rounded-lg py-1">
+        <input
+          className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
+          {...registration.register(registration.name)}
+          type={type}
+        />
+        {Icon && <Icon className="text-gray-400 text-xl" />}
+      </div>
+      {error && (
+        <span className="text-sm mt-1 flex items-center gap-1">
+          <RiErrorWarningFill className="text-xl text-red-600 rounded-full" />
+          {error}
+        </span>
+      )}
+    </label>
+  );
+};

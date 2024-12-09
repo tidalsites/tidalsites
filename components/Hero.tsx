@@ -29,7 +29,7 @@ export const Hero = () => {
           designs that not only look great but also help your business connect,
           engage, and grow.
         </p>
-        <div className="flex flex-wrap justify-between items-center gap-4 mt-8 lg:mt-20 lg:bg-[rgba(0,0,0,.5)] outline outline-1 outline-[--theme] py-6 lg:px-6 rounded-full">
+        <div className="flex flex-wrap justify-between items-center gap-4 mt-8 lg:mt-20 lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[--theme] py-6 lg:px-6 rounded-full">
           <span className="ml-4 uppercase text-2xl border-b-[1px] border-[--theme] h-fit">
             Let&apos;s build it!
           </span>

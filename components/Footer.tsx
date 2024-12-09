@@ -70,7 +70,7 @@ export const Footer = () => {
             target="_blank"
             href="https://www.instagram.com/tidalsites/"
             aria-label="Instagram"
-            className="w-10 h-10 grid place-content-center bg-black/30 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
+            className="w-10 h-10 grid place-content-center rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]"
           >
             <FaInstagram className="text-2xl" />
           </a>

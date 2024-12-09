@@ -41,7 +41,7 @@ function Contact() {
             <a
               href="mailto:devin@tidalsites.com"
               target="_blank"
-              className="flex gap-2 items-center my-4 py-2 w-fit underline"
+              className="flex gap-2 items-center my-4 py-2 w-fit underline hover:text-[--theme] transition-colors duration-200"
             >
               <FaEnvelope className="text-xl" />
               devin@tidalsites.com
@@ -49,7 +49,7 @@ function Contact() {
 
             <a
               href="tel:757-550-0830"
-              className="flex gap-2 items-center my-4 py-2 w-fit underline"
+              className="flex gap-2 items-center my-4 py-2 w-fit underline hover:text-[--theme] transition-colors duration-200"
             >
               <FaPhone />
               (757) 550-0830
@@ -60,21 +60,21 @@ function Contact() {
                 href="https://www.linkedin.com/company/tidalsites"
                 aria-label="Linkedin"
               >
-                <FaLinkedin className="text-4xl" />
+                <FaLinkedin className="text-4xl hover:text-[--theme] transition-colors duration-200" />
               </a>
               <a
                 target="_blank"
                 href="https://www.facebook.com/people/Tidal-Sites/61553610020184/"
                 aria-label="Facebook"
               >
-                <FaFacebook className="text-4xl" />
+                <FaFacebook className="text-4xl hover:text-[--theme] transition-all duration-200" />
               </a>
               <a
                 target="_blank"
                 href="https://www.instagram.com/tidalsites/"
                 aria-label="Instagram"
               >
-                <FaInstagram className="text-4xl" />
+                <FaInstagram className="text-4xl hover:text-[--theme] transition-colors duration-200" />
               </a>
             </div>
           </div>
