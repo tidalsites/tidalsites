@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import { PortfolioTag } from "./PortfolioTag";
 import { LuExternalLink } from "react-icons/lu";
 import Link from "next/link";
+import { Chip } from "@/components/Chip";
 
 type Props = {
   title: string;
@@ -23,7 +23,7 @@ export const PortfolioCard = ({
   link,
 }: Props) => {
   return (
-    <div className="grid grid-rows-[250px,auto,auto,auto] row-span-4 sm:rounded-xl overflow-hidden max-w-prose h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
+    <div className="grid grid-rows-[auto,auto,auto,auto] lg:grid-rows-[300px,auto,auto,auto] xl:grid-rows-[250px,auto,auto,auto] row-span-4 justify-center sm:rounded-xl overflow-hidden h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
       <div className="rounded-2xl overflow-hidden">
         <Image
           src={imgSrc}
@@ -37,21 +37,21 @@ export const PortfolioCard = ({
           <Link
             href={link}
             target="_blank"
-            className="text-xl my-4 py-2 rounded-lg flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
+            className="text-2xl mt-4 mb-2 py-1 rounded-full flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-[--theme] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
           >
             <span>{title}</span>
             <LuExternalLink className="text-2xl" />
           </Link>
         ) : (
-          <div className="text-xl py-4 flex gap-2">
+          <div className="text-2xl mt-4 mb-2 py-1 flex gap-2">
             <span>{title}</span>
           </div>
         )}
 
-        <p className="max-w-scale text-sm leading-6">{description}</p>
-        <div className="flex flex-wrap items-end gap-2 mt-4">
+        <p className="max-w-scale leading-6">{description}</p>
+        <div className="flex flex-wrap items-end gap-2 mt-10">
           {tags.map((tag, i) => {
-            return <PortfolioTag tag={tag} key={`PortfolioTag_${tag}_${i}`} />;
+            return <Chip key={i} text={tag} size="sm" border={false} />;
           })}
         </div>
       </div>

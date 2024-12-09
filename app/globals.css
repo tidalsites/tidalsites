@@ -1,7 +1,5 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
 
 :root {
@@ -20,7 +18,9 @@
   --border-radius-rounded: 500px;
   --navbar-height: 70px;
   --dark-theme: #020d16;
-  --theme: #b40b0b;
+  /* --theme: #b40b0b; */
+
+  --theme: rgb(0, 100, 128);
 }
 
 html,

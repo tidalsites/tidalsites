@@ -1,5 +1,6 @@
 import { Rubik } from "next/font/google";
 import Link from "next/link";
+import { CTA } from "./cta";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -28,24 +29,11 @@ export const Hero = () => {
           designs that not only look great but also help your business connect,
           engage, and grow.
         </p>
-        <div className="flex flex-wrap justify-between gap-4 mt-8 lg:mt-20 lg:bg-[rgba(0,0,0,.25)] py-6 lg:px-4 rounded-2xl">
-          <span className="uppercase text-2xl border-b-[1px] border-[--theme]">
+        <div className="flex flex-wrap justify-between items-center gap-4 mt-8 lg:mt-20 lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[--theme] py-6 lg:px-6 rounded-full">
+          <span className="ml-4 uppercase text-2xl border-b-[1px] border-[--theme] h-fit">
             Let&apos;s build it!
           </span>
-          <div className="flex gap-4">
-            <Link
-              href="/contact"
-              className="text-lg flex items-center rounded px-4 py-1 bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.5),rgba(0,200,255,.5))] [text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline outline-1 outline-offset-[3px] outline-[rgba(0,200,255,.5)] hover:outline-offset-4 hover:outline-1 focus:outline-offset-4 hover:bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.65),rgba(0,200,255,.65))] | focus:outline-1 focus:bg-[radial-gradient(circle_at_0_100%,rgba(0,150,200,.65),rgba(0,200,255,.65))] transistion-all duration-100"
-            >
-              Get Quote
-            </Link>
-            <a
-              href="tel:757-550-0830"
-              className="text-lg flex items-center rounded px-4 py-1 bg-black/30 [text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] outline-double outline-4 outline-[rgba(0,200,255,.5)] hover:outline-offset-2 focus:outline-offset-2 transistion-all duration-100"
-            >
-              Call now
-            </a>
-          </div>
+          <CTA href="/contact" text="Get Quote" size="lg" />
         </div>
       </div>
     </section>

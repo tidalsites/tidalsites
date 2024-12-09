@@ -12,6 +12,7 @@ import { FC, useEffect, useMemo, useState } from "react";
 
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaForward } from "react-icons/fa";
+import { CTA } from "./cta";
 
 type Service =
   | "Branding"
@@ -103,7 +104,7 @@ export const Services: FC = () => {
         <div className="grid lg:grid-cols-2 gap-4">
           <ul className="text-3xl flex lg:flex-col justify-center flex-wrap gap-8 lg:gap-2 [&>*:nth-child(odd)]:lg:bg-none [&>*:nth-child(even)]:lg:bg-none [&>*:nth-child(odd)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(45deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)] [&>*:nth-child(even)]:bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%),linear-gradient(135deg,transparent,rgba(0,200,255,.125),rgba(0,0,0,.5),transparent)]">
             {services.map((service) => (
-              <div
+              <li
                 key={service}
                 className="w-fit lg:w-full px-4 sm:px-20 rounded-2xl lg:bg-transparent lg:bg-none shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] lg:shadow-none outline-1 outline outline-[rgba(0,200,255,.25)] lg:outline-none"
               >
@@ -115,7 +116,7 @@ export const Services: FC = () => {
                 <p className="xs:text-lg text-base max-w-[40ch] lg:hidden pb-8">
                   {ServiceContent[service]}
                 </p>
-              </div>
+              </li>
             ))}
           </ul>
           <div className="hidden w-full h-full box-border p-4 rounded-lg lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
@@ -125,12 +126,7 @@ export const Services: FC = () => {
           </div>
         </div>
         <div className="mt-10 flex justify-center py-10">
-          <Link
-            href="/services"
-            className="transition-all w-fit rounded-full px-4 hover:px-6 py-2 outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
-          >
-            Explore All Services
-          </Link>
+          <CTA href="/services" text="Explore All Services" />
         </div>
       </div>
     </section>
@@ -149,7 +145,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
   handleServiceClick,
 }) => {
   return (
-    <li
+    <div
       className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:lg:bg-[rgba(0,0,0,.5)] hover:lg:px-4 ${
         active
           ? "lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)] lg:px-4"
@@ -158,7 +154,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
       onClick={() => handleServiceClick(service)}
     >
       {active && (
-        <FaForward className="hidden lg:block text-3xl transition-all" />
+        <FaForward className="hidden lg:block text-3xl transition-all text-[--theme]" />
       )}
 
       <p
@@ -170,6 +166,6 @@ const ServiceItem: FC<ServiceItemProps> = ({
       >
         {service}
       </p>
-    </li>
+    </div>
   );
 };
