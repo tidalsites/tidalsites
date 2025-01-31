@@ -1,19 +1,13 @@
 "use client";
 
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormRegister } from "react-hook-form";
 import { FC } from "react";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
 import { RiErrorWarningFill } from "react-icons/ri";
-
-const WebsiteAuditSchema = z.object({
-  website: z.string().url("Please enter a valid URL"),
-  email: z.string().email("Please enter a valid email address"),
-});
-
-type TWebsiteAuditSchema = z.infer<typeof WebsiteAuditSchema>;
+import { WebsiteAuditSchema, TWebsiteAuditSchema } from "@/lib/AuditSchema";
+import { sendAuditResults } from "@/lib/actions";
 
 export default function WebsiteAuditForm() {
   const {
@@ -26,14 +20,14 @@ export default function WebsiteAuditForm() {
   });
 
   async function sendAuditRequest(data: TWebsiteAuditSchema) {
-    // Replace with your actual API call
-    const results = await new Promise<{ success: boolean }>((resolve) =>
-      setTimeout(() => resolve({ success: true }), 2000)
-    );
+    const results = await sendAuditResults(data);
+    // const results = await new Promise<{ success: boolean }>((resolve) =>
+    //   setTimeout(() => resolve({ success: true }), 2000)
+    // );
 
     if (results.success) {
       toast.success(
-        "Audit request sent successfully. We'll be in touch shortly"
+        "Your audit request is being processed. You will receive an email shortly."
       );
     } else {
       toast.error("We were unable to process your request");
@@ -64,12 +58,14 @@ export default function WebsiteAuditForm() {
           type="email"
         />
         <button
-          className="transition-all w-fit rounded-full outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
+          className="transition-all w-fit rounded-full flex gap-4 items-center outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)] disabled:text-gray-500 disabled:bg-gray-800 disabled:hover:px-4 disabled:hover:text-shadow-none disabled:hover:bg-gray-800 disabled:hover:shadow-none"
           type="submit"
           disabled={isSubmitting}
         >
-          Submit
-          {isSubmitting && <FaSpinner className="animate-spin ml-2" />}
+          {isSubmitting ? "Submitting..." : "Submit"}
+          {isSubmitting && (
+            <FaSpinner className="animate-spin ml-2 text-2xl text-[--theme]" />
+          )}
         </button>
       </form>
     </div>
