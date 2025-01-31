@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
+    "@types/react-google-recaptcha": "^2.1.9",
     "@vercel/analytics": "^1.4.1",
     "aws-sdk": "^2.1692.0",
     "chrome-launcher": "^1.1.2",
@@ -19,6 +20,7 @@
     "nodemailer": "^6.9.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.54.2",
     "react-icons": "^4.12.0",
     "react-toastify": "^9.1.3",

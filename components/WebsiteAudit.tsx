@@ -8,6 +8,7 @@ import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { WebsiteAuditSchema, TWebsiteAuditSchema } from "@/lib/AuditSchema";
 import { sendAuditResults } from "@/lib/actions";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function WebsiteAuditForm() {
   const {
@@ -56,6 +57,10 @@ export default function WebsiteAuditForm() {
           registration={{ name: "email", register }}
           Icon={FaEnvelope}
           type="email"
+        />
+        <ReCAPTCHA
+          sitekey="6LfB8sgqAAAAAFsIORvsaeoHNBVaLtOG3bcjdU5i"
+          size="invisible"
         />
         <button
           className="transition-all w-fit rounded-full flex gap-4 items-center outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)] disabled:text-gray-500 disabled:bg-gray-800 disabled:hover:px-4 disabled:hover:text-shadow-none disabled:hover:bg-gray-800 disabled:hover:shadow-none"
