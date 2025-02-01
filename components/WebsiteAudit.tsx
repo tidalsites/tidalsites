@@ -23,19 +23,32 @@ export default function WebsiteAuditForm() {
   async function sendAuditRequest(data: TWebsiteAuditSchema) {
     try {
       // Get reCAPTCHA token
-      const token = await getCaptchaToken();
+      const token = await getCaptchaToken("audit");
+
+      // Show initial toast message and reset the form
+      toast.success(
+        "Thank you for your request. We are processing your audit. This may take several minutes."
+      );
+      reset();
 
       const results = await sendAuditResults(data, token);
 
       if (results.success) {
         toast.success(
-          "Your audit request is being processed. You will receive an email shortly."
+          "Your audit request has been processed. You will receive an email shortly."
         );
       } else {
-        toast.error("We were unable to process your request.");
+        if (
+          results.error === "Token not found" ||
+          results.error === "reCAPTCHA verification failed. Please try again."
+        ) {
+          toast.error("Recaptcha failed. Please try again.");
+        } else if (results.error === "unknown") {
+          toast.error("We were unable to process your request.");
+        } else {
+          toast.error("An unexpected error occurred. Please try again.");
+        }
       }
-
-      reset();
     } catch (error) {
       toast.error("An unexpected error occurred. Please try again.");
     }

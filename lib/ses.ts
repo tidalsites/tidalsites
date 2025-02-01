@@ -14,6 +14,8 @@ config.update({
   region: "us-east-1",
 });
 
+const devMode = process.env.NODE_ENV === "development";
+
 export async function sendSESEmail(formData: TContactSchema) {
   let sent = false;
 
@@ -41,7 +43,7 @@ export async function sendSESEmail(formData: TContactSchema) {
         },
         Subject: {
           Charset: "UTF-8",
-          Data: "Contact Request",
+          Data: devMode ? "Contact Request - DEV MODE" : "Contact Request",
         },
       },
       Source: "devin@tidalsites.com",
@@ -68,7 +70,7 @@ export async function sendAuditResultsEmail(
   try {
     const params: SendEmailRequest = {
       Destination: {
-        ToAddresses: [email],
+        ToAddresses: devMode ? ["devin@tidalsites.com"] : [email],
         CcAddresses: ["devin@tidalsites.com"],
       },
       Message: {
@@ -83,7 +85,9 @@ export async function sendAuditResultsEmail(
         },
         Subject: {
           Charset: "UTF-8",
-          Data: "Website Audit Request",
+          Data: devMode
+            ? "Website Audit Request - DEV MODE"
+            : "Website Audit Request",
         },
       },
       Source: "devin@tidalsites.com",

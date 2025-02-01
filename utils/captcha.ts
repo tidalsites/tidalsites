@@ -1,4 +1,6 @@
-export async function getCaptchaToken() {
+type CaptchaAction = "contact" | "audit";
+
+export async function getCaptchaToken(action: CaptchaAction) {
   return new Promise<string | null>((resolve) => {
     grecaptcha.ready(async () => {
       const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
@@ -7,7 +9,7 @@ export async function getCaptchaToken() {
         return;
       }
       const token = await grecaptcha.execute(siteKey, {
-        action: "contact",
+        action,
       });
       resolve(token);
     });

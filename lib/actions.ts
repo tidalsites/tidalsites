@@ -18,8 +18,15 @@ type EmailResponse = {
 };
 
 export const sendEmail = async (
-  formData: TContactSchema
+  formData: TContactSchema,
+  token: string | null
 ): Promise<EmailResponse> => {
+  if (!token) {
+    return {
+      success: false,
+      error: "Token not found",
+    };
+  }
   const validationResults = ContactSchema.safeParse(formData);
 
   if (!validationResults.success) {
