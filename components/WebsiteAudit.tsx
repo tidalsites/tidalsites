@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormRegister } from "react-hook-form";
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
 import { RiErrorWarningFill } from "react-icons/ri";
@@ -11,6 +11,8 @@ import { sendAuditResults } from "@/lib/actions";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function WebsiteAuditForm() {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const {
     register,
     handleSubmit,
@@ -21,20 +23,50 @@ export default function WebsiteAuditForm() {
   });
 
   async function sendAuditRequest(data: TWebsiteAuditSchema) {
-    const results = await sendAuditResults(data);
-    // const results = await new Promise<{ success: boolean }>((resolve) =>
-    //   setTimeout(() => resolve({ success: true }), 2000)
-    // );
+    try {
+      // Execute reCAPTCHA and get token
+      const token = await recaptchaRef.current?.executeAsync();
+      recaptchaRef.current?.reset();
 
-    if (results.success) {
-      toast.success(
-        "Your audit request is being processed. You will receive an email shortly."
-      );
-    } else {
-      toast.error("We were unable to process your request");
+      if (!token) {
+        toast.error("reCAPTCHA verification failed. Please try again.");
+        return;
+      }
+
+      const results = await sendAuditResults(data, token);
+
+      if (results.success) {
+        toast.success(
+          "Your audit request is being processed. You will receive an email shortly."
+        );
+      } else {
+        toast.error("We were unable to process your request.");
+      }
+
+      reset();
+    } catch (error) {
+      toast.error("An unexpected error occurred. Please try again.");
     }
-    reset();
   }
+
+  // async function sendAuditRequest(data: TWebsiteAuditSchema) {
+  //   const token = await recaptchaRef.current.executeAsync();
+  //   recaptchaRef.current.reset();
+
+  //   const results = await sendAuditResults(data);
+  //   // const results = await new Promise<{ success: boolean }>((resolve) =>
+  //   //   setTimeout(() => resolve({ success: true }), 2000)
+  //   // );
+
+  //   if (results.success) {
+  //     toast.success(
+  //       "Your audit request is being processed. You will receive an email shortly."
+  //     );
+  //   } else {
+  //     toast.error("We were unable to process your request");
+  //   }
+  //   reset();
+  // }
 
   return (
     <div className="w-fit">
@@ -58,10 +90,7 @@ export default function WebsiteAuditForm() {
           Icon={FaEnvelope}
           type="email"
         />
-        <ReCAPTCHA
-          sitekey="6LfB8sgqAAAAAFsIORvsaeoHNBVaLtOG3bcjdU5i"
-          size="invisible"
-        />
+
         <button
           className="transition-all w-fit rounded-full flex gap-4 items-center outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)] disabled:text-gray-500 disabled:bg-gray-800 disabled:hover:px-4 disabled:hover:text-shadow-none disabled:hover:bg-gray-800 disabled:hover:shadow-none"
           type="submit"
@@ -73,6 +102,11 @@ export default function WebsiteAuditForm() {
           )}
         </button>
       </form>
+      <ReCAPTCHA
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+        size="invisible"
+        ref={recaptchaRef}
+      />
     </div>
   );
 }
