@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Providers } from "@/app/providers";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title:
@@ -36,10 +37,14 @@ export default function RootLayout({
           " bg-[--dark-theme] bg-[radial-gradient(ellipse_at_75%_25%,rgba(33,55,82,.2)_0%,rgba(0,0,0,.8)_80%,var(--dark-theme)_100%)]"
         }
       >
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="beforeInteractive"
+        />
         <Providers>
           <Header />
           <main className="dark:text-[--white] text-[--black]">
-            <ToastContainer className="mt-[--navbar-height]" />
+            <ToastContainer className="mt-[--navbar-height]" theme="dark" />
             {children}
           </main>
           <Footer />

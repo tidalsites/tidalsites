@@ -112,6 +112,22 @@ export const Footer = () => {
 
         <span className="ml-auto">&copy; Tidal Sites, LLC 2024</span>
       </div>
+      <div>
+        <p className="text-gray-500 text-xs text-center">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a
+            className="text-blue-700"
+            href="https://policies.google.com/privacy"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a className="text-blue-700" href="https://policies.google.com/terms">
+            Terms of Service
+          </a>{" "}
+          apply.
+        </p>
+      </div>
     </div>
   );
 };

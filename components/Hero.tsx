@@ -1,6 +1,6 @@
 import { Rubik } from "next/font/google";
-import Link from "next/link";
 import { CTA } from "./cta";
+import WebsiteAuditForm from "./WebsiteAudit";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -23,17 +23,28 @@ export const Hero = () => {
         >
           DIGITAL SOLUTIONS. <span>YOUR WAY.</span>
         </h1>
-        <p className="text-xl max-w-[60ch] lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_750ms_forwards] text-left">
+        <p className="text-xl max-w-[60ch] lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_550ms_forwards] text-left">
           At Tidal Sites, we believe a website should do more than just exist—it
           should work for you. That&apos;s why we focus on creating custom
           designs that not only look great but also help your business connect,
           engage, and grow.
         </p>
-        <div className="flex flex-wrap justify-between items-center gap-4 mt-8 lg:mt-20 lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[--theme] py-6 lg:px-6 rounded-full">
-          <span className="ml-4 uppercase text-2xl border-b-[1px] border-[--theme] h-fit">
+
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 mt-8 lg:mt-20 bg-[rgba(0,0,0,.75)] lg:outline lg:outline-1 lg:outline-[--theme] py-6 lg:px-6 lg:rounded-2xl lg:opacity-0 lg:animate-[fadeIn_750ms_linear_750ms_forwards]">
+          {/* <span className="ml-4 uppercase text-2xl border-b-[1px] border-[--theme] h-fit">
             Let&apos;s build it!
-          </span>
-          <CTA href="/contact" text="Get Quote" size="lg" />
+          </span> */}
+          <WebsiteAuditForm />
+          <div>
+            <div className="grid items-center grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-[1fr_auto_1fr] px-2 h-full">
+              <div className="bg-slate-500 w-full h-[1px] md:w-[1px] md:h-full md:mx-auto"></div>
+              <div className="px-4 md:py-4">OR</div>
+              <div className="bg-slate-500 w-full h-[1px] md:w-[1px] md:h-full md:mx-auto"></div>
+            </div>
+          </div>
+          <div className="grid place-content-center">
+            <CTA href="/contact" text="Get Started Today" size="lg" />
+          </div>
         </div>
       </div>
     </section>
