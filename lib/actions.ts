@@ -4,7 +4,7 @@ import { ZodError } from "zod";
 import { ContactSchema, type TContactSchema } from "./ContactSchema";
 import { sendAuditResultsEmail, sendSESEmail } from "./ses";
 import { TWebsiteAuditSchema, WebsiteAuditSchema } from "./AuditSchema";
-import { revalidatePath } from "next/cache";
+import { verifyCaptchaToken } from "@/utils/captcha";
 
 type EmailResponse = {
   success: boolean;
@@ -12,7 +12,8 @@ type EmailResponse = {
     | ZodError<TContactSchema>
     | null
     | "unknown"
-    | "reCAPTCHA verification failed. Please try again.";
+    | "reCAPTCHA verification failed. Please try again."
+    | "Token not found";
   pageSpeedReport?: any;
 };
 
@@ -36,8 +37,16 @@ export const sendEmail = async (
 
 export const sendAuditResults = async (
   formData: TWebsiteAuditSchema,
-  recaptchaToken: string
+  recaptchaToken: string | null
 ): Promise<EmailResponse> => {
+  if (!recaptchaToken) {
+    return {
+      success: false,
+      error: "Token not found",
+    };
+  }
+
+  // Server side form validation
   const validationResults = WebsiteAuditSchema.safeParse(formData);
 
   if (!validationResults.success) {
@@ -45,7 +54,7 @@ export const sendAuditResults = async (
   }
 
   // Verify reCAPTCHA before proceeding
-  const isHuman = await verifyRecaptcha(recaptchaToken);
+  const isHuman = await verifyCaptchaToken(recaptchaToken);
   if (!isHuman) {
     return {
       success: false,
@@ -74,14 +83,3 @@ export const runPageSpeedReport = async (url: string) => {
 
   return await response.json();
 };
-
-async function verifyRecaptcha(token: string): Promise<boolean> {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY!;
-  const response = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`,
-    { method: "POST" }
-  );
-  const data = await response.json();
-
-  return data.success && data.score > 0.5; // Ensure human-like behavior
-}

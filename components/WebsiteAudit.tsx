@@ -2,17 +2,15 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormRegister } from "react-hook-form";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { WebsiteAuditSchema, TWebsiteAuditSchema } from "@/lib/AuditSchema";
 import { sendAuditResults } from "@/lib/actions";
-import ReCAPTCHA from "react-google-recaptcha";
+import { getCaptchaToken } from "@/utils/captcha";
 
 export default function WebsiteAuditForm() {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
-
   const {
     register,
     handleSubmit,
@@ -24,14 +22,8 @@ export default function WebsiteAuditForm() {
 
   async function sendAuditRequest(data: TWebsiteAuditSchema) {
     try {
-      // Execute reCAPTCHA and get token
-      const token = await recaptchaRef.current?.executeAsync();
-      recaptchaRef.current?.reset();
-
-      if (!token) {
-        toast.error("reCAPTCHA verification failed. Please try again.");
-        return;
-      }
+      // Get reCAPTCHA token
+      const token = await getCaptchaToken();
 
       const results = await sendAuditResults(data, token);
 
@@ -48,25 +40,6 @@ export default function WebsiteAuditForm() {
       toast.error("An unexpected error occurred. Please try again.");
     }
   }
-
-  // async function sendAuditRequest(data: TWebsiteAuditSchema) {
-  //   const token = await recaptchaRef.current.executeAsync();
-  //   recaptchaRef.current.reset();
-
-  //   const results = await sendAuditResults(data);
-  //   // const results = await new Promise<{ success: boolean }>((resolve) =>
-  //   //   setTimeout(() => resolve({ success: true }), 2000)
-  //   // );
-
-  //   if (results.success) {
-  //     toast.success(
-  //       "Your audit request is being processed. You will receive an email shortly."
-  //     );
-  //   } else {
-  //     toast.error("We were unable to process your request");
-  //   }
-  //   reset();
-  // }
 
   return (
     <div className="w-fit">
@@ -102,11 +75,6 @@ export default function WebsiteAuditForm() {
           )}
         </button>
       </form>
-      <ReCAPTCHA
-        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-        size="invisible"
-        ref={recaptchaRef}
-      />
     </div>
   );
 }

@@ -60,3 +60,8 @@ ul {
   overflow: hidden;
   height: 100vh;
 }
+
+/* Hide ugly recaptcha badge */
+.grecaptcha-badge {
+  visibility: hidden;
+}
