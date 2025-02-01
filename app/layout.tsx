@@ -44,7 +44,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main className="dark:text-[--white] text-[--black]">
-            <ToastContainer className="mt-[--navbar-height]" />
+            <ToastContainer className="mt-[--navbar-height]" theme="dark" />
             {children}
           </main>
           <Footer />
