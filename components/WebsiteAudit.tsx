@@ -2,15 +2,18 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormRegister } from "react-hook-form";
-import { FC, ForwardedRef, RefObject, forwardRef } from "react";
+import { FC } from "react";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
-import { RiCloseFill, RiErrorWarningFill } from "react-icons/ri";
+import { RiErrorWarningFill } from "react-icons/ri";
 import { WebsiteAuditSchema, TWebsiteAuditSchema } from "@/lib/AuditSchema";
-import { sendAuditResults } from "@/lib/actions";
 import { getCaptchaToken } from "@/utils/captcha";
 
-export default function WebsiteAuditForm() {
+export default function WebsiteAuditForm({
+  closeDialog,
+}: {
+  closeDialog: () => void;
+}) {
   const {
     register,
     handleSubmit,
@@ -29,9 +32,22 @@ export default function WebsiteAuditForm() {
       toast.success(
         "Thank you for your request. We are processing your audit. This may take several minutes."
       );
-      reset();
 
-      const results = await sendAuditResults(data, token);
+      reset();
+      closeDialog();
+
+      const results = await fetch("/api/audit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ data, token }),
+      }).then((res) => res.json());
+
+      if (!results) {
+        toast.error("An unexpected error occurred. Please try again.");
+        return;
+      }
 
       if (results.success) {
         toast.success(
@@ -42,14 +58,25 @@ export default function WebsiteAuditForm() {
           results.error === "Token not found" ||
           results.error === "reCAPTCHA verification failed. Please try again."
         ) {
-          toast.error("Recaptcha failed. Please try again.");
+          toast.error(
+            "reCaptcha verification failed. Please make sure you are not a robot."
+          );
         } else if (results.error === "unknown") {
           toast.error("We were unable to process your request.");
+        } else if (
+          results.error === "Rate limit exceeded. Please try again tomorrow."
+        ) {
+          toast.error(
+            "You are only allowed one submission per day. Please try again tomorrow."
+          );
         } else {
           toast.error("An unexpected error occurred. Please try again.");
         }
       }
     } catch (error) {
+      if (error instanceof Error) {
+        console.error(error);
+      }
       toast.error("An unexpected error occurred. Please try again.");
     }
   }

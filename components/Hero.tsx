@@ -28,6 +28,7 @@ export const Hero = () => {
     setIsDialogOpen(false);
     dialogRef.current?.close();
   };
+
   return (
     <section className="flex mb-20 min-h-screen w-full max-w-page mx-auto isolate bg-fixed">
       <div className="absolute right-0 -bottom-1/4 -z-10 | lg:opacity-100 lg:blur-none">
@@ -85,7 +86,7 @@ export const Hero = () => {
             Close
             <RiCloseFill />
           </button>
-          <WebsiteAuditForm />
+          <WebsiteAuditForm closeDialog={closeDialog} />
         </div>
       </dialog>
     </section>

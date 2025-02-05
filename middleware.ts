@@ -10,10 +10,8 @@ export function middleware(req: Request) {
     "unknown";
   const now = Date.now();
 
-  console.log("Middleware", req.method, req.url, ip);
-
   // Only apply rate limiting to POST requests to the home route
-  if (req.method === "POST" && req.url === "/") {
+  if (req.method === "POST" && req.url.includes("/api/audit")) {
     if (!rateLimitCache.has(ip)) {
       rateLimitCache.set(ip, []);
     }
@@ -23,10 +21,17 @@ export function middleware(req: Request) {
       .filter((timestamp: number) => now - timestamp < 86400000); // 24-hour window
 
     if (requests.length >= 1) {
+      console.log("Rate limit exceeded. Please try again tomorrow.");
       return new NextResponse(
-        "Rate limit exceeded. Please try again tomorrow.",
+        JSON.stringify({
+          success: false,
+          error: "Rate limit exceeded. Please try again tomorrow.",
+        }),
         {
           status: 429,
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
     }
@@ -39,5 +44,5 @@ export function middleware(req: Request) {
 }
 
 export const config = {
-  matcher: "/", // Apply to home route (For audit form)
+  matcher: "/api/audit/", // Apply to home route (For audit form)
 };
