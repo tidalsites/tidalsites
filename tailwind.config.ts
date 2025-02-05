@@ -37,6 +37,11 @@ const config: Config = {
           "75%": { transform: "translateY(-10%)" },
           "100%": { transform: "translateY(0)" },
         },
+        shiftRight: {
+          "0%": { transform: "translateX(-100vw)" },
+          "75%": { transform: "translateX(10%)" },
+          "100%": { transform: "translateX(0)" },
+        },
         fadeIn: {
           to: { opacity: "1" },
         },

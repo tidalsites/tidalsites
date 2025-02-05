@@ -1,52 +1,94 @@
+"use client";
+
 import { Rubik } from "next/font/google";
 import { CTA } from "./cta";
 import WebsiteAuditForm from "./WebsiteAudit";
+import Image from "next/image";
+import hero from "../public/assets/images/hero-img.png";
+import bolt from "../public/assets/images/bolt.svg";
+import { FaChevronRight } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
+import { useRef, useState } from "react";
+import { RiCloseFill } from "react-icons/ri";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const Hero = () => {
-  return (
-    <section className="flex h-[100vh] w-full max-w-page mx-auto isolate bg-fixed bg-[url(/assets/images/mobile-bg.webp)] bg-black/60 bg-center bg-cover bg-blend-multiply md:bg-none md:bg-transparent">
-      <div className="absolute inset-0 max-h-screen overflow-hidden -z-20 hidden md:block">
-        <video
-          className="absolute top-10 bottom-10 left-0 w-full h-[calc(100%-5rem)] object-cover shadow-[0_0_20px_-8px_white] opacity-40 -z-10"
-          autoPlay
-          loop
-          muted
-        >
-          <source src="/assets/videos/hero.mp4" />
-        </video>
-      </div>
-      <div className="lg:shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] lg:backdrop-filter lg:backdrop-blur-[10px] lg:bg-[rgba(0,0,0,.25)] rounded-2xl py-10 px-4 flex-col gap-8 text-gray-100 sm:px-12 my-auto mx-auto text-center">
-        <h1
-          className={`flex flex-col lg:flex-row gap-2 text-4xl sm:text-5xl lg:text-6xl lg:py-8 lg:translate-y-[150%] [text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)] lg:animate-[shiftUp_750ms_linear_forwards] ${rubik.className} `}
-        >
-          DIGITAL SOLUTIONS. <span>YOUR WAY.</span>
-        </h1>
-        <p className="text-xl max-w-[60ch] lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_550ms_forwards] text-left">
-          At Tidal Sites, we believe a website should do more than just exist—it
-          should work for you. That&apos;s why we focus on creating custom
-          designs that not only look great but also help your business connect,
-          engage, and grow.
-        </p>
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 mt-8 lg:mt-20 bg-[rgba(0,0,0,.75)] lg:outline lg:outline-1 lg:outline-[--theme] py-6 lg:px-6 lg:rounded-2xl lg:opacity-0 lg:animate-[fadeIn_750ms_linear_750ms_forwards]">
-          {/* <span className="ml-4 uppercase text-2xl border-b-[1px] border-[--theme] h-fit">
-            Let&apos;s build it!
-          </span> */}
-          <WebsiteAuditForm />
-          <div>
-            <div className="grid items-center grid-cols-[1fr_auto_1fr] md:grid-cols-1 md:grid-rows-[1fr_auto_1fr] px-2 h-full">
-              <div className="bg-slate-500 w-full h-[1px] md:w-[1px] md:h-full md:mx-auto"></div>
-              <div className="px-4 md:py-4">OR</div>
-              <div className="bg-slate-500 w-full h-[1px] md:w-[1px] md:h-full md:mx-auto"></div>
-            </div>
-          </div>
-          <div className="grid place-content-center">
-            <CTA href="/contact" text="Get Started Today" size="lg" />
-          </div>
+  const openDialog = () => {
+    document.body.classList.add("no-scroll");
+    setIsDialogOpen(true);
+    dialogRef.current?.showModal();
+  };
+
+  const closeDialog = () => {
+    document.body.classList.remove("no-scroll");
+    setIsDialogOpen(false);
+    dialogRef.current?.close();
+  };
+
+  return (
+    <section className="flex mb-20 min-h-screen w-full max-w-page mx-auto isolate bg-fixed">
+      <div className="absolute right-0 -bottom-1/4 -z-10 | lg:opacity-100 lg:blur-none">
+        <Image src={hero} alt="Hero Image" priority />
+      </div>
+      <div className="pt-[--navbar-height] py-10 px-4 flex-col gap-4 | sm:px-12 | lg:bg-transparent">
+        <h1
+          className={`flex flex-col text-6xl font-bold max-w-[12ch] [-webkit-text-stroke:1px_var(--theme)] text-black/60 pt-12 | sm:text-7xl | md:text-8xl | lg:[-webkit-text-stroke:2px_var(--theme)] lg:text-9xl ${rubik.className} `}
+        >
+          <span className="lg:animate-[shiftUp_750ms_ease-in_forwards] lg:translate-y-full">
+            BLAZINGLY
+          </span>{" "}
+          <span className="lg:animate-[shiftUp_750ms_ease-in_250ms_forwards] lg:translate-y-full flex">
+            FAST
+            <FaChevronRight className=" text-[var(--theme)] -translate-x-[100vw] animate-[shiftRight_750ms_ease-in-out_550ms_forwards] ml-10 | md:inline-flex md:ml-20" />
+            <FaChevronRight className=" text-[var(--theme)] -translate-x-[100vw] animate-[shiftRight_750ms_ease-in-out_750ms_forwards] -ml-8 | md:inline-flex md:-ml-10 | lg:-ml-20" />
+            <FaChevronRight className=" text-[var(--theme)] -translate-x-[100vw] animate-[shiftRight_750ms_ease-in-out_1000ms_forwards] -ml-8 | md:inline-flex md:-ml-10 | lg:-ml-20" />
+          </span>{" "}
+          <span className="lg:animate-[shiftUp_750ms_ease-in_350ms_forwards] lg:translate-y-full">
+            WEBSITES.
+          </span>
+        </h1>
+        <p className="flex flex-col text-lg max-w-[60ch] text-left backdrop-blur-sm rounded-2xl | lg:opacity-0 mt-8 lg:animate-[fadeIn_750ms_linear_750ms_forwards]">
+          <span className="text-xl">
+            Don&apos;t let your website be the bottleneck. Improve your
+            site&apos;s performance and user experience with our expert web
+            services.
+          </span>{" "}
+        </p>
+        <div className="absolute top-0 -left-1/2 -z-10 blur-md opacity-75 | md:-left-1/4 | lg:-left-16">
+          <Image src={bolt} alt="lightning bolt" />
+        </div>
+
+        <div className="flex flex-wrap gap-4 mt-8 | md:rounded-full md:flex-row | lg:opacity-0 lg:animate-[fadeIn_750ms_linear_1000ms_forwards]">
+          <CTA
+            onClick={openDialog}
+            text="Free Website Audit"
+            size="lg"
+            type="button"
+          />
+          <CTA
+            href="/contact"
+            text="Contact Us"
+            size="lg"
+            Icon={GoArrowUpRight}
+          />
         </div>
       </div>
+      <dialog ref={dialogRef} open={isDialogOpen}>
+        <div className="fixed inset-0 grid place-content-center bg-black bg-opacity-50 overflow-hidden">
+          <button
+            className="bg-gray-800 hover:bg-[--theme] outline outline-1 outline-black rounded-full py-1 px-4 w-fit flex items-center gap-4 mb-2 ml-auto"
+            onClick={closeDialog}
+          >
+            Close
+            <RiCloseFill />
+          </button>
+          <WebsiteAuditForm closeDialog={closeDialog} />
+        </div>
+      </dialog>
     </section>
   );
 };

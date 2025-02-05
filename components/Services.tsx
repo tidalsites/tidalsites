@@ -106,7 +106,7 @@ export const Services: FC = () => {
             {services.map((service) => (
               <li
                 key={service}
-                className="w-fit lg:w-full px-4 sm:px-20 rounded-2xl lg:bg-transparent lg:bg-none shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] lg:shadow-none outline-1 outline outline-[rgba(0,200,255,.25)] lg:outline-none"
+                className="w-fit outline-1 outline outline-[rgba(0,200,255,.25)] px-4 rounded-2xl shadow-[0_0_12px_-6px_rgba(255,255,255,.5)] backdrop-blur-sm | sm:px-20 | lg:w-full lg:bg-transparent lg:bg-none  lg:shadow-none  lg:outline-none"
               >
                 <ServiceItem
                   service={service}
@@ -119,7 +119,7 @@ export const Services: FC = () => {
               </li>
             ))}
           </ul>
-          <div className="hidden w-full h-full box-border p-4 rounded-lg lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)]">
+          <div className="hidden w-full h-full box-border p-4 rounded-2xl lg:grid content-center bg-[radial-gradient(rgba(0,0,0,.5)_40%,transparent_100%)] shadow-[2px_2px_8px_0px_rgba(255,255,255,.125)] backdrop-blur-md">
             <p className="text-lg max-w-[40ch] mx-auto ">
               {ServiceContent[activeService]}
             </p>
