@@ -67,7 +67,7 @@ const sendAuditResults = async (
   }
 };
 
-export const runPageSpeedReport = async (url: string) => {
+const runPageSpeedReport = async (url: string) => {
   const apiKey = process.env.PAGESPEED_API_KEY;
   const response = await fetch(
     `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${apiKey}&strategy=desktop&category=performance&category=seo&category=best-practices&category=accessibility`
