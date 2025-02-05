@@ -2,10 +2,10 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, UseFormRegister } from "react-hook-form";
-import { FC } from "react";
+import { FC, ForwardedRef, RefObject, forwardRef } from "react";
 import { toast } from "react-toastify";
 import { FaEnvelope, FaGlobe, FaSpinner } from "react-icons/fa";
-import { RiErrorWarningFill } from "react-icons/ri";
+import { RiCloseFill, RiErrorWarningFill } from "react-icons/ri";
 import { WebsiteAuditSchema, TWebsiteAuditSchema } from "@/lib/AuditSchema";
 import { sendAuditResults } from "@/lib/actions";
 import { getCaptchaToken } from "@/utils/captcha";
@@ -55,13 +55,18 @@ export default function WebsiteAuditForm() {
   }
 
   return (
-    <div className="w-fit">
-      <p className="uppercase text-lg text-left mb-4">
+    <div className="w-fit bg-black p-8 rounded-2xl shadow-card">
+      <p className="uppercase text-2xl text-left mb-4 border-b-2 border-b-[--theme]">
         Get a Free Website Audit Report
+      </p>
+      <p className="max-w-[50ch] text-left text-sm mb-4">
+        See how your website is performing. We will perform an automated
+        analysis and send you the results. Quick and easy!
       </p>
       <form
         className="flex flex-col gap-4 py-4 rounded-lg shadow-md max-w-[40ch]"
         onSubmit={handleSubmit(sendAuditRequest)}
+        method="dialog"
       >
         <Label
           name="Website"
@@ -119,7 +124,7 @@ const Label: FC<LabelProps> = ({
           {...registration.register(registration.name)}
           type={type}
         />
-        {Icon && <Icon className="text-gray-400 text-xl" />}
+        {Icon && <Icon className="text-gray-400 text-xl hidden xs:block" />}
       </div>
       {error && (
         <span className="text-sm mt-1 flex items-center gap-1 text-red-600">

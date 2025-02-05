@@ -19,6 +19,7 @@ export async function getCaptchaToken(action: CaptchaAction) {
 export async function verifyCaptchaToken(token: string) {
   const secretKey = process.env.RECAPTCHA_SECRET;
   if (!secretKey) {
+    console.log("Unable to retreive captcha secret key");
     throw new Error("No secret key found");
   }
   const url = new URL("https://www.google.com/recaptcha/api/siteverify");

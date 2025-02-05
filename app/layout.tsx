@@ -34,7 +34,7 @@ export default function RootLayout({
       <body
         className={
           montserrat.className +
-          " bg-[--dark-theme] bg-[radial-gradient(ellipse_at_75%_25%,rgba(33,55,82,.2)_0%,rgba(0,0,0,.8)_80%,var(--dark-theme)_100%)]"
+          "bg-[--dark-theme] bg-[radial-gradient(ellipse_at_75%_25%,rgba(33,55,82,.2)_0%,rgba(0,0,0,.8)_80%,var(--dark-theme)_100%)]"
         }
       >
         <Script

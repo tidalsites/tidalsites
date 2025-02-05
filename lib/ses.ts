@@ -376,7 +376,7 @@ function generatePageSpeedEmail({
           <div class="closing">
             <p>Thank you for using our automated website auditing tool. We use this tool, among others, to ensure our products meet the highest quality standards.</p>
             <p>To learn more about the underlying technology behind this audit, explore the <a href="https://developers.google.com/speed/docs/insights/v5/get-started" target="_blank">Google PageSpeed Insights API</a>.</p>
-            <p>If you're interested in a more in-depth analysis of your website, including mobile responsiveness, layout design, performance optimization, and more, our team is here to help. Please reach out to us at <a href="mailto:devin@tidalsites.com">devin@tidalsites.com</a> for further assistance.</p>
+            <p>If you're interested in a more in-depth analysis of your website, including mobile responsiveness, layout design, performance optimization, and more, our team is here to help. <a href="https://calendly.com/devin-tidalsites/30min">Book An Appointment Today!<a></p>
             <p>We look forward to helping you enhance your online presence!</p>
           </div>
         </div>
