@@ -12,7 +12,7 @@ import { getCaptchaToken } from "@/utils/captcha";
 export default function WebsiteAuditForm({
   closeDialog,
 }: {
-  closeDialog: () => void;
+  closeDialog?: () => void;
 }) {
   const {
     register,
@@ -34,7 +34,9 @@ export default function WebsiteAuditForm({
       );
 
       reset();
-      closeDialog();
+      if (closeDialog) {
+        closeDialog();
+      }
 
       const results = await fetch("/api/audit", {
         method: "POST",
@@ -82,7 +84,7 @@ export default function WebsiteAuditForm({
   }
 
   return (
-    <div className="w-fit bg-black p-8 rounded-2xl shadow-card">
+    <div className="w-fit bg-black p-8 pb-2 rounded-2xl shadow-card">
       <p className="uppercase text-2xl text-left mb-4 border-b-2 border-b-[--theme]">
         Get a Free Website Audit Report
       </p>
@@ -120,6 +122,7 @@ export default function WebsiteAuditForm({
           )}
         </button>
       </form>
+      <small className="text-gray-400">* Limited to one audit per day</small>
     </div>
   );
 }

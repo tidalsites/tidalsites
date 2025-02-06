@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className="py-4 px-2 text-[--white]">
+    <div className="py-4 px-2 text-[--white] mt-20">
       <div className="max-w-[--page-max-width] w-fit mx-auto flex gap-2 flex-wrap items-center">
         <nav
           className="px-4 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] py-2"

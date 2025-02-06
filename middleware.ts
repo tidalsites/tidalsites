@@ -44,5 +44,5 @@ export function middleware(req: Request) {
 }
 
 export const config = {
-  matcher: "/api/audit/", // Apply to home route (For audit form)
+  matcher: "/api/audit/",
 };
