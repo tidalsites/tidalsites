@@ -1,18 +1,13 @@
 "use server";
 
-import { config, SES } from "aws-sdk";
-import { SendEmailRequest } from "aws-sdk/clients/ses";
+import { SendEmailCommandInput, SES } from "@aws-sdk/client-ses";
 import { TContactSchema } from "./ContactSchema";
 import { TWebsiteAuditSchema } from "./AuditSchema";
 
-config.credentials = {
+const credentials = {
   accessKeyId: process.env.SES_ACCESS_KEY || "",
   secretAccessKey: process.env.SES_SECRET_ACCESS_KEY || "",
 };
-
-config.update({
-  region: "us-east-1",
-});
 
 const devMode = process.env.NODE_ENV === "development";
 
@@ -21,7 +16,7 @@ export async function sendSESEmail(formData: TContactSchema) {
 
   const { first_name, last_name, email, phone, description } = formData;
   try {
-    const params: SendEmailRequest = {
+    const params: SendEmailCommandInput = {
       Destination: {
         ToAddresses: ["devin@tidalsites.com"],
       },
@@ -49,9 +44,12 @@ export async function sendSESEmail(formData: TContactSchema) {
       Source: "devin@tidalsites.com",
     };
 
-    const ses = new SES({ apiVersion: "2010-12-01" }).sendEmail(params);
+    const ses = new SES({
+      region: "us-east-1",
+      credentials,
+    });
 
-    await ses.promise();
+    await ses.sendEmail(params);
     sent = true;
   } catch (e) {
     console.log(e);
@@ -68,7 +66,7 @@ export async function sendAuditResultsEmail(
 
   const { email, website } = formData;
   try {
-    const params: SendEmailRequest = {
+    const params: SendEmailCommandInput = {
       Destination: {
         ToAddresses: devMode ? ["devin@tidalsites.com"] : [email],
         CcAddresses: ["devin@tidalsites.com"],
@@ -93,9 +91,12 @@ export async function sendAuditResultsEmail(
       Source: "devin@tidalsites.com",
     };
 
-    const ses = new SES({ apiVersion: "2010-12-01" }).sendEmail(params);
+    const ses = new SES({
+      region: "us-east-1",
+      credentials,
+    });
 
-    await ses.promise();
+    await ses.sendEmail(params);
     sent = true;
   } catch (e) {
     console.log(e);
