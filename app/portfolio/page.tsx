@@ -13,9 +13,8 @@ import ConcrecalWeb from "@/public/assets/images/concrecal-web-min.png";
 import OlokunWeb from "@/public/assets/images/olokun-web.webp";
 
 // Components
-import AdsTag from "@/components/AdsTag";
-import AnalyticsTag from "@/components/AnalyticsTag";
 import { PortfolioCard } from "./PortfolioCard";
+import Page from "@/components/Page";
 
 export const metadata: Metadata = {
   title: "Tidal Sites Portfolio",
@@ -47,18 +46,12 @@ function getImage(imgName: string) {
 const Portfolio: FC = () => {
   const { portfolio } = portfolioData;
   return (
-    <>
-      <AnalyticsTag />
-      <AdsTag />
+    <Page>
       <div className="pt-[--navbar-height]">
         <div className="py-6 px-4 text-[--white] mb-20">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Portfolio</h1>
             <span>Check out our work</span>
-            <p className="text-center my-6 text-xl max-w-prose px-9 py-4 mx-auto relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
-              Tidal Sites is dedicated to ensuring your designs are unique,
-              beautiful, and functional across any device.
-            </p>
           </div>
         </div>
 
@@ -85,7 +78,7 @@ const Portfolio: FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </Page>
   );
 };
 

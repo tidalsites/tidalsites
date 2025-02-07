@@ -1,6 +1,3 @@
-// Icons
-import AdsTag from "@/components/AdsTag";
-import AnalyticsTag from "@/components/AnalyticsTag";
 import { Metadata } from "next";
 import {
   FaEnvelope,
@@ -10,18 +7,17 @@ import {
   FaPhone,
 } from "react-icons/fa";
 import ContactForm from "./form";
+import Page from "@/components/Page";
 
 export const metadata: Metadata = {
-  title: "Tidal Sites Contact",
+  title: "Tidal Sites | Contact",
   description:
-    "Connect with Tidal Sites – Your Gateway to Digital Excellence. Reach out for inquiries, quotes, or consultations. Let's collaborate to turn your digital vision into reality. Elevate your brand with tailored web solutions.",
+    "Connect with Tidal Sites - Your Gateway to Digital Excellence. Reach out for inquiries, quotes, or consultations. Let's collaborate to turn your digital vision into reality. Elevate your brand with tailored web solutions.",
 };
 
 function Contact() {
   return (
-    <>
-      <AnalyticsTag />
-      <AdsTag />
+    <Page>
       <div className="pt-[--navbar-height]">
         <div className="py-6 px-4 text-[--white] mb-20">
           <div className="mx-auto max-w-page">
@@ -81,7 +77,7 @@ function Contact() {
           <ContactForm />
         </section>
       </div>
-    </>
+    </Page>
   );
 }
 

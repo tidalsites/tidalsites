@@ -1,10 +1,3 @@
-import Image from "next/image";
-
-// Images
-import webDesignIllustrationAlt from "@/public/assets/images/web-design-illustration-alt.svg";
-import webDesignIllustrationNew from "@/public/assets/images/web-design-illustration-new.svg";
-import deployIllustration from "@/public/assets/images/deploy-illustration.svg";
-
 export const Process = () => {
   return (
     <section className="mt-20 px-4">
@@ -16,15 +9,6 @@ export const Process = () => {
         </div>
         <div className="flex flex-wrap gap-8 justify-center">
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            {/* <div className="p-4 bg-gray-100 rounded-t-lg">
-              <Image
-                src={webDesignIllustrationNew}
-                alt="Woman designing web app"
-                width="400"
-                height="309"
-              />
-            </div> */}
-
             <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
               <div className="bg-[--theme] flex items-center justify-center p-2 text-white text-2xl rounded">
                 1
@@ -43,14 +27,6 @@ export const Process = () => {
             </p>
           </div>
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            {/* <div className="p-4 bg-gray-100 rounded-t-lg">
-              <Image
-                src={webDesignIllustrationAlt}
-                alt="Computer and phone with digital connections"
-                width="400"
-                height="309"
-              />
-            </div> */}
             <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
               <div className="bg-[--theme] flex items-center justify-center p-2 text-white text-2xl rounded">
                 2
@@ -67,14 +43,6 @@ export const Process = () => {
             </p>
           </div>
           <div className="flex flex-col rounded-lg shadow-lg items-center max-w-[400px] border-2 border-black/10">
-            {/* <div className="p-4 bg-gray-100 rounded-t-lg">
-              <Image
-                src={deployIllustration}
-                alt="Man uploading ideas into the cloud"
-                width="400"
-                height="309"
-              />
-            </div> */}
             <div className="flex w-full pt-4 border-t-2 border-black/10 items-center px-4 gap-2">
               <div className="bg-[--theme] flex items-center justify-center p-2 text-white text-2xl rounded">
                 3

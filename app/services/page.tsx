@@ -1,8 +1,6 @@
 import { Metadata } from "next";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
-import AdsTag from "@/components/AdsTag";
-import AnalyticsTag from "@/components/AnalyticsTag";
 import brandingImg from "@/public/assets/images/services-branding.png";
 import consultImg from "@/public/assets/images/services-consultation.png";
 import designImg from "@/public/assets/images/services-design.png";
@@ -10,9 +8,10 @@ import developmentImg from "@/public/assets/images/services-development.png";
 import hostingImg from "@/public/assets/images/services-hosting.png";
 import maintenanceImg from "@/public/assets/images/services-maintenance.png";
 import { Chip } from "@/components/Chip";
+import Page from "@/components/Page";
 
 export const metadata: Metadata = {
-  title: "Tidal Sites Services",
+  title: "Tidal Sites | Services",
   description:
     "Explore our comprehensive suite of top-tier web solutions at Tidal Sites. From web design and development to branding, hosting, and maintenance services, discover how we elevate your online presence. Uncover tailored strategies for your digital success!",
 };
@@ -121,20 +120,13 @@ const services: ServiceObject[] = [
 
 const Services: FC = () => {
   return (
-    <>
-      <AnalyticsTag />
-      <AdsTag />
+    <Page>
       <div className="pt-[--navbar-height]">
         <div className="py-6 px-4">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Services</h1>
             <span>What can we do for you?</span>
           </div>
-          <p className="max-w-[50ch] px-9 py-4 mx-auto mt-6 text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
-            We love the web and we love helping people improve their online
-            profile! Tidal Sites offers a variety of services to get you noticed
-            online.
-          </p>
         </div>
         {services.map((service, i) => (
           <ServiceSection
@@ -147,7 +139,7 @@ const Services: FC = () => {
           />
         ))}
       </div>
-    </>
+    </Page>
   );
 };
 

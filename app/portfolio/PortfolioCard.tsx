@@ -23,8 +23,8 @@ export const PortfolioCard = ({
   link,
 }: Props) => {
   return (
-    <div className="grid grid-rows-[auto,auto,auto,auto] lg:grid-rows-[300px,auto,auto,auto] xl:grid-rows-[250px,auto,auto,auto] row-span-4 justify-center sm:rounded-xl overflow-hidden h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
-      <div className="rounded-2xl overflow-hidden">
+    <div className="grid grid-rows-[auto,auto,auto,auto] lg:grid-rows-[300px,auto,auto,auto] xl:grid-rows-[250px,auto,auto,auto] row-span-4 justify-center sm:rounded-3xl overflow-hidden h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
+      <div className="rounded-2xl overflow-hidden border-2 border-gray-400">
         <Image
           src={imgSrc}
           alt={alt}

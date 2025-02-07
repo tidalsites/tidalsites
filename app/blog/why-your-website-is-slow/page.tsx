@@ -8,7 +8,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Tidal Sites | Why Your Website is Slow",
-  description: "Learn why your website might be slow and how to fix it.",
+  description:
+    "A slow website can cost you customers. Learn why your website is slow and how you can improve website performance.",
 };
 
 export default function Blog() {

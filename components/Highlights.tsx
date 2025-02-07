@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { LuCheckCircle } from "react-icons/lu";
 import { Chip } from "./Chip";
 
 export const Highlights: FC = () => {
