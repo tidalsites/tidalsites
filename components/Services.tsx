@@ -1,16 +1,7 @@
 "use client";
 
-/**
- *
- * TODO:
- * Fix view transition to only apply to the content section
- * Currently the entire page transitions, causing screen flicker
- */
-
-import Link from "next/link";
 import { FC, useEffect, useMemo, useState } from "react";
 
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaForward } from "react-icons/fa";
 import { CTA } from "./cta";
 
@@ -25,16 +16,6 @@ type Service =
 export const Services: FC = () => {
   const [activeService, setActiveService] = useState<Service>("Branding");
   const [autoPlayServices, setAutoPlayServices] = useState<boolean>(true);
-
-  // const switchViewWithTransition = (service: Service) => {
-  //   if (!document.startViewTransition) {
-  //     console.warn("View Transitions API is not supported in this browser.");
-  //     return setActiveService(service);
-  //   }
-  //   document.startViewTransition(() => {
-  //     setActiveService(service);
-  //   });
-  // };
 
   const services: Service[] = useMemo(() => {
     return [
@@ -59,12 +40,6 @@ export const Services: FC = () => {
     Maintenance: `Cultivating a thriving online presence requires consistent care and upkeep. Our maintenance service ensures your website remains at its peak performance. From regular updates, security checks, to technical optimizations, we safeguard your online investment, guaranteeing a seamless and reliable user experience.`,
     Consulting: `Our consultation services are your gateway to unlocking digital potential. With tailored strategies, we offer expert guidance, analyzing your specific needs and goals. Gain actionable insights and a roadmap for success, empowering your online presence and business growth.`,
   };
-
-  // const handleServiceClick = (service: Service) => {
-  //   switchViewWithTransition(service);
-  //   // Temporarily disable auto-play functionality
-  //   setAutoPlayServices(false);
-  // };
 
   useEffect(() => {
     let interval: NodeJS.Timeout;

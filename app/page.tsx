@@ -1,13 +1,10 @@
 import HomePage from "./homepage";
-import AnalyticsTag from "@/components/AnalyticsTag";
-import AdsTag from "@/components/AdsTag";
+import Page from "@/components/Page";
 
-export default async function Page() {
+export default async function Home() {
   return (
-    <>
-      <AnalyticsTag />
-      <AdsTag />
+    <Page>
       <HomePage />
-    </>
+    </Page>
   );
 }

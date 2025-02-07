@@ -59,7 +59,7 @@ export const Hero = () => {
           </span>{" "}
         </p>
         <div className="absolute top-0 -left-1/2 -z-10 blur-md opacity-75 | md:-left-1/4 | lg:-left-16">
-          <Image src={bolt} alt="lightning bolt" />
+          <Image src={bolt} alt="lightning bolt" priority />
         </div>
 
         <div className="flex flex-wrap gap-4 mt-8 | md:rounded-full md:flex-row | lg:opacity-0 lg:animate-[fadeIn_750ms_linear_1000ms_forwards]">

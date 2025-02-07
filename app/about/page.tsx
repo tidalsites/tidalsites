@@ -1,8 +1,6 @@
-import AdsTag from "@/components/AdsTag";
-import AnalyticsTag from "@/components/AnalyticsTag";
 import { Bio } from "@/components/Bio";
+import Page from "@/components/Page";
 import illustration from "@/public/assets/images/about-illustration.png";
-import bio from "@/public/assets/images/bio-pic.png";
 import { TBio } from "@/types/types";
 import { Metadata } from "next";
 import { Rubik } from "next/font/google";
@@ -14,7 +12,7 @@ import { FaEnvelope } from "react-icons/fa";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "About Tidal Sites",
+  title: "Tidal Sites | About Us",
   description:
     "Discover the story behind Tidal Sites - Your go-to web services partner in Hampton Roads, Virginia. Learn about our commitment to crafting exceptional online experiences, our team's expertise, and our dedication to elevating your digital presence. Explore our journey today!",
 };
@@ -33,34 +31,8 @@ const bios: TBio[] = [
 
 const About: FC = () => {
   return (
-    <>
-      <AnalyticsTag />
-      <AdsTag />
+    <Page>
       <div className="pt-[--navbar-height] dark:bg-[--dark-theme]">
-        <div className="px-4 py-6">
-          <div className="mx-auto max-w-page">
-            <h1 className="text-4xl">About Us</h1>
-            <span>Who are we?</span>
-            <p className="max-w-[50ch] px-9 py-4 mx-auto mt-6 text-xl relative before:absolute before:border-t-2 before:border-l-2 before:border-[--white] before:w-12 before:h-12 before:top-0 before:left-0 after:absolute after:border-b-2 after:border-r-2 after:border-[--white] after:w-12 after:h-12 after:bottom-0 after:right-0">
-              We are passionate about crafting unparalleled web experiences that
-              make a lasting impact. Our mission is to enhance your online
-              presence, improve user engagement, and drive measurable results
-              for your business.
-            </p>
-          </div>
-        </div>
-        <section className="shadow-[0_0_20px_-8px_rgba(255,255,255,.25)] backdrop-filter backdrop-blur-[10px] bg-[rgba(0,0,0,.25)] px-4 flex flex-col max-w-page mx-auto place-content-center md:flex-row w-full dark:bg-[rgba(0,0,0,.5)] rounded-2xl">
-          <div className="p-4 flex justify-between flex-col md:w-[50%] border-b-gray-200 border-b-2 relative after:absolute after:w-4 after:h-4 after:bg-gray-200 after:border-2 after:border-gray-300 after:bottom-[-9px] after:left-[50%] after:rotate-45 after:shadow-xl md:border-0 md:border-r-2 md:after:top-[50%] md:after:left-auto md:after:right-[-9px]">
-            <h2 className="text-lg italic">Mission</h2>
-            <p className="text-xl py-20">
-              To craft digital success stories that help businesses thrive.
-            </p>
-          </div>
-          <div className="p-4 grid placeholder-center md:w-[50%]">
-            <h2 className="text-lg italic">Values</h2>
-            <p className="text-xl py-20 mx-auto">Quality, Quality, Quality</p>
-          </div>
-        </section>
         <section>
           <div className="max-w-page mx-auto py-10 flex gap-8 flex-col px-4">
             <p className="max-w-[65ch] mx-auto text-3xl font-bold pt-10 py-2 uppercase border-b-2 border-[--theme]">
@@ -206,7 +178,7 @@ const About: FC = () => {
           </section>
         </div>
       </div>
-    </>
+    </Page>
   );
 };
 

@@ -1,5 +1,3 @@
-import Link from "next/link";
-import collageImg from "@/public/assets/images/collage.png";
 import Image from "next/image";
 import hex from "@/public/assets/images/digital-hexagons.svg";
 import { SwiperComponent } from "./Swiper";
@@ -20,7 +18,7 @@ export const Portfolio = () => {
 
   return (
     <section className="px-4 my-20 relative">
-      <div className="absolute -top-6 left-0 max-w-2xl hidden md:block opacity-10 -rotate-6">
+      <div className="absolute -top-1/4 max-w-2xl block opacity-10 -rotate-6 -translate-x-1/2 | md:-top-1/2 | lg:translate-x-0 lg:-top-[35%]">
         <Image src={hex} alt="Digital Hexagons" />
       </div>
       <div className="mx-auto max-w-page">
@@ -34,13 +32,6 @@ export const Portfolio = () => {
                 <SwiperComponent slides={slides} />
               </div>
             </div>
-
-            {/* <Link
-              className="transition-all  mt-10 w-fit mx-auto rounded-full px-4 hover:px-6 py-2 outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
-              href="/portfolio"
-            >
-              View Full Portfolio
-            </Link> */}
             <div className="mt-10 flex justify-center py-10">
               <CTA href="/portfolio" text="View Full Portfolio" />
             </div>
