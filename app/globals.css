@@ -29,6 +29,7 @@ body {
   margin: 0;
   font-family: Montserrat, Rubik, Fira Sans, Ubuntu, Roboto, sans-serif;
   overflow-x: hidden;
+  background: black;
 }
 
 a {

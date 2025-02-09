@@ -31,7 +31,7 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <header className="w-[100vw] fixed top-2 z-10 text-[--black] dark:text-[--white] shadow lg:shadow-none px-2 flex">
+    <header className="w-[100vw] fixed top-2 z-10 text-[--white] shadow lg:shadow-none px-2 flex">
       <div className="w-full max-w-page flex gap-2 mx-auto">
         <div className="grow flex justify-between px-10 items-center rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]">
           <div className="py-1">

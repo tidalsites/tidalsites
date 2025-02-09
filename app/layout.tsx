@@ -4,7 +4,6 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ToastContainer } from "react-toastify";
 import { Analytics } from "@vercel/analytics/react";
-import { Providers } from "@/app/providers";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import Script from "next/script";
@@ -41,14 +40,12 @@ export default function RootLayout({
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="beforeInteractive"
         />
-        <Providers>
-          <Header />
-          <main className="dark:text-[--white] text-[--black]">
-            <ToastContainer className="mt-[--navbar-height]" theme="dark" />
-            {children}
-          </main>
-          <Footer />
-        </Providers>
+        <Header />
+        <main className="text-[--white]">
+          <ToastContainer className="mt-[--navbar-height]" theme="dark" />
+          {children}
+        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>
