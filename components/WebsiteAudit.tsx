@@ -102,6 +102,7 @@ export default function WebsiteAuditForm({
           error={errors.website?.message}
           registration={{ name: "website", register }}
           Icon={FaGlobe}
+          placeholder="https://example.com"
         />
         <Label
           name="Email"
@@ -109,6 +110,7 @@ export default function WebsiteAuditForm({
           registration={{ name: "email", register }}
           Icon={FaEnvelope}
           type="email"
+          placeholder="email@yourbusiness.com"
         />
 
         <button
@@ -122,7 +124,25 @@ export default function WebsiteAuditForm({
           )}
         </button>
       </form>
-      <small className="text-gray-400">* Limited to one audit per day</small>
+      <small className="text-gray-400 text-xs">
+        Limited to one audit per day
+      </small>
+      <div>
+        <p className="text-gray-400 text-xs">
+          This site is protected by reCAPTCHA and the Google{" "}
+          <a
+            className="text-blue-700"
+            href="https://policies.google.com/privacy"
+          >
+            Privacy Policy
+          </a>{" "}
+          and{" "}
+          <a className="text-blue-700" href="https://policies.google.com/terms">
+            Terms of Service
+          </a>{" "}
+          apply.
+        </p>
+      </div>
     </div>
   );
 }
@@ -136,6 +156,7 @@ type LabelProps = {
   };
   Icon?: React.ComponentType<{ className?: string }>;
   type?: "email" | "text" | "url";
+  placeholder?: string;
 };
 
 const Label: FC<LabelProps> = ({
@@ -144,21 +165,23 @@ const Label: FC<LabelProps> = ({
   registration,
   Icon,
   type = "text",
+  placeholder,
 }) => {
   return (
     <label className="flex flex-col text-left">
       {name}
       <div className="flex gap-2 items-center rounded-lg py-1">
         <input
-          className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-blue-500 grow"
+          className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-blue-500 grow text-black"
           {...registration.register(registration.name)}
           type={type}
+          placeholder={placeholder}
         />
         {Icon && <Icon className="text-gray-400 text-xl hidden xs:block" />}
       </div>
       {error && (
-        <span className="text-sm mt-1 flex items-center gap-1 text-red-600">
-          <RiErrorWarningFill className="text-xl" />
+        <span className="text-sm mt-1 flex items-center gap-1 text-gray-100">
+          <RiErrorWarningFill className="text-xl text-red-600" />
           {error}
         </span>
       )}
