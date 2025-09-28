@@ -88,7 +88,7 @@ export default function ContactForm() {
           <textarea
             {...register("description")}
             rows={10}
-            className="rounded-lg px-2 py-1 min-w-[300px]"
+            className="rounded-lg px-2 py-1 min-w-[300px] text-black"
             placeholder="Describe what it is you are looking for today..."
           ></textarea>
           {errors["description"] && (
@@ -136,7 +136,7 @@ const Label: FC<LabelProps> = ({
       {name}
       <div className="flex gap-2 items-center rounded-lg py-1">
         <input
-          className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow"
+          className="rounded-lg px-2 py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] grow text-black"
           {...registration.register(registration.name)}
           type={type}
         />
