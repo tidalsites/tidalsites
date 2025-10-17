@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { LuCheckCircle } from "react-icons/lu";
+import { LuCheck } from "react-icons/lu";
 
 type Props = {
   size?: "sm" | "md" | "lg";
@@ -32,7 +32,7 @@ export const Chip: FC<Props> = ({
   const wrapperClass = `${baseClasses} ${borderClasses} ${shadowClasses} ${sizeClasses}`;
   return (
     <div className={wrapperClass}>
-      {checkmark && <LuCheckCircle className={checkClasses} />}
+      {checkmark && <LuCheck className={checkClasses} />}
       <span>{text}</span>
     </div>
   );
