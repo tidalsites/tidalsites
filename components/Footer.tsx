@@ -110,7 +110,7 @@ export const Footer = () => {
           </a>
         </p>
 
-        <span className="ml-auto">&copy; Tidal Sites, LLC 2024</span>
+        <span className="ml-auto">&copy; Tidal Sites, LLC 2025</span>
       </div>
     </div>
   );
