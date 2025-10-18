@@ -1,6 +1,87 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --shadow-card: 0 2px 6px 2px rgba(0, 0, 0, 0.25);
+
+  --spacing-page: 90em;
+  --spacing-scale: min(50ch, calc(100vw - 2rem));
+  --spacing-prose: 50ch;
+
+  --spacing-navbar: 70px;
+  --spacing-page-height: calc(100vh - var(--navbar-height));
+  --spacing-navbar: 70px;
+
+  --grid-cols-portfolio: repeat(auto-fit, minmax(500px, 1fr));
+  --grid-cols-portfolio-lg: repeat(auto-fit, minmax(600px, 1fr));
+
+  @keyframes shift-up {
+    0% {
+      transform: translateY(100%);
+    }
+    75% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes shift-right {
+    0% {
+      transform: translateX(-100vw);
+    }
+    75% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  --breakpoint-xs: 385px;
+  --breakpoint-md: 820px;
+
+  --color-theme: rgb(0, 100, 128);
+  --color-darkgray: #666;
+  --color-link: #0055cd;
+  --color-link-light: #909cf9;
+  --color-gold: #d1c300;
+  --color-error: #dd3232;
+  --color-success: #32dd32;
+}
+
+@layer base {
+  :where(a) {
+    color: inherit;
+    text-decoration: none;
+  }
+  :where(a:hover) {
+    text-decoration: underline;
+  }
+
+  :where(button) {
+    font: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--color-link);
+    color: white;
+    cursor: pointer;
+  }
+  :where(button:hover) {
+    background: var(--color-link-light);
+  }
+}
 
 :root {
   --black: #333;
@@ -29,28 +110,6 @@ body {
   margin: 0;
   font-family: Montserrat, Rubik, Fira Sans, Ubuntu, Roboto, sans-serif;
   overflow-x: hidden;
-  background: black;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  box-shadow: none;
-  background: none;
 }
 
 ul {

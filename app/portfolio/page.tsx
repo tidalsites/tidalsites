@@ -47,8 +47,8 @@ const Portfolio: FC = () => {
   const { portfolio } = portfolioData;
   return (
     <Page>
-      <div className="pt-[--navbar-height]">
-        <div className="py-6 px-4 text-[--white] mb-20">
+      <div className="pt-(--navbar-height)">
+        <div className="py-6 px-4 text-(--white) mb-20">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Portfolio</h1>
             <span>Check out our work</span>

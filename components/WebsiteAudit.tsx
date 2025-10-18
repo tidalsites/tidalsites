@@ -85,7 +85,7 @@ export default function WebsiteAuditForm({
 
   return (
     <div className="w-fit bg-black p-8 pb-2 rounded-2xl shadow-card">
-      <p className="uppercase text-2xl text-left mb-4 border-b-2 border-b-[--theme]">
+      <p className="uppercase text-2xl text-left mb-4 border-b-2 border-b-(--theme)">
         Get a Free Website Audit Report
       </p>
       <p className="max-w-[50ch] text-left text-sm mb-4">
@@ -114,13 +114,13 @@ export default function WebsiteAuditForm({
         />
 
         <button
-          className="transition-all w-fit rounded-full flex gap-4 items-center outline outline-1 outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)] disabled:text-gray-500 disabled:bg-gray-800 disabled:hover:px-4 disabled:hover:text-shadow-none disabled:hover:bg-gray-800 disabled:hover:shadow-none"
+          className="transition-all w-fit rounded-full flex gap-4 items-center outline outline-[rgba(0,200,255,.25)] bg-[rgba(0,0,0,.5)] backdrop-filter backdrop-blur-[5px] shadow-[0_0_20px_-10px_rgba(255,255,255,.125)] text-base px-4 hover:px-6 py-2 hover:text-shadow-[0_0_5px_#00c8ff] hover:bg-[rgba(0,200,255,.25)] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)] disabled:text-gray-500 disabled:bg-gray-800 disabled:hover:px-4 disabled:hover:text-shadow-none disabled:hover:bg-gray-800 disabled:hover:shadow-none"
           type="submit"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Submit"}
           {isSubmitting && (
-            <FaSpinner className="animate-spin ml-2 text-2xl text-[--theme]" />
+            <FaSpinner className="animate-spin ml-2 text-2xl text-(--theme)" />
           )}
         </button>
       </form>

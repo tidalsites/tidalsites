@@ -8,8 +8,8 @@ import {
 } from "react-icons/fa";
 export const Footer = () => {
   return (
-    <div className="py-4 px-2 text-[--white] mt-20">
-      <div className="max-w-[--page-max-width] w-fit mx-auto flex gap-2 flex-wrap items-center">
+    <div className="py-4 px-2 text-(--white) mt-20">
+      <div className="max-w-(--page-max-width) w-fit mx-auto flex gap-2 flex-wrap items-center">
         <nav
           className="px-4 rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] py-2"
           aria-label="Footer Navigation"
@@ -17,7 +17,7 @@ export const Footer = () => {
           <ul className="flex flex-wrap gap-4">
             <li>
               <Link
-                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                className="hover:[text-shadow:0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
                 href="/"
               >
                 Home
@@ -25,7 +25,7 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                className="hover:[text-shadow:0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
                 href="/about"
               >
                 About
@@ -33,7 +33,7 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                className="hover:[text-shadow:0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
                 href="/services"
               >
                 Services
@@ -41,7 +41,7 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                className="hover:[text-shadow:0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
                 href="/portfolio"
               >
                 Portfolio
@@ -49,7 +49,7 @@ export const Footer = () => {
             </li>
             <li>
               <Link
-                className="hover:[text-shadow:_0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
+                className="hover:[text-shadow:0_0px_20px_rgba(255,255,255,.5),0_0px_30px_rgba(0,200,255,.5)]"
                 href="/contact"
               >
                 Contact
@@ -98,11 +98,11 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="max-w-[--page-max-width] mx-auto p-2 flex justify-between flex-wrap gap-2">
+      <div className="max-w-(--page-max-width) mx-auto p-2 flex justify-between flex-wrap gap-2">
         <p>
           Already a customer?
           <a
-            className="text-[--link-light] underline"
+            className="text-(--link-light) underline"
             href="https://g.page/r/CRXKrwtrLyweEBM/review"
             target="_blank"
           >

@@ -121,7 +121,7 @@ const services: ServiceObject[] = [
 const Services: FC = () => {
   return (
     <Page>
-      <div className="pt-[--navbar-height]">
+      <div className="pt-(--navbar-height)">
         <div className="py-6 px-4">
           <div className="mx-auto max-w-page">
             <h1 className="text-4xl">Services</h1>

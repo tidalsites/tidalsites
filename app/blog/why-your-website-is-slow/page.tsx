@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <div className="min-h-screen p-4 mt-[--navbar-height] max-w-page mx-auto text-lg">
+    <div className="min-h-screen p-4 mt-(--navbar-height) max-w-page mx-auto text-lg">
       <div className="w-fit mx-auto">
         <div className="max-h-[300px] mx-auto rounded-3xl overflow-hidden w-full mb-4">
           <Image
@@ -103,7 +103,7 @@ export default function Blog() {
                     the page.
                   </p>
                   <h4 className="font-bold text-xl flex gap-4 items-center ">
-                    <FaWrench className="outline outline-1 outline-white outline-offset-4 rounded-full" />
+                    <FaWrench className="outline outline-white outline-offset-4 rounded-full" />
                     How can I fix it?
                   </h4>
                   <p>
@@ -116,7 +116,7 @@ export default function Blog() {
                       <strong className="underline">Image Compression</strong> -
                       Using free online tools like{" "}
                       <a
-                        className="text-[--link-light] underline"
+                        className="text-(--link-light) underline"
                         href="https://tinypng.com/"
                         target="_blank"
                       >
@@ -131,7 +131,7 @@ export default function Blog() {
                       images are 30-50% smaller than PNGs and JPEGs without
                       sacrificing quality. Use tools like{" "}
                       <a
-                        className="text-[--link-light] underline"
+                        className="text-(--link-light) underline"
                         href="https://cloudconvert.com/png-to-webp"
                         target="_blank"
                       >
@@ -168,7 +168,7 @@ export default function Blog() {
                   </p>
 
                   <h4 className="font-bold text-xl flex gap-4 items-center ">
-                    <FaWrench className="outline outline-1 outline-white outline-offset-4 rounded-full" />
+                    <FaWrench className="outline outline-white outline-offset-4 rounded-full" />
                     How can I fix it?
                   </h4>
                   <ul>
@@ -250,7 +250,7 @@ export default function Blog() {
                     </li>
                   </ul>
                   <h4 className="font-bold text-xl flex gap-4 items-center ">
-                    <FaWrench className="outline outline-1 outline-white outline-offset-4 rounded-full" />
+                    <FaWrench className="outline outline-white outline-offset-4 rounded-full" />
                     How can I fix it?
                   </h4>
                   <ul>
@@ -278,7 +278,7 @@ export default function Blog() {
                       in use. Consider replacing heavy plugins with lightweight
                       alternatives. For more tips, you can check out this{" "}
                       <a
-                        className="text-[--link-light] underline"
+                        className="text-(--link-light) underline"
                         href="https://wpengine.com/resources/improve-wordpress-site-speed/"
                         target="_blank"
                       >
@@ -331,7 +331,7 @@ export default function Blog() {
               </ul>
             </div>
           </article>
-          <aside className="outline outline-1 outline-[--theme] rounded-2xl flex h-fit w-fit mx-auto">
+          <aside className="outline outline-(--theme) rounded-2xl flex h-fit w-fit mx-auto">
             <WebsiteAuditForm />
           </aside>
         </section>

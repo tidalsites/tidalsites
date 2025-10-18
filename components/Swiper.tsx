@@ -46,7 +46,7 @@ export const SwiperComponent: FC<Props> = ({ slides }) => {
             <Image
               src={src}
               alt={alt}
-              className="block rounded-2xl overflow-hidden max-h-[500px] object-contain outline outline-1 outline-[rgba(0,200,255,.5)]"
+              className="block rounded-2xl overflow-hidden max-h-[500px] object-contain outline outline-[rgba(0,200,255,.5)]"
             />
           </div>
         </SwiperSlide>

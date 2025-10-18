@@ -24,7 +24,7 @@ export const Portfolio = () => {
       <div className="mx-auto max-w-page">
         <div className="mt-10">
           <div className="flex flex-col justify-center">
-            <h2 className="text-4xl border-b-[--theme] uppercase border-b-2 border-[--theme]">
+            <h2 className="text-4xl border-b-(--theme) uppercase border-b-2 border-(--theme)">
               Explore our success stories!
             </h2>
             <div className="p-4 -mx-8">

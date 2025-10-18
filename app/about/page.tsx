@@ -32,10 +32,10 @@ const bios: TBio[] = [
 const About: FC = () => {
   return (
     <Page>
-      <div className="pt-[--navbar-height] dark:bg-[--dark-theme]">
+      <div className="pt-(--navbar-height) dark:bg-(--dark-theme)">
         <section>
           <div className="max-w-page mx-auto py-10 flex gap-8 flex-col px-4">
-            <p className="max-w-[65ch] mx-auto text-3xl font-bold pt-10 py-2 uppercase border-b-2 border-[--theme]">
+            <p className="max-w-[65ch] mx-auto text-3xl font-bold pt-10 py-2 uppercase border-b-2 border-(--theme)">
               Welcome to Tidal Sites, where your success story begins.
             </p>
           </div>
@@ -45,7 +45,7 @@ const About: FC = () => {
           <section className="pt-20 px-4">
             <div className="max-w-page mx-auto flex justify-between gap-8">
               <div className="max-w-[65ch] leading-6">
-                <h2 className="w-fit text-xl italic border-b-4 border-b-[--theme] pr-4">
+                <h2 className="w-fit text-xl italic border-b-4 border-b-(--theme) pr-4">
                   The Company
                 </h2>
                 <div className="py-8">
@@ -147,9 +147,9 @@ const About: FC = () => {
                   </p>
                   <Link
                     href="/contact"
-                    className="flex gap-2 bg-[--theme] text-[--white] w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-[--theme] -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transition-all"
+                    className="flex gap-2 bg-(--theme) text-(--white) w-fit px-4 py-2 rounded-full items-center my-10 outline outline-2 outline-(--theme) -outline-offset-2 hover:outline-offset-2 focus:outline-offset-2 transition-all"
                   >
-                    <FaEnvelope className="text-[--white] text-2xl" />
+                    <FaEnvelope className="text-(--white) text-2xl" />
                     Email Us Today
                   </Link>
                 </div>
@@ -161,7 +161,7 @@ const About: FC = () => {
           </section>
           <section className="py-10 px-4 w-full">
             <div className="max-w-page mx-auto">
-              <h2 className="w-fit text-xl italic border-b-4 border-b-[--theme] pr-4 mb-8">
+              <h2 className="w-fit text-xl italic border-b-4 border-b-(--theme) pr-4 mb-8">
                 The Team
               </h2>
               <div className="flex flex-wrap gap-12">

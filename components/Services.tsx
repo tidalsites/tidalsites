@@ -121,7 +121,7 @@ const ServiceItem: FC<ServiceItemProps> = ({
 }) => {
   return (
     <div
-      className={`transition-all relative py-4 dark:border-[--white] max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:lg:bg-[rgba(0,0,0,.5)] hover:lg:px-4 ${
+      className={`transition-all relative py-4 dark:border-(--white) max-w-[30ch] flex items-center rounded-lg cursor-pointer hover:lg:bg-[rgba(0,0,0,.5)] hover:lg:px-4 ${
         active
           ? "lg:bg-[rgba(0,0,0,.5)] lg:outline lg:outline-1 lg:outline-[rgba(0,200,255,.25)] lg:px-4"
           : ""
@@ -129,13 +129,13 @@ const ServiceItem: FC<ServiceItemProps> = ({
       onClick={() => handleServiceClick(service)}
     >
       {active && (
-        <FaForward className="hidden lg:block text-3xl transition-all text-[--theme]" />
+        <FaForward className="hidden lg:block text-3xl transition-all text-(--theme)" />
       )}
 
       <p
         className={
           active
-            ? "lg:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] lg:px-4 border-b-2 border-[rgba(0,200,255,.5)] pr-8 lg:border-none"
+            ? "lg:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] lg:px-4 border-b-2 border-[rgba(0,200,255,.5)] pr-8 lg:border-none"
             : "border-b-2 border-[rgba(0,200,255,.5)] pr-8 lg:border-none"
         }
       >

@@ -31,12 +31,12 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <header className="w-[100vw] fixed top-2 z-10 text-[--white] shadow lg:shadow-none px-2 flex">
-      <div className="w-full max-w-page flex gap-2 mx-auto">
+    <header className="w-screen fixed top-2 z-10 text-white shadow lg:shadow-none px-2 flex">
+      <div className="w-full max-w-[90em] flex gap-2 mx-auto">
         <div className="grow flex justify-between px-10 items-center rounded-full backdrop-filter backdrop-blur-[10px] shadow-[0_0_20px_-8px_rgba(255,255,255,.25)]">
           <div className="py-1">
             <Link
-              className="flex gap-2 relative py-1 focus:outline focus:outline-[1px] focus:outline-[rgba(0,200,255,.25)] rounded-full focus:px-4"
+              className="flex gap-2 relative py-1 focus:outline-1 focus:outline-[rgba(0,200,255,.25)] rounded-full focus:px-4"
               href="/"
             >
               <Image src={logo} alt="Tidal Sites" width="35" height="35" />
@@ -61,7 +61,7 @@ export const Header: FC = () => {
             <ul className="flex gap-4 flex-wrap justify-end">
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/"
                 >
                   HOME
@@ -69,7 +69,7 @@ export const Header: FC = () => {
               </li>
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/about"
                 >
                   ABOUT
@@ -77,7 +77,7 @@ export const Header: FC = () => {
               </li>
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/services"
                 >
                   SERVICES
@@ -85,7 +85,7 @@ export const Header: FC = () => {
               </li>
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/portfolio"
                 >
                   PORTFOLIO
@@ -93,7 +93,7 @@ export const Header: FC = () => {
               </li>
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/blog"
                 >
                   BLOG
@@ -101,7 +101,7 @@ export const Header: FC = () => {
               </li>
               <li className="relative">
                 <Link
-                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-[--theme] after:transition-all hover:[text-shadow:_0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
+                  className="transition-colors after:absolute after:bottom-0 after:left-[50%] after:w-0 after:h-[2px] after:bg-(--theme) after:transition-all hover:[text-shadow:0_0px_8px_rgba(255,255,255,.5),0_0px_12px_rgba(0,200,255,.5)] hover:after:w-full hover:after:left-0"
                   href="/contact"
                 >
                   CONTACT
@@ -116,7 +116,7 @@ export const Header: FC = () => {
               dropdownActivated
                 ? "translate-y-0 flex flex-col"
                 : "translate-y-[-100vh] invisible"
-            } fixed inset-0 -top-2 -left-2 justify-center bg-black/90 overflow-hidden z-50 transition-all duration-300 w-[100vw] h-[100vh] backdrop-filter backdrop-blur-[40px]`}
+            } fixed inset-0 -top-2 -left-2 justify-center bg-black/90 overflow-hidden z-50 transition-all duration-300 w-screen h-screen backdrop-filter backdrop-blur-2xl`}
           >
             <button
               onClick={deactivateDropdown}
@@ -127,7 +127,7 @@ export const Header: FC = () => {
             </button>
 
             <ul className="flex flex-col content-center items-center min-w-[300px] mx-auto rounded-2xl overflow-hidden shadow-[0_0_20px_-10px_rgba(255,255,255,.25)] bg-black/90">
-              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
+              <li className="w-full text-center border-b border-[rgba(0,200,255,.25)]">
                 <Link href="/">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -137,7 +137,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
+              <li className="w-full text-center border-b border-[rgba(0,200,255,.25)]">
                 <Link href="/about">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -147,7 +147,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
+              <li className="w-full text-center border-b border-[rgba(0,200,255,.25)]">
                 <Link href="/services">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -157,7 +157,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
+              <li className="w-full text-center border-b border-[rgba(0,200,255,.25)]">
                 <Link href="/portfolio">
                   <span
                     className="flex justify-center w-full h-full py-4"
@@ -167,7 +167,7 @@ export const Header: FC = () => {
                   </span>
                 </Link>
               </li>
-              <li className="w-full text-center border-b-[1px] border-[rgba(0,200,255,.25)]">
+              <li className="w-full text-center border-b border-[rgba(0,200,255,.25)]">
                 <Link href="/blog">
                   <span
                     className="flex justify-center w-full h-full py-4"

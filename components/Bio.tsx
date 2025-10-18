@@ -11,7 +11,7 @@ export const Bio = ({ name, title, bio }: Props) => {
       <Image
         src={bioImg}
         alt={name}
-        className="max-w-[200px] max-h-[200px] outline-double outline-[8px] outline-[--white] -outline-offset-4 rounded-full"
+        className="max-w-[200px] max-h-[200px] outline-double outline-8 outline-(--white) -outline-offset-4 rounded-full"
       />
       <div className="max-w-prose flex flex-col grow">
         <span className="text-lg">{name}</span>

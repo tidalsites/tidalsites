@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { ToastContainer } from "react-toastify";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
@@ -34,7 +34,8 @@ export default function RootLayout({
       <body
         className={
           montserrat.className +
-          "bg-[--dark-theme] bg-[radial-gradient(ellipse_at_75%_25%,rgba(33,55,82,.2)_0%,rgba(0,0,0,.8)_80%,var(--dark-theme)_100%)]"
+          " " +
+          "bg-(--dark-theme) bg-[radial-gradient(ellipse_at_75%_25%,rgba(33,55,82,.2)_0%,rgba(0,0,0,.8)_80%,var(--dark-theme)_100%)]"
         }
       >
         <Script
@@ -42,8 +43,8 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
         <Header />
-        <main className="text-[--white]">
-          <ToastContainer className="mt-[--navbar-height]" theme="dark" />
+        <main className="text-(--white)">
+          <ToastContainer className="mt-(--navbar-height)" theme="dark" />
           {children}
         </main>
         <Footer />

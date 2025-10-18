@@ -16,9 +16,7 @@ export const Chip: FC<Props> = ({
   checkmark = true,
   text,
 }) => {
-  const borderClasses = border
-    ? "outline outline-1 outline-[rgba(0,200,255,.5)]"
-    : "";
+  const borderClasses = border ? "outline outline-[rgba(0,200,255,.5)]" : "";
   const shadowClasses = shadow
     ? "shadow-[0_0_12px_-6px_rgba(255,255,255,.25)]"
     : "";

@@ -23,7 +23,7 @@ export const PortfolioCard = ({
   link,
 }: Props) => {
   return (
-    <div className="grid grid-rows-[auto,auto,auto,auto] lg:grid-rows-[300px,auto,auto,auto] xl:grid-rows-[250px,auto,auto,auto] row-span-4 justify-center sm:rounded-3xl overflow-hidden h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
+    <div className="grid grid-rows-[auto_auto_auto_auto] lg:grid-rows-[300px_auto_auto_auto] xl:grid-rows-[250px_auto_auto_auto] row-span-4 justify-center sm:rounded-3xl overflow-hidden h-full bg-[rgba(0,0,0,.5)] shadow-[0_0_12px_-6px_rgba(255,255,255,.25)] p-4">
       <div className="rounded-2xl overflow-hidden border-2 border-gray-400">
         <Image
           src={imgSrc}
@@ -37,7 +37,7 @@ export const PortfolioCard = ({
           <Link
             href={link}
             target="_blank"
-            className="text-2xl mt-4 mb-2 py-1 rounded-full flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-[--theme] hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
+            className="text-2xl mt-4 mb-2 py-1 rounded-full flex items-center gap-2 w-fit transition-all hover:px-4 hover:bg-(--theme) hover:shadow-[0_0_20px_0px_rgba(0,200,255,.25)]"
           >
             <span>{title}</span>
             <LuExternalLink className="text-2xl" />
