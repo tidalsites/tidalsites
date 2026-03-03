@@ -3,7 +3,6 @@ import Image from "next/image";
 import { FaWrench } from "react-icons/fa";
 import { GoArrowLeft } from "react-icons/go";
 import header from "@/public/assets/blog/slow-website-blog-header.png";
-import WebsiteAuditForm from "@/components/WebsiteAudit";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -331,9 +330,6 @@ export default function Blog() {
               </ul>
             </div>
           </article>
-          <aside className="outline outline-1 outline-[--theme] rounded-2xl flex h-fit w-fit mx-auto">
-            <WebsiteAuditForm />
-          </aside>
         </section>
       </div>
     </div>

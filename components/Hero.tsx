@@ -2,33 +2,14 @@
 
 import { Rubik } from "next/font/google";
 import { CTA } from "./cta";
-import WebsiteAuditForm from "./WebsiteAudit";
 import Image from "next/image";
 import hero from "../public/assets/images/hero-img.png";
 import bolt from "../public/assets/images/bolt.svg";
 import { FaChevronRight } from "react-icons/fa";
-import { GoArrowUpRight } from "react-icons/go";
-import { useRef, useState } from "react";
-import { RiCloseFill } from "react-icons/ri";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
 export const Hero = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const openDialog = () => {
-    document.body.classList.add("no-scroll");
-    setIsDialogOpen(true);
-    dialogRef.current?.showModal();
-  };
-
-  const closeDialog = () => {
-    document.body.classList.remove("no-scroll");
-    setIsDialogOpen(false);
-    dialogRef.current?.close();
-  };
-
   return (
     <section className="flex mb-20 min-h-screen w-full max-w-page mx-auto isolate bg-fixed">
       <div className="absolute right-0 -bottom-1/4 -z-10 | lg:opacity-100 lg:blur-none">
@@ -63,32 +44,9 @@ export const Hero = () => {
         </div>
 
         <div className="flex flex-wrap gap-4 mt-8 | md:rounded-full md:flex-row | lg:opacity-0 lg:animate-[fadeIn_750ms_linear_1000ms_forwards]">
-          <CTA
-            onClick={openDialog}
-            text="Free Website Audit"
-            size="lg"
-            type="button"
-          />
-          <CTA
-            href="/contact"
-            text="Contact Us"
-            size="lg"
-            Icon={GoArrowUpRight}
-          />
+          <CTA href="/contact" text="Contact Us" size="lg" />
         </div>
       </div>
-      <dialog ref={dialogRef} open={isDialogOpen}>
-        <div className="fixed inset-0 grid place-content-center bg-black bg-opacity-50 overflow-hidden">
-          <button
-            className="bg-gray-800 hover:bg-[--theme] outline outline-1 outline-black rounded-full py-1 px-4 w-fit flex items-center gap-4 mb-2 ml-auto"
-            onClick={closeDialog}
-          >
-            Close
-            <RiCloseFill />
-          </button>
-          <WebsiteAuditForm closeDialog={closeDialog} />
-        </div>
-      </dialog>
     </section>
   );
 };
