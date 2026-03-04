@@ -2,14 +2,13 @@
 
 import { ContactSchema, TContactSchema } from "@/lib/ContactSchema";
 import { sendEmail } from "@/lib/actions";
-import { getCaptchaToken } from "@/utils/captcha";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FC } from "react";
 import { useForm, UseFormRegister } from "react-hook-form";
 import { IconType } from "react-icons";
 import { FaEnvelope, FaPhone, FaSpinner } from "react-icons/fa";
 import { MdOutlineCorporateFare } from "react-icons/md";
-import { RiErrorWarningFill, RiSendPlaneLine } from "react-icons/ri";
+import { RiErrorWarningFill } from "react-icons/ri";
 import { toast } from "react-toastify";
 
 export default function ContactForm() {
@@ -23,21 +22,14 @@ export default function ContactForm() {
   });
 
   async function sendContactForm(data: TContactSchema) {
-    // Recaptcha
-    const token = await getCaptchaToken("contact");
-    const results = await sendEmail(data, token);
+    const results = await sendEmail(data);
 
     if (results.success) {
       toast.success("Email sent successfully. We'll be in touch shortly");
     }
 
     if (!results.success) {
-      if (
-        results.error === "Token not found" ||
-        results.error === "reCAPTCHA verification failed. Please try again."
-      ) {
-        toast.error("Recaptcha failed. Please try again.");
-      } else if (results.error === "unknown") {
+      if (results.error === "unknown") {
         toast.error("We were unable to process your request.");
       } else {
         toast.error("An unexpected error occurred. Please try again.");
