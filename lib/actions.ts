@@ -6,12 +6,7 @@ import { sendSESEmail } from "./ses";
 
 export type EmailResponse = {
   success: boolean;
-  error:
-    | ZodError<TContactSchema>
-    | null
-    | Error
-    | "unknown"
-    | "Request timed out";
+  error: ZodError<TContactSchema> | null | "unknown";
 };
 
 export const sendEmail = async (
